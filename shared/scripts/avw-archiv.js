@@ -1,0 +1,1 @@
+function updateListe(e,t,n){var l=document.getElementById(t).children,a=e.value.toLowerCase();if(l&&a.length>=0)for(let e of l){var i=!1,o=e.getElementsByClassName(n);for(let t of o)if(0==a.length||t.innerText.toLowerCase().indexOf(a)>-1){e.style.display="inline",i=!0;break}i||(e.style.display="none")}}

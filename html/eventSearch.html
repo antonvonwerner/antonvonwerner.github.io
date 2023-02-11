@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Anton von Werner - Suche nach Ereignissen</title>
+    <meta name="description" content="Anton von Werner - Archiv">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="labelwords" content="Anton von Werner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.github.io/shared/resources/logo.ico">
+    <link href="https://antonvonwerner.github.io/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<script src="https://antonvonwerner.github.io/shared/scripts/avw-archiv.js"></script>
+</head>
+
+<body onload="init();">
+    <header>
+        <div class="header-title">
+            <h1>
+                <a href="https://antonvonwerner.github.io/index.html">
+                    <img class="logo" alt="Logo" src="https://antonvonwerner.github.io/shared/resources/logo.svg"> Anton von Werner - Archiv
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <a href="https://antonvonwerner.github.io/html/news.html">Neuigkeiten</a>
+            <a href="https://antonvonwerner.github.io/html/imageSearch.html">Bilder</a>
+            <a href="https://antonvonwerner.github.io/html/messageSearch.html">Briefe/Texte</a>
+            <a href="https://antonvonwerner.github.io/html/eventSearch.html">Ereignisse</a>
+            <a href="https://antonvonwerner.github.io/html/opinionSearch.html">Meinungen</a>
+            <a href="https://antonvonwerner.github.io/html/personRelSearch.html">Beziehungen</a>
+            <a href="https://antonvonwerner.github.io/html/awardSearch.html">Ehrungen und Ämter</a>
+            <a href="https://antonvonwerner.github.io/html/publicationSearch.html">Publikationen</a>
+        </nav>
+    </header>
+    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.github.io/shared/resources/AvW-Header.jpg">
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem 
+            Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (<a href="https://antonvonwerner.github.io/shared/resources/AvW-Archiv-ERD.png">Diagramm</a>).
+	</div>
+
+     <article style="border-style: dotted;">
+          <h2 class="detail-title" style="text-align: center; font-size: large;">Werkverzeichnis der Zeichnungen</h2>
+          <p class="detail-title" style="text-align: center; font-size: xx-large;">Ein Aufruf</p>
+          <p>Anton von Werner hat mehrere tausend Handzeichnungen sowohl
+          als freie Kompositionen wie auch als Vorstudien und Skizzen für Gemälde geschaffen. Sämliche seiner
+          Arbeiten auf Papier sollen in einem Werkverzeichnis katalogisiert werden. Während die Bestände in
+          öffentlichem Besitz und teils auch in privatem Besitz erfasst sind, tritt doch auch immer wieder
+          Unbekanntes oder verschollen Geglaubtes zu Tage. Entsprechende Hinweise werden erbeten an:
+          </p>
+          <p> Dr. Dominik Bartmann<br><a class="contact" href="mailto:dominik_bartmann@yahoo.de?subject=Werkverzeichnis%20der%20Zeichnungen">dominik_bartmann@yahoo.de</a>
+          </p>
+     </article>
+        <article>
+        <h2 class="article-title">Ereignisauswahl nach:</h2>
+        <div class="searchTabs">
+  <input type="radio" name="inhalt" id="tabName">
+            <label for="tabName">Gruppe</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.github.io/html/event/list/event_groups.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Übersicht...</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventYear">
+            <label for="tabEventYear">Jahr</label>
+            <div class="searchTab"> <h2>Wählen sie eine Jahresangabe:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1843.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1843 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1857-1859.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1857-1859 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1859.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1859 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1860-1862.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1860-1862 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1861um.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1861 (um) (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1862.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1862 (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1863.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1863 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1869.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1869 (5)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1870.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1870 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1871.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1871 (6)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1872.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1872 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1873.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1873 (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1874.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1874 (5)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1875.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1875 (9)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1877.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1877 (3)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1878.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1878 (3)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1879.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1879 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1880.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1880 (3)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1881.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1881 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1882.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1882 (4)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1883.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1883 (7)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1884.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1884 (5)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1885.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1885 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1886.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1886 (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1887.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1887 (4)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1888.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1888 (3)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1890.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1890 (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1891.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1891 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1892.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1892 (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1896-1897.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1896-1897 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1897.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1897 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1898.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1898 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1901.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1901 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1902.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1902 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1906.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1906 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1915.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1915 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1922.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1922 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1925.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1925 (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/year_1947.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">1947 (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventPerson">
+            <label for="tabEventPerson">Person</label>
+            <div class="searchTab"> <h2>Wählen sie eine Person aus:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3129.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Biber-Palubicki, Alfred von (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2064.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Bismarck, Otto von (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3120.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Bode, Wilhelm von (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2069.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Friedrich III.  (Deutsches Reich) (5)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2057.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Gude, Hans Fredrik (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Lessing, Carl Friedrich (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3126.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Lutterroth, Ascan (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2036.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Meckel, Adolf von Hemsbach (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2103.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Meckel, Lina von (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3127.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Meyerheim, Franz (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2073.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Moltke, Helmut von (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3140.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Munch, Edvard (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3172.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Ruben, Franz Leo (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2043.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Salviati, Antonio (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_1013.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Scheffel, Joseph Victor (7)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2042.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Schr&oelig;dter, Alwine (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3130.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Tendlau, Louis (Ludwig) (2)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_3174.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Venus, Franz Albert (1)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2056.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Victoria von Großbritannien und Irland (Kaiserin Friedrich) (3)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_1.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Anton von (89)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2040.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Malvina von (31)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/person_2062.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Wilhelm I. (Deutsches Reich) (4)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventParticipantType">
+            <label for="tabEventParticipantType">Art</label>
+            <div class="searchTab"> <h2>Wählen sie eine Art aus :</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.github.io/html/event/list/participant_DIE.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Dienstlich (26)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/participant_PRI.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Privat (110)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/participant_PUD.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Privat und Dienstlich (17)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/participant_UNB.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Unbekannt (4)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventPriority">
+            <label for="tabEventPriority">Gewichtung</label>
+            <div class="searchTab"> <h2>Wählen sie eine Gewichtung aus :</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.github.io/html/event/list/prio_BED.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Bedeutend (15)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/prio_NOR.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Normal (17)</a>
+	    <a href="https://antonvonwerner.github.io/html/event/list/prio_UNB.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Unbedeutend (57)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabTag">
+            <label for="tabTag">Schlagwort</label>
+            <div class="searchTab"> <h2>Wählen sie ein Schlagwort:</h2>  <br><div class="buttonChoices"> <a href="https://antonvonwerner.github.io/html/event/list/eventTag_all.html" class="button">
+	    <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Suche...</a></div><br><div>
+    <div class="info-block openClose">
+	   <input type="checkbox" id="28" name="28">
+	   <label for="28" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Architektur (4)</label>
+	   <label for="28" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Architektur (4)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5976.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Denkmal (Gedenken) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6455.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Wohnung (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="27" name="27">
+	   <label for="27" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Bauwerke / Geb&auml;ude (10)</label>
+	   <label for="27" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Bauwerke / Geb&auml;ude (10)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6288.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Altes Palais (Berlin) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12050.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kronprinzenpalais (Berlin) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6454.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">L&uuml;tzower Ufer 31 (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12043.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Oberes Schloss (Talheim) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8936.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Schloss Falkenhagen (Mark) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5833.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Siegesss&auml;ule (Berlin) (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12026.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Villa d&apos;Este (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5481.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Villa VI in Potsdam  (2)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="15" name="15">
+	   <label for="15" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Berufe / Stand / Hobbys (3)</label>
+	   <label for="15" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Berufe / Stand / Hobbys (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8488.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Ausbildung (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8487.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Maler und Lackierer (Stubenmaler) (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="22" name="22">
+	   <label for="22" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Beziehungen (20)</label>
+	   <label for="22" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Beziehungen (20)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5100.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Familie (16)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5098.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Freundschaft (3)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5101.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Verein/B&uuml;ndnis/Aktionsgemeinschaft (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="4" name="4">
+	   <label for="4" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Epochen (1)</label>
+	   <label for="4" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Epochen (1)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5784.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Renaissance (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="10" name="10">
+	   <label for="10" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Gegenst&auml;nde (3)</label>
+	   <label for="10" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Gegenst&auml;nde (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5114.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Totenbett / Sterbebett / Sterbesessel (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="16" name="16">
+	   <label for="16" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Geographie (2)</label>
+	   <label for="16" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Geographie (2)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6025.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Großer Wannsee (2)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="14" name="14">
+	   <label for="14" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Gesellschaft (70)</label>
+	   <label for="14" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Gesellschaft (70)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6197.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Ausflug (8)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6267.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Besuch (6)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6228.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Erholungsurlaub (5)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5173.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Feste und Feiern (7)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1021.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Festessen (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5124.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Gastfreundschaft (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5727.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Hochzeitstag (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_9964.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kabinettsorder (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6105.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kontroverse / Streit / Disput (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_9976.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Preußischer Kunstverein (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5158.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Rede / Vortrag / Monolog (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5056.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Trinkspruch/Toast/Prosit (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8845.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Unterricht (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5767.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Urlaub (24)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6167.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Verein Berliner K&uuml;nstler (5)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5057.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Zug / Auszug (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="19" name="19">
+	   <label for="19" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Handlung (2)</label>
+	   <label for="19" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Handlung (2)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5766.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Dekorieren (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5831.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Umzug (Wohnsitzwechsel) (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="25" name="25">
+	   <label for="25" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Historische Ereignisse (1)</label>
+	   <label for="25" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Historische Ereignisse (1)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8900.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Heyden, August von (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="7" name="7">
+	   <label for="7" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Historische Personen (101)</label>
+	   <label for="7" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Historische Personen (101)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12051.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Becker, Karl (Maler) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12054.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Begas, Oscar (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5428.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Blumenthal, Leonhard von (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12052.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">D&oelig;pler, Carl Emil (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5982.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">D&oelig;pler, Emil d.J. (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12030.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Dr. Jansen (Historiker) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12031.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Dr. Papst (Historiker) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5427.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Eulenburg, August zu  (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12053.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Ewald, Ernst (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5393.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Friedrich III. (Deutsches Reich) (4)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5579.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Harrach, Ferdinand von (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6368.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kayser, Maria Magdalena (Mutter von AvW) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5984.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Knaus, Ludwig (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12056.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Knille, Otto (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5668.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Menzel, Adolph von (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6181.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Meyerheim, Paul Friedrich (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1027.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Moltke, Helmut von (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12064.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Munch, Edvard (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_2033.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Scheffel, Joseph Victor (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6277.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Schr&oelig;dter, Alwine (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6463.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Tizian (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5478.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Victoria von Großbritannien und Irland (Kaiserin Friedrich) (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12029.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Wedding (K&uuml;nstler) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5484.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Adeline (Lilli) Margarete Karoline Friedericke von (02.05.1874 - 1947) (8)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5736.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Anton von (15)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5482.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Fritz von (1878 - 1906) (8)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5487.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Hans Karl Anton von (06.07.1881 - 1922) (6)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5483.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Hildegard Josepha Alwine von (28.04.1873 - 1925) (8)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5341.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Malvina von (Schr&oelig;dter 07.02.1847 - 16.12.1901) (19)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5485.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Molly von (1877 - 1883) (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5486.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Werner, Paul von (06.07.1881 - 1902) (7)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5418.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Wilhelm I. (Deutsches Reich) (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="30" name="30">
+	   <label for="30" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Kleidung (3)</label>
+	   <label for="30" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Kleidung (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5781.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kost&uuml;m / Verkleidung (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="29" name="29">
+	   <label for="29" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">K&ouml;rper / Anatomie (1)</label>
+	   <label for="29" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">K&ouml;rper / Anatomie (1)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5210.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Krankheit (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="17" name="17">
+	   <label for="17" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Kunst (20)</label>
+	   <label for="17" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Kunst (20)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8562.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Ausstellung (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8583.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kulturtourismus (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1020.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kunstakademie (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1023.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kunststudium (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6236.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Modell (Kunst) (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5469.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Moderne Kunst (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6298.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Sitzungen (Kunst) (4)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5970.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Studien- und Forschungsreise (7)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="18" name="18">
+	   <label for="18" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Lebensstationen (19)</label>
+	   <label for="18" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Lebensstationen (19)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1022.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Geburt (6)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_3053.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Hochzeit (4)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1033.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Tod (9)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="5" name="5">
+	   <label for="5" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Lebewesen (3)</label>
+	   <label for="5" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Lebewesen (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5115.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Leiche (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="11" name="11">
+	   <label for="11" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Reale Orte (64)</label>
+	   <label for="11" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Reale Orte (64)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8581.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Bamberg (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6037.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Baveno (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6273.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Berchtesgaden (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5416.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Berlin (4)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6074.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Bodensee (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1029.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Capri (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5768.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Churwalden (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12085.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Civitella (Bellegra) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5343.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Erlenbad / Sasbach (3)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8935.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Falkenhagen (Mark) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8741.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Flensburg (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6262.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Flims (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6310.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Fr&oelig;schwiller / Froschweiler (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Harz (Landschaft) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6313.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Helgoland (3)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5769.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Heringsdorf (3)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6203.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Hohenkr&auml;hen (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5812.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Hohentwiel (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6034.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Ilsenburg (Harz) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1024.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Italien (7)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8552.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kiel (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6192.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Kinzigtal (Wolfach) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5913.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Neusatzeck (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_1025.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Olevano Romano (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6211.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Radolfzell am Bodensee (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6073.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Reichenau (Insel) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5170.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Rom (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6183.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">R&uuml;gen (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12086.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Sabiner Berge (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5122.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Schwarzwald (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5360.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Schweiz (7)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5283.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Sorrent (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6182.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Stubbenkammer (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12044.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Talheim (Landkreis Heilbronn) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_12027.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Tivoli (Latium) (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6263.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">&Uuml;berlingen (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_5789.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Venedig (2)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8740.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Westerland (1)</a>
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_6309.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Wissembourg / Weißenburg (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="idEventTag12" name="idEventTag12">
+	   <label for="idEventTag12" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/closed.svg" alt="Closed">Schriften (2)</label>
+	   <label for="idEventTag12" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.github.io/shared/resources/opened.svg" alt="Opened">Schriften (2)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.github.io/html/event/list/event_tag_8620.html" class="button">
+	   <img src="https://antonvonwerner.github.io/shared/resources/forward.svg" alt="Gehe zu">Wohnadresse (2)</a></div>
+    </div>     
+</div>     </div>
+ </div>
+    </article>
+
+    <footer>
+    <p> <a href="https://antonvonwerner.github.io/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
+	- Anton von Werner - Archiv (2023) /
+        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.github.io/shared/resources/mail.svg" alt="Mail"></a>
+    </p>
+    </footer>
+
+</body>
+
+</html>
+

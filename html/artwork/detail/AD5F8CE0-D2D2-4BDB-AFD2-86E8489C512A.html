@@ -37,8 +37,7 @@
         </nav>
     </header>
     <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
-<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem 
-            Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (<a href="https://antonvonwerner.de/shared/resources/AvW-Archiv-ERD.png">Diagramm</a>).<br>Dr. Bartmann ist nicht Betreiber dieser Seiten  und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (<a href="https://antonvonwerner.de/shared/resources/AvW-Archiv-ERD.png">Diagramm</a>). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
 	</div>
 
      <article style="border-style: dotted;">
@@ -87,6 +86,18 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkMaterial" name="idArtworkMaterial" checked="checked" >
+	   <label for="idArtworkMaterial" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Material und technische Details</label>
+	   <label for="idArtworkMaterial" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Material und technische Details</label>
+	   <div class="label-value-pair">
+	   <div class="label">Beschriftung</div>
+        <div class="value">Unten <cite><b>Die deutsche Kunst in St. Louis.</b> Dem Drängen seiner Münchener Freunde entsprechend, hat sich Anton von Werner entschlossen, das für St. Louisbestimmte Congressbiid sezessionistisch zu renoviren. Hofstil und ,,Rinnstein" auf einer Leinwand „det können die Amerikaner wirkiich nich!"<cite></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkCategories" name="idArtworkCategories" checked="checked" >
 	   <label for="idArtworkCategories" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gruppierungen</label>
@@ -112,10 +123,13 @@
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Literatur</label>
 	   <div class="label-value-pair">
 	   <div class="label">Publikationen</div>
-        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/publication/detail/C67A79A5-5AFC-4B9C-8873-AA253AE5A163.html">Moszkowski Alexander (Hrsg.) (1904) <cite>Lustige Blätter - St. Louis</cite>. Jg. 19 Nr. 26. Berlin: Dr. Eysler & Co., S. 9 (Abb.)</a> (Nur Erwähnung)</li></ul></div>
+        <div class="value"><div class="detail-title">Nur Erwähnung:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/C67A79A5-5AFC-4B9C-8873-AA253AE5A163.html">Moszkowski Alexander (Hrsg.) (1904) <cite>Lustige Blätter - St. Louis</cite>. Jg. 19 Nr. 26. Berlin: Dr. Eysler & Co., S. 9 (Abb.)</a></li></ul></div>
     </div><div class="label-value-pair">
 	   <div class="label">Berliner Kongress</div>
-        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/publication/detail/0FBCA677-4A63-4F24-BA8A-A2C884E57667.html">Rosenberg, Adolf (1900) <cite>A. von Werner</cite>.  Nr. 9 2. Aufl. Bielefeld / Leipzig. Bielefeld: Verlag Velhagen und Klasing, S. 55-61</a> (Ausführliche Beschreibung mit Bewertung und Daten)</li></ul></div>
+        <div class="value"><div class="detail-title">Ausführliche Beschreibung mit Bewertung und Daten:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/0FBCA677-4A63-4F24-BA8A-A2C884E57667.html">Rosenberg, Adolf (1900) <cite>A. von Werner</cite>.  Nr. 9 2. Aufl. Bielefeld / Leipzig. Bielefeld: Verlag Velhagen und Klasing, S. 55-61</a></li></ul></div>
+    </div><div class="label-value-pair">
+	   <div class="label">Berliner Kongress - Wandbild (1881)</div>
+        <div class="value"><div class="detail-title">Kurze Beschreibung mit Bewertung und Daten:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/496E425E-28B6-40F2-A22E-7B19FC006D86.html">Vollmer, Hans (Hrsg.) (1942) <cite>Allgemeines Lexikon der Bildenden Künstler von der Antike bis zur Gegenwart</cite>.  Bd. 35: Waage–Wilhelmson. Leipzig: Verlag von E. A. Seemann, S. 403</a></li></ul></div>
     </div>
     </div>     
 

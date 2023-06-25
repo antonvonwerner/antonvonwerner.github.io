@@ -37,8 +37,7 @@
         </nav>
     </header>
     <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
-<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem 
-            Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (<a href="https://antonvonwerner.de/shared/resources/AvW-Archiv-ERD.png">Diagramm</a>).<br>Dr. Bartmann ist nicht Betreiber dieser Seiten  und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (<a href="https://antonvonwerner.de/shared/resources/AvW-Archiv-ERD.png">Diagramm</a>). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
 	</div>
 
      <article style="border-style: dotted;">
@@ -75,10 +74,10 @@
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Allgemeine Angaben</label>
 	   <div class="label-value-pair">
 	   <div class="label">K&uuml;nstler</div>
-        <div class="value"><ul><li><a href="https://de.wikipedia.org/wiki/Anton_von_Werner">Anton von Werner (09.05.1843 - 04.01.1915)</a> - 38 Jahre - Gesamtwerk</li></ul></div>
+        <div class="value"><ul><li><a href="https://de.wikipedia.org/wiki/Anton_von_Werner">Anton von Werner (Di, 09.05.1843 - Mo, 04.01.1915)</a> - 38 Jahre - Gesamtwerk</li></ul></div>
     </div><div class="label-value-pair">
 	   <div class="label">Titel</div>
-        <div class="value"><ul><li>Kriegsrat in Versailles</li><li>Ein deutscher Kriegsrat zu Versailles</li></ul></div>
+        <div class="value"><ul><li>Kriegsrat in Versailles</li><li>Ein deutscher Kriegsrat zu Versailles</li><li>Kriegsrat (Generalsvortrag) in Versailles</li><li>Kriegsrath zu Versailles im November 1870</li></ul></div>
     </div><div class="label-value-pair">
 	   <div class="label">Datierung</div>
         <div class="value"><a href="https://antonvonwerner.de/html/artwork/list/year_1881.html"> (1881)</a></div>
@@ -119,6 +118,18 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkOwnerShort" name="idArtworkOwnerShort" checked="checked" >
+	   <label for="idArtworkOwnerShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Besitzer</label>
+	   <label for="idArtworkOwnerShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Besitzer</label>
+	   <div class="label-value-pair">
+	   <div class="label">Besitzer</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/D26A4DE4-9C6C-4DD3-8630-AD6ABC2D8335.html">Auf jeden Fall 1901 / Hamburg, Sammlung Eduard Friedrich Weber</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkDescription" name="idArtworkDescription" checked="checked" >
 	   <label for="idArtworkDescription" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Beschreibungen</label>
@@ -128,19 +139,13 @@
     <div class="info-block">
 	   <div class="label-value-pair">
 	   <div class="label">Bewertung</div>
-        <div class="value"><img src="https://antonvonwerner.de/shared/resources/sentiment_neutral.svg" alt="Neutral" title="Neutral">Neutral</div>
+        <div class="value"><img src="https://antonvonwerner.de/shared/resources/sentiment_neutral.svg" alt="Neutral" title="Neutral">Neutral - <a href="https://books.google.de/books/content?id=vzBLAQAAMAAJ&amp;hl=de&amp;pg=PA51&amp;img=1&amp;zoom=3&amp;sig=ACfU3U2tre2aOgQ0&AElig;jWwkIcRBShSdoYlQ&amp;ci=111%2C158%2C858%2C1012&amp;edge=0">Köppen (1881) - Männer und Thaten: Vaterländische Balladen</a></div>
     </div><div class="label-value-pair">
 	   <div class="label">Zusammenfassung</div>
         <div class="value">Das Gedicht <cite>Ein deutscher Kriegsrat zu Versailles.</cite></div>
     </div><div class="label-value-pair">
-	   <div class="label">Publikation</div>
-        <div class="value">Köppen (1881) - Männer und Thaten: Vaterländische Balladen</div>
-    </div><div class="label-value-pair">
 	   <div class="label">Beschreibung</div>
-        <div class="value">In König Wilhelms Hauptquartier<br>Schlug eine schwere Stunde,<br>Sie hatten von der Loire hier<br>Die erste trübe Kunde.<br><br>Der Feind hat Truppen aufgebracht<br>In allen Waffenplätzen,<br>Jetzt rückt er an mit Übermacht,<br>Die Hauptstadt zu entsetzen.<br><br>Des Königs Haupt ist sorgenschwer,<br>Er sehnt sich still nach Frieden,<br>Er denkt, wie lange schon das Heer<br>Die Heimat hat gemieden.<br><br>Zum Kriegsrat kamen Moltke, Roon,<br>Die Herren der Heeresleitung,<br>Auch <q>unser Fritz</q>, der Königsohn,<br>In Blumenthals Begleitung.<br><br><q>Ihr Herrn,</q> hub König Wilhelm an,<br><q>Jetzt gilt's, Entschluss zu fassen,<br>Soeben meldet von der Tann,<br>Das Orleans verlassen.<br><br>Die Sachen wollen nicht mehr gehn,<br>So wie sie angefangen,<br>Das kommt -- wir wollen's nur gestehen: --<br>Wir sind zu weit gegangen.<br><br>Uns hat zu kühn gemacht das Glück,<br>Das läßt uns wohl erwägen,<br>Drum trifft uns jetzt das Mißgeschick<br>Mit solchen harten Schlägen.<br><br>Ich muß Euch fragen über dies,<br>Wollt Euren Rat mir geben,<br>Ob die Belag'rung von Paris<br>Nicht besser aufzuheben?</q> --<br><br>Wohl klang nach manchem stolzen Sieg<br>Die Frag' als eine harte, -- <br>Roon hört' sie ungern, Moltke schwieg,<br>Podbielski trug die Karte.<br><br>Eifrig besprach sich unser Fritz<br>Mit Blumenthal ganz leise,<br>Da hob sich Roon von seinem Sitz<br>Und sprach auf seine Weise:<br><br><q>Ew. Majestät, mir scheint es Pflicht,<br>Die Frage zu verneinen,<br>Die Sachen stehn noch lange nicht<br>So schlimm, wie Sie vermeinen.<br><br>Gott half uns bis auf diesen Tag<br>So treu in allen Kämpfen,<br>Da soll der erste Unglücksschlag<br>Noch unsern Mut nicht dämpfen.<br><br>Gott ist Derselbe früh und spät,<br>Er hilft so heut' wie morgen;<br>Sie haben unrecht, Majestät,<br>Zu zweifeln und zu sorgen.</q> --<br><br>Die Andern hörten wie perplex,<br>Was sprach der kühne Degen,<br>Da streckte unser Wilhelm Rex<br>Ihm seine Hand entgegen:<br><br><q>Recht so! nehmt von den Mund kein Blatt,<br>Wahrheit vor allen Dingen!<br>Und wer das Schwert geschliffen hat,<br>Weiß auch wohl, es zu schwingen.<br><br>Ich stimm Euch bei; -- ihr Herrn, nur flott<br>So weiter unverdrosssen!<br>Wir bleiben stehn und bau'n auf Gott; --<br>Der Kriegsrat ist geschlossen.</q></div>
-    </div><div class="label-value-pair">
-	   <div class="label">Link</div>
-        <div class="value"><a href="https://books.google.de/books/content?id=vzBLAQAAMAAJ&amp;hl=de&amp;pg=PA51&amp;img=1&amp;zoom=3&amp;sig=ACfU3U2tre2aOgQ0&AElig;jWwkIcRBShSdoYlQ&amp;ci=111%2C158%2C858%2C1012&amp;edge=0">Webseite</a></div>
+        <div class="value"><blockquote>In König Wilhelms HauptquartierSchlug eine schwere Stunde,<br>Sie hatten von der Loire hier<br>Die erste trübe Kunde.<br><br>Der Feind hat Truppen aufgebracht<br>In allen Waffenplätzen,<br>Jetzt rückt er an mit Übermacht,<br>Die Hauptstadt zu entsetzen.<br><br>Des Königs Haupt ist sorgenschwer,<br>Er sehnt sich still nach Frieden,<br>Er denkt, wie lange schon das Heer<br>Die Heimat hat gemieden.<br><br>Zum Kriegsrat kamen Moltke, Roon,<br>Die Herren der Heeresleitung,<br>Auch <q>unser Fritz</q>, der Königsohn,<br>In Blumenthals Begleitung.<br><br><q>Ihr Herrn,</q> hub König Wilhelm an,<br><q>Jetzt gilt's, Entschluss zu fassen,<br>Soeben meldet von der Tann,<br>Das Orleans verlassen.<br><br>Die Sachen wollen nicht mehr gehn,<br>So wie sie angefangen,<br>Das kommt -- wir wollen's nur gestehen: --<br>Wir sind zu weit gegangen.<br><br>Uns hat zu kühn gemacht das Glück,<br>Das läßt uns wohl erwägen,<br>Drum trifft uns jetzt das Mißgeschick<br>Mit solchen harten Schlägen.<br><br>Ich muß Euch fragen über dies,<br>Wollt Euren Rat mir geben,<br>Ob die Belag'rung von Paris<br>Nicht besser aufzuheben?</q> --<br><br>Wohl klang nach manchem stolzen Sieg<br>Die Frag' als eine harte, -- <br>Roon hört' sie ungern, Moltke schwieg,<br>Podbielski trug die Karte.<br><br>Eifrig besprach sich unser Fritz<br>Mit Blumenthal ganz leise,<br>Da hob sich Roon von seinem Sitz<br>Und sprach auf seine Weise:<br><br><q>Ew. Majestät, mir scheint es Pflicht,<br>Die Frage zu verneinen,<br>Die Sachen stehn noch lange nicht<br>So schlimm, wie Sie vermeinen.<br><br>Gott half uns bis auf diesen Tag<br>So treu in allen Kämpfen,<br>Da soll der erste Unglücksschlag<br>Noch unsern Mut nicht dämpfen.<br><br>Gott ist Derselbe früh und spät,<br>Er hilft so heut' wie morgen;<br>Sie haben unrecht, Majestät,<br>Zu zweifeln und zu sorgen.</q> --<br><br>Die Andern hörten wie perplex,<br>Was sprach der kühne Degen,<br>Da streckte unser Wilhelm Rex<br>Ihm seine Hand entgegen:<br><br><q>Recht so! nehmt von den Mund kein Blatt,<br>Wahrheit vor allen Dingen!<br>Und wer das Schwert geschliffen hat,<br>Weiß auch wohl, es zu schwingen.<br><br>Ich stimm Euch bei; -- ihr Herrn, nur flott<br>So weiter unverdrosssen!<br>Wir bleiben stehn und bau'n auf Gott; --<br>Der Kriegsrat ist geschlossen.</q></blockquote></div>
     </div>
     </div>     
 
@@ -154,7 +159,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Literatur</label>
 	   <div class="label-value-pair">
 	   <div class="label">Publikationen</div>
-        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/publication/detail/18BDC354-8274-4E59-ADA9-084FA905B6BA.html">Köppen, Fedor von (1881) <cite>Männer und Thaten: Vaterländische Balladen</cite>. Leipzig: Verlag von Alphons Dürr, S. 50, 51 (Abb.), 52</a> (Nur Erwähnung)</li><li><a href="https://antonvonwerner.de/html/publication/detail/87995842-67F1-4C99-91C8-C26EB381A698.html">Kugler, Bernhard von (1888) <cite>Kaiser Wilhelm und seine Zeit</cite>. München: Verlagsanstalt für Kunst und Wissenschaft, S. 281 (Abb.)</a> (Nur Erwähnung)</li><li><a href="https://antonvonwerner.de/html/publication/detail/0FBCA677-4A63-4F24-BA8A-A2C884E57667.html">Rosenberg, Adolf (1900) <cite>A. von Werner</cite>. Nr. 9 2. Aufl. Bielefeld / Leipzig. Bielefeld: Verlag Velhagen und Klasing, S. 19 (Abb.), 20, 128</a> (Mittlere Beschreibung)</li><li><a href="https://antonvonwerner.de/html/publication/detail/DD39AF0A-17BC-4803-AD32-D294F3600696_7.html">Bartmann, Dominik <cite>Katalog</cite> in Bartmann, Dominik (Hrsg.) (1993) <cite>Anton von Werner: Geschichte in Bildern</cite>. München: Hirmer Verlag, S. 297, 300 (Abb.), 301</a> (Ausführliche Beschreibung mit Daten)</li></ul></div>
+        <div class="value"><div class="detail-title">Ausführliche Beschreibung mit Daten:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/DD39AF0A-17BC-4803-AD32-D294F3600696_7.html">Bartmann, Dominik <cite>Katalog</cite> in Bartmann, Dominik (Hrsg.) (1993) <cite>Anton von Werner: Geschichte in Bildern</cite>. München: Hirmer Verlag, S. 297, 300 (Abb.), 301</a></li></ul><br><div class="detail-title">Mittlere Beschreibung:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/0FBCA677-4A63-4F24-BA8A-A2C884E57667.html">Rosenberg, Adolf (1900) <cite>A. von Werner</cite>. Nr. 9 2. Aufl. Bielefeld / Leipzig. Bielefeld: Verlag Velhagen und Klasing, S. 19 (Abb.), 20, 128</a></li></ul><br><div class="detail-title">Erwähnung mit Daten:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/3B80C375-0D2E-4EDE-9612-5BD03423BCBD.html">Boetticher, Friedrich von (1901) <cite>Malerwerke des neunzehnten Jahrhunderts</cite>. Zweiter Band. Zweite Hälfte (Bogen 33-67). Saal bis Zwengauer. Dresden: Fr. von Boetticher's Verlag, S. 1003</a></li></ul><br><div class="detail-title">Nur Erwähnung:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/18BDC354-8274-4E59-ADA9-084FA905B6BA.html">Köppen, Fedor von (1881) <cite>Männer und Thaten: Vaterländische Balladen</cite>. Leipzig: Verlag von Alphons Dürr, S. 50, 51 (Abb.), 52</a></li><li><a href="https://antonvonwerner.de/html/publication/detail/B485B04C-ED1E-4D9E-B797-8ABBCB4BB04D.html">Stillfried-Alcantara, Rudolf Maria Bernhard von / Kugler Bernhard (1886) <cite>Die Hohenzollern und das deutsche Vaterland</cite>. Vierte Auflage. München: Verlagsanstalt für Kunst und Wissenschaft, S. 367 (Abb.)</a></li><li><a href="https://antonvonwerner.de/html/publication/detail/87995842-67F1-4C99-91C8-C26EB381A698.html">Kugler, Bernhard von (1888) <cite>Kaiser Wilhelm und seine Zeit</cite>. München: Verlagsanstalt für Kunst und Wissenschaft, S. 281 (Abb.)</a></li></ul></div>
     </div>
     </div>     
 
@@ -177,11 +182,14 @@
 	   <label for="idArtworkOther" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Sonstiges</label>
 	   <div class="label-value-pair">
+	   <div class="label">Verzeichnisse</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/artwork/list/artworkCatalogue_7.html">Friedrich von Boetticher: Malerwerke des neunzehnten Jahrhunderts - Zeichnungen - Nummer 23</a></li></ul></div>
+    </div><div class="label-value-pair">
 	   <div class="label">Anlage</div>
         <div class="value">23.05.2020</div>
     </div><div class="label-value-pair">
 	   <div class="label">Letzte &Auml;nderung</div>
-        <div class="value">16.03.2023</div>
+        <div class="value">20.06.2023</div>
     </div>
     </div>     
 

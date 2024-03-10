@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/logo.ico">
     <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
-	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script>
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
 </head>
 
 <body onload="init();">
@@ -37,7 +37,7 @@
         </nav>
     </header>
     <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
-<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (168 Tabellen). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (169 Tabellen). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
 	</div>
 
      <article style="border-style: dotted;">
@@ -118,6 +118,15 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkMap" name="idArtworkMap" checked="checked" >
+	   <label for="idArtworkMap" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
+	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
+	   <div><article><div id="idMapArtwork3982" class="openStreetMap"></div> <script>const idMapArtwork3982 = L.map("idMapArtwork3982").setView([51.3154546,9.4924096], 6); const idMapArtwork3982_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork3982);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.232650000,6.996190000], {icon: orangeIcon,title: "Saarbrücken"}).addTo(idMapArtwork3982).bindPopup('<div>Saarbrücken: Besitzer</div>'); L.marker([48.759664297,8.236853768], {title: "Hotel Messmer (Baden-Baden)"}).addTo(idMapArtwork3982).bindPopup('<div>Hotel Messmer (Baden-Baden): Ausstellungen</div>'); L.marker([50.218532441,8.552165953], {title: "Galerie Joseph Fach"}).addTo(idMapArtwork3982).bindPopup('<div>Galerie Joseph Fach: Besitzer</div>');</script></article></div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkCategories" name="idArtworkCategories" checked="checked" >
 	   <label for="idArtworkCategories" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gruppierungen</label>
@@ -143,7 +152,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Besitzer</label>
 	   <div class="label-value-pair">
 	   <div class="label">Besitzer</div>
-        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/3C966978-7097-48E3-B8EE-75F795DE060F.html">Bis 1963 / Galerie Joseph Fach</a></li><li><a href="https://antonvonwerner.de/html/owner/detail/1E074EAE-E793-43A4-AD3C-7ECA9D11F2FD.html">Seit 1963 / Saarlandmuseum. Alte Sammlung. NI 3086. Kauf von Joseph Fach, Frankfurt am Main (ALXXXVI-009, Aktenzeichen 12000877)</a></li></ul></div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/3C966978-7097-48E3-B8EE-75F795DE060F.html">Bis 1963 / Galerie Joseph Fach, Galerie Joseph Fach</a></li><li><a href="https://antonvonwerner.de/html/owner/detail/1E074EAE-E793-43A4-AD3C-7ECA9D11F2FD.html">Seit 1963 / Saarbrücken, Saarlandmuseum. Alte Sammlung. NI 3086. Kauf von Joseph Fach, Frankfurt am Main (ALXXXVI-009, Aktenzeichen 12000877)</a></li></ul></div>
     </div>
     </div>     
 

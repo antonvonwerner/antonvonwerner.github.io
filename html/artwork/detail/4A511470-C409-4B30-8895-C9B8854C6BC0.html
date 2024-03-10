@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/logo.ico">
     <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
-	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script>
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
 </head>
 
 <body onload="init();">
@@ -37,7 +37,7 @@
         </nav>
     </header>
     <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
-<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (168 Tabellen). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (169 Tabellen). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
 	</div>
 
      <article style="border-style: dotted;">
@@ -96,6 +96,15 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkMap" name="idArtworkMap" checked="checked" >
+	   <label for="idArtworkMap" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
+	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
+	   <div><article><div id="idMapArtwork10330" class="openStreetMap"></div> <script>const idMapArtwork10330 = L.map("idMapArtwork10330").setView([51.3154546,9.4924096], 6); const idMapArtwork10330_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork10330);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapArtwork10330).bindPopup('<div>Berlin: Besitzer</div>');</script></article></div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkCategories" name="idArtworkCategories" checked="checked" >
 	   <label for="idArtworkCategories" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gruppierungen</label>
@@ -121,7 +130,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Besitzer</label>
 	   <div class="label-value-pair">
 	   <div class="label">Besitzer</div>
-        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/76D161B2-EDA6-4FBE-AFD5-ACB2E534D626.html">Auf jeden Fall bis 1915 / Sammlung Anton von Werner</a></li></ul></div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/76D161B2-EDA6-4FBE-AFD5-ACB2E534D626.html">Auf jeden Fall bis 1915 / Berlin, Sammlung Anton von Werner</a></li></ul></div>
     </div>
     </div>     
 

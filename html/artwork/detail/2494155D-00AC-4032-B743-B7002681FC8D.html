@@ -53,9 +53,9 @@
           </p>
      </article>
      <article>
-        <div class="detail">
-            <h2 class="article-title detail-title">Anton von Werner - Blick auf die Insel Capri von einer Anhöhe über Sorrent (1869)</h2>
-      <section class="detailImages">
+			<div class="detail">
+				<h2 class="article-title detail-title">Anton von Werner - Blick auf die Insel Capri von einer Anhöhe über Sorrent (1869)</h2>
+		  <section class="detailImages">
                 <h3 class="block-title">Bilder</h3>
 	   <div class="imageContainer"><a href="https://antonvonwerner.de/html/artwork/image/A3316429-32A3-4023-B9EF-ED65DAA3CD68.html"><figure>   
 					<img src="https://antonvonwerner.de/shared/resources/art/A3316429-32A3-4023-B9EF-ED65DAA3CD68_preview.jpg" alt="Bild zum Kunstwerk">
@@ -126,7 +126,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
 	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
-	   <div><article><div id="idMapArtwork9201" class="openStreetMap"></div> <script>const idMapArtwork9201 = L.map("idMapArtwork9201").setView([51.3154546,9.4924096], 6); const idMapArtwork9201_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork9201);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.001344013,8.383673926], {title: "Staatliche Kunsthalle Karlsruhe (Gebäude)"}).addTo(idMapArtwork9201).bindPopup('<div>Staatliche Kunsthalle Karlsruhe (Gebäude): Besitzer</div>'); L.marker([43.000000000,12.000000000], {icon: orangeIcon,title: "Italien"}).addTo(idMapArtwork9201).bindPopup('<div>Italien: Bildinhalt</div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapArtwork9201).bindPopup('<div>Zeughaus (Berlin): Ausstellungen</div>'); L.marker([40.550000000,14.233333000], {icon: orangeIcon,title: "Capri"}).addTo(idMapArtwork9201).bindPopup('<div>Capri: Bildinhalt</div>'); L.marker([40.626111000,14.376111000], {icon: orangeIcon,title: "Sorrent"}).addTo(idMapArtwork9201).bindPopup('<div>Sorrent: Bildinhalt</div>'); L.marker([35.000000000,18.000000000], {icon: orangeIcon,title: "Mittelmeer"}).addTo(idMapArtwork9201).bindPopup('<div>Mittelmeer: Bildinhalt</div>');</script></article></div>
+	   <div><article><div id="idMapArtwork" class="openStreetMap"></div> <script>const idMapArtwork = L.map("idMapArtwork").setView([49.001344013,8.383673926], 6); const idMapArtwork_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.001344013,8.383673926], {title: "Staatliche Kunsthalle Karlsruhe (Gebäude)"}).addTo(idMapArtwork).bindPopup('<div>Staatliche Kunsthalle Karlsruhe (Gebäude): Besitzer</div>'); L.marker([43.000000000,12.000000000], {icon: orangeIcon,title: "Italien"}).addTo(idMapArtwork).bindPopup('<div>Italien: Bildinhalt</div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapArtwork).bindPopup('<div>Zeughaus (Berlin): Ausstellungen</div>'); L.marker([40.550000000,14.233333000], {icon: orangeIcon,title: "Capri"}).addTo(idMapArtwork).bindPopup('<div>Capri: Bildinhalt</div>'); L.marker([40.626111000,14.376111000], {icon: orangeIcon,title: "Sorrent"}).addTo(idMapArtwork).bindPopup('<div>Sorrent: Bildinhalt</div>'); L.marker([35.000000000,18.000000000], {icon: orangeIcon,title: "Mittelmeer"}).addTo(idMapArtwork).bindPopup('<div>Mittelmeer: Bildinhalt</div>');</script></article></div>
     </div>     
 
     <div class="info-block openClose">
@@ -245,8 +245,8 @@
 					<figcaption>Anton von Werner - Häuser auf der Insel Capri (1869)<span class="credit">2014: Fondation Custodia, Collection Frits Lugt, Paris</span></figcaption> </figure></a></div> 
 	   </section>
 	   
-        </div>
-    </article>
+			</div>
+		</article>
     <footer>
     <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
 	- Anton von Werner-Archiv (2024) /

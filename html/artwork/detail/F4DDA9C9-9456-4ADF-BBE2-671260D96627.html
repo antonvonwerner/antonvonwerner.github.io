@@ -53,9 +53,9 @@
           </p>
      </article>
      <article>
-        <div class="detail">
-            <h2 class="article-title detail-title">Anton von Werner - Das Schlachtfeld von Sedan (Südseite) (1882)</h2>
-      <section class="detailImages">
+			<div class="detail">
+				<h2 class="article-title detail-title">Anton von Werner - Das Schlachtfeld von Sedan (Südseite) (1882)</h2>
+		  <section class="detailImages">
                 <h3 class="block-title">Bilder</h3>
 	   <div class="imageContainer"><a href="https://antonvonwerner.de/html/artwork/image/1DFB2564-2A4C-48C1-B20E-254B26B5D5DD.html"><figure><img src="https://antonvonwerner.de/shared/resources/art/1DFB2564-2A4C-48C1-B20E-254B26B5D5DD_preview.jpg" alt="Bild zum Kunstwerk"></figure></a><div class="image-caption">Mit Farbkarte / Grauskala<span class="credit">2020: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.de">Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International</a> Bildarchiv Saarlandmuseum - Maaß, Raphael</span></div></div><div class="imageContainer"><a href="https://antonvonwerner.de/html/artwork/image/F865B196-1401-4F7F-A5D8-3C5F34972EC0.html"><figure>   
 					<img src="https://antonvonwerner.de/shared/resources/art/F865B196-1401-4F7F-A5D8-3C5F34972EC0_preview.jpg" alt="Bild zum Kunstwerk">
@@ -118,7 +118,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
 	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
-	   <div><article><div id="idMapArtwork4055" class="openStreetMap"></div> <script>const idMapArtwork4055 = L.map("idMapArtwork4055").setView([51.3154546,9.4924096], 6); const idMapArtwork4055_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork4055);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.665833000,4.883611000], {icon: orangeIcon,title: "Cheveuges"}).addTo(idMapArtwork4055).bindPopup('<div>Cheveuges: Bildinhalt</div>'); L.marker([49.701944000,4.940278000], {icon: orangeIcon,title: "Sedan"}).addTo(idMapArtwork4055).bindPopup('<div>Sedan: Bildinhalt</div>'); L.marker([49.232650000,6.996190000], {icon: orangeIcon,title: "Saarbrücken"}).addTo(idMapArtwork4055).bindPopup('<div>Saarbrücken: Besitzer</div>'); L.marker([48.759664297,8.236853768], {title: "Hotel Messmer (Baden-Baden)"}).addTo(idMapArtwork4055).bindPopup('<div>Hotel Messmer (Baden-Baden): Ausstellungen</div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapArtwork4055).bindPopup('<div>Zeughaus (Berlin): Ausstellungen</div>');</script></article></div>
+	   <div><article><div id="idMapArtwork" class="openStreetMap"></div> <script>const idMapArtwork = L.map("idMapArtwork").setView([49.665833000,4.883611000], 6); const idMapArtwork_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.665833000,4.883611000], {icon: orangeIcon,title: "Cheveuges"}).addTo(idMapArtwork).bindPopup('<div>Cheveuges: Bildinhalt</div>'); L.marker([49.701944000,4.940278000], {icon: orangeIcon,title: "Sedan"}).addTo(idMapArtwork).bindPopup('<div>Sedan: Bildinhalt</div>'); L.marker([49.232650000,6.996190000], {icon: orangeIcon,title: "Saarbrücken"}).addTo(idMapArtwork).bindPopup('<div>Saarbrücken: Besitzer</div>'); L.marker([48.759664297,8.236853768], {title: "Hotel Messmer (Baden-Baden)"}).addTo(idMapArtwork).bindPopup('<div>Hotel Messmer (Baden-Baden): Ausstellungen</div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapArtwork).bindPopup('<div>Zeughaus (Berlin): Ausstellungen</div>');</script></article></div>
     </div>     
 
     <div class="info-block openClose">
@@ -261,8 +261,8 @@
 					<figcaption>Anton von Werner - Villa Clara in Baveno (1887)<span class="credit">1913: Mittler und Sohn</span></figcaption> </figure></a></div> 
 	   </section>
 	   
-        </div>
-    </article>
+			</div>
+		</article>
     <footer>
     <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
 	- Anton von Werner-Archiv (2024) /

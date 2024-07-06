@@ -2,1683 +2,1952 @@
 <html lang="de">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Neuigkeiten</title>
-    <meta name="description" content="Anton von Werner-Archiv">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="labelwords" content="Anton von Werner">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" sizes="128x128" href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Neuigkeiten</title>
+	<meta name="description" content="Anton von Werner-Archiv">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="labelwords" content="Anton von Werner">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="128x128"
+		href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="https://antonvonwerner.de/shared/resources/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="https://antonvonwerner.de/shared/resources/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">	
-	<link rel="icon" type="image/png" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">	
+	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="228x228"
+		href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
 	<link rel="apple-touch-icon" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
 
-    <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<link href="https://antonvonwerner.de/shared/styles/avw-archiv.css" type="text/css" rel="stylesheet">
 	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script>
 </head>
 
 <body onload="init();">
-    <header>
-        <div class="header-title">
-            <h1>
-                <a href="https://antonvonwerner.de/index.html" class="logo-container">
-                    <img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von Werner-Archiv
-                </a>
-            </h1>
-        </div>
-        <nav>
-            <a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
-            <a href="https://antonvonwerner.de/html/imageSearch.html">Bilder</a>
-            <a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte</a>
-            <a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
-            <a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
-            <a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
-            <a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
-            <a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
-            <a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
-            <a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
-            <a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
-        </nav>
-    </header>
-    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
-<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen). Dr. Bartmann ist nicht Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
+	<header>
+		<div class="header-title">
+			<h1>
+				<a href="https://antonvonwerner.de/index.html" class="logo-container">
+					<img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von
+					Werner-Archiv
+				</a>
+			</h1>
+		</div>
+		<nav>
+			<a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
+			<a href="https://antonvonwerner.de/html/imageSearch.html">Bilder</a>
+			<a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte</a>
+			<a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
+			<a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
+			<a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
+			<a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
+			<a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
+			<a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
+			<a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
+			<a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
+		</nav>
+	</header>
+	<img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
+	<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem
+		Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen). Dr. Bartmann ist nicht
+		Betreiber dieser Seiten und trägt keine Verantwortung für den Inhalt und mögliche Fehler.
 	</div>
 
-     <article style="border-style: dotted;">
-          <h2 class="detail-title" style="text-align: center; font-size: large;">Werkverzeichnis der Zeichnungen</h2>
-          <p class="detail-title" style="text-align: center; font-size: xx-large;">Ein Aufruf</p>
-          <p>Anton von Werner hat mehrere tausend Handzeichnungen sowohl
-          als freie Kompositionen wie auch als Vorstudien und Skizzen für Gemälde geschaffen. Sämliche seiner
-          Arbeiten auf Papier sollen in einem Werkverzeichnis katalogisiert werden. Während die Bestände in
-          öffentlichem Besitz und teils auch in privatem Besitz erfasst sind, tritt doch auch immer wieder
-          Unbekanntes oder verschollen Geglaubtes zu Tage. Entsprechende Hinweise werden erbeten an:
-          </p>
-          <p> Dr. Dominik Bartmann<br><a class="contact" href="mailto:dominik_bartmann@yahoo.de?subject=Werkverzeichnis%20der%20Zeichnungen">dominik_bartmann@yahoo.de</a>
-          </p>
-     </article>
-        <article>
-        <h2 class="article-title">Neuigkeiten</h2>
-            <table class="table">
-                <caption class="tableInfo">Neuigkeiten zu Anton von Werner (Stand 16.06.2024):</caption>
-				<thead>
-                <tr>
-                    <th>Wann</th>
-                    <th>Info</th>
-                    <th>Link</th>
-                </tr>
-				</thead><tbody>
-		  <tr>
-                    <td>26.05.2024</td>
-                    <td>Das Auktionshaus Plückbaum versteigert am 15.06.2024 eine Studie von General von Podbielski zu dem Diorama der Kapitulationsverhandlungen in Donchery zum Mindestgebot von 300 Euro. Zu diesem Preis wurde das Blatt auch verkauft.</td>
-                    <td>
-                        <a href="https://katalog.plueckbaum.de/#/catalogue/357/article/1362">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>04.05.2024</td>
-                    <td>Am 31. Mai versteigert das Auktionshaus Bassenge eine Farbskizze der Ehefrau des Künstlers auf der Veranda der Sommerresidenz in Berlin-Wannsee zum Schätzpreis von 3000 Euro. Verkauft wurden sie für 2500 EUR (inkl. Aufgeld).</td>
-                    <td>
-                        <a href="https://bassenge.com/lots/123/67170">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>04.05.2024</td>
-                    <td>Am 30. Mai versteigert das Auktionshaus Grisebach in einem Los zwei Ölstudien des Vesuvs zum geschätzten Preis von 4000 bis 6000 Euro. Verkauft wurden sie für 10160 EUR (inkl. Aufgeld).</td>
-                    <td>
-                        <a href="https://www.grisebach.com/kaufen/kataloge/detailansicht.html?katalog%5Bkat_id%5D=358&amp;katalog%5Blistnum%5D=4068036">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>23.04.2024</td>
-                    <td>Das Düsseldorfer Auktionshaus bietet mit Los 1174 eine Farbskizze eines lesenden Knaben an, die typisch für die Düsseldorfer Malerschule ist. Die Zuordnung zu Anton von Werner ist laut Dr. Bartmann fraglich, was ich stark unterstützen würde.</td>
-                    <td>
-                        <a href="https://www.duesseldorfer-auktionshaus.de/de/katalog/view/01_2024/750">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>27.03.2024</td>
-                    <td>Auf der Detailseite eines Briefs/Textes wird nun eine Karte mit den relevanten Orten angezeigt, wie Besitzer, Absenderort, Empfängerort und Textinhalt. Auf der Suchseite gibt es dazu eine Gesamtübersicht.</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/html/messageSearch.html">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>27.03.2024</td>
-                    <td>Auf der Detailseite einer Beziehung werden nun alle Briefe zwischen den Personen und alle Ereignisse, die beide betreffen, angezeigt</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/html/personRelSearch.html">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>17.03.2024</td>
-                    <td>Auf der Detailseite eines Ereignisses wird nun eine Karte mit den Orten angezeigt, die mit diesem Ereignis in Verbindung stehen. Entweder direkt oder über eine übergeordnete Gruppe. Falls es die Datenlage zulässt, kann man einen Weg nachzeichnen, wie ich es als Beispiel in der von Werner gut beschriebenen <a href="https://antonvonwerner.de/html/event/detail/799CCE24-A57C-449C-9466-CAA013D50C55.html">Wanderung durch den Odenwald 1863</a> umgesetzt habe.</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/html/eventSearch.html">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>15.03.2024</td>
-                    <td>Das Auktionshaus Satow bietet eine Zeichnung des Monogrammisten 'A.v.W.' mit einem Startpreis von 220 Euro an, die sie 'wohl' Anton von Werner zuordnen. Dr. Bartmann gibt jedoch an, was ich auch vermutet habe, dass die Signatur und der Stil völlig untypisch für von Werner sind, die Zuordnung also mehr als fraglich ist. Die Zeichnung wurde nicht verkauft</td>
-                    <td>
-                        <a href="https://satow.atgportals.net/auctions/8851/satow10045/lot-details/25417cc2-e228-485f-96cd-b1310114889b">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>10.03.2024</td>
-                    <td>Auf der Detailseite eines Kunstwerks wird nun eine Karte mit den relevanten Orten angezeigt, die für das Werk von Bedeutung sind, wie Ausstellungen, Besitzer, Auktionen, Ehrungen oder Bildinhalt. Darüber hinaus gibt es eine Karte mit den Geburtsorten der Personen, mit denen Anton von Werner in Beziehung stand.</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/html/imageSearch.html">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>09.03.2024</td>
-                    <td>Das Datenmodell für Beziehungen wurde aktualisiert, um nun die Möglichkeit zu bieten, mehrere Beziehungstypen zwischen zwei Personen zu erfassen. Auf der Beziehungsseite werden zudem die Briefe zwischen ihnen angezeigt.</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/html/personRelSearch.html">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>08.03.2024</td>
-                    <td>Das Auktionshaus Grob versteigert am 23. März ein dilettantisches Damenporträt aus dem Jahr 1870, welches sie ernsthaft Anton von Werner zuordnen. Verkauft wurde es für 900 Euro.</td>
-                    <td>
-                        <a href="https://www.auktionshaus-groben.de/de/l/8722/anton_von_werner_1843-1915_damenportr&aelig;t_1870?aid=15&amp;aname=fruehjahrsauktion">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>05.03.2024</td>
-                    <td>Eine Karte der Orte wurde nun auch in die Übersichtsseiten für Ereignisse, Ehrungen, Ämter, Besitzer, Ausstellungen und Auktionen integriert.</td>
-                    <td>
-                        <a href="">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>04.03.2024</td>
-                    <td>Das Auktionshaus Dannenberg versteigert vom 21.03.2024 bis zum 23.04.2024 zwei Zeichnungen Anton von Werners zu 300 bzw. 400 Euro Startpreis. Verkauft wurden sie für 650 bzw. 600 Euro.</td>
-                    <td>
-                        <a href="https://www.auktion-dannenberg.de/de/l/708493/werner_anton_von_1843_franfurt-o_-_berlin_1915?aid=296329&amp;aname=173_kunst-_antiquit&aelig;tenauktion">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>01.03.2024</td>
-                    <td>Das Auktionshaus Mag. Johann Sebök versteigert am 9. März eine Farbskizze eines Soldaten, die sie Anton von Werner zuschreiben. Dem kann ich mich jedoch nicht anschließen, da es weder inhaltlich noch technisch zu ihm passt. Das Bild fand kein Gebot.</td>
-                    <td>
-                        <a href="https://seb&oelig;k.atgportals.net/auctions/8837/seb&oelig;k10027/lot-details/838ce68a-bf63-4b4e-b066-b122010513d2">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>25.02.2024</td>
-                    <td>Auf der Startseite finden Sie nun eine Übersicht der aktuell ausgestellten Werke. Für Hinweise und Korrekturen bin ich sehr dankbar.</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/index.html#onDisplayMap">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>24.12.2023</td>
-                    <td>Das Auktionshaus Rheine versteigert am 20.01.2024 eine Zeichnung des Bernhardiners der Familie von Werner, Barry, mit Startpreis von 100 Euro. Verkauft wurde sie für 260 Euro.</td>
-                    <td>
-                        <a href="https://www.lot-tissimo.com/de-de/auction-catalogues/ah-rheine/catalogue-id-auktio2-10083/lot-053e382b-517e-4993-9e6e-b0de00ab14b7">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>09.11.2023</td>
-                    <td>Die Galerie Bassenge bietet in ihrer Kunstauktion 122: Zeichnungen des 16.-19. Jahrhunderts (1.12.2023) ein Los (<a href="https://antonvonwerner.de/html/artwork/detail/6639118C-0107-4AC0-8468-B12B8F87A527.html">Bildnis Julie Loewe mit blauem Kleid und roter Schleife</a>) von Anton von Werner zum Schätzpreis von 1200 Euro an. Verkauft wurde es für 1612 Euro inklusive Aufgeld.</td>
-                    <td>
-                        <a href="https://bassenge.com/lots/122/67590#mz-expanded-view-365644482400">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>04.11.2023</td>
-                    <td>Das Auktionshaus Grisebach versteigert am 30.11.2023 eine <a href="https://antonvonwerner.de/html/artwork/detail/A1F9ED4C-8955-49A7-8D40-86DDAF90288A.html">Studie</a> zur Krönung Friedrichs I. mit Schätzpreis von 3000 bis 4000 Euro. Verkauft wurde das Blatt weit über Schätzpreis für 8255 EUR inklusive Aufgeld.</td>
-                    <td>
-                        <a href="https://www.grisebach.com/kaufen/kataloge/detailansicht.html?katalog%5Bkat_id%5D=353&amp;katalog%5Blistnum%5D=4066070&amp;cHash=4c3f075e6adc170d22cab99b129210c9">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>14.10.2023</td>
-                    <td>Das Auktionshaus Nosbüsch & Stucke versteigert am 9. November 2023 zwei Lose (562 und 563) von Anton von Werner.  Eine Modellstudie zu <cite>Konradin von Hohenstaufen und Friedrich von Baden, das Todesurteil hörend</cite> und zwei Rückenakte. Die Lose gingen erst im Nachverkauf über die Ladentheke.</td>
-                    <td>
-                        <a href="https://nosbuesch-stucke.berlin/auktion/?tag=cat_11">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>14.10.2023</td>
-                    <td>Am 18. November 2023 versteigert das Auktionshaus Schramm eine Gouache eines Alpenveilchens, die mit der Signatur von Anton von Werner versehen ist. Das Auktionshaus vermerkt die Zuordnung mit recht jedoch mit einem Fragezeichen. Das Blatt wurde nicht verkauft.</td>
-                    <td>
-                        <a href="https://www.lot-tissimo.com/de-de/auction-catalogues/antiquariat-schramm/catalogue-id-schramm10016/lot-469b624f-66da-4e11-a161-b098009e4433">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>29.09.2023</td>
-                    <td>Am 10. Oktober 2023 versteigert das Auktionshaus Weidler eine Ölskizze mit dem Titel <cite>Angriff des 107. Regiments bei Sedan</cite>. Der Startpreis beträgt 1500 Euro. Dr. Bartmann hat meine Vermutung bestätigt, dass die Zuordnung aufgrund der Malweise fraglich ist. Das Los wurde nicht verkauft</td>
-                    <td>
-                        <a href="https://www.lot-tissimo.com/de-de/auction-catalogues/weidler/catalogue-id-auktio53-10052/lot-34796209-5f62-4017-9ad9-b08a00efe6b8">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>23.09.2023</td>
-                    <td>Am 21. Oktober 2023 versteigert das Auktionshaus Quentin zwei Zeichnungen von Anton von Werner unter den Losnummern 158 und 159. Eine Studie zu den Treppenhausbildern in Kiel und eine Studie zu "Don Quijote und den Ziegenhirten". Beide Lose wurden verkauft.</td>
-                    <td>
-                        <a href="https://www.lot-tissimo.com/de-de/auction-catalogues/quentin/catalogue-id-auktio44-10011">Link</a>
-                    </td>
-		  </tr>
-	   
-		  <tr>
-                    <td>19.06.2023</td>
-                    <td>Umstellung des Webauftritts auf eine neue Domain. Die alte Domain ist weiterhin erreichbar.</td>
-                    <td>
-                        <a href="https://antonvonwerner.de/">Link</a>
-                    </td>
-		  </tr>
-	   
-				</tbody>
-            </table>
-    </article>
-    <article>
-        <h2 class="article-title">Änderungshistorie</h2>
-            <table class="table">
-			 <caption class="tableInfo">Letzte Änderungen (Stand 16.06.2024):</caption>
-			<thead>       
-                <tr>
-                    <th>Bild</th>
-                    <th>Wann</th>
-                    <th>Was</th>
-                    <th>Aktion</th>
-                </tr>
+	<article style="border-style: dotted;">
+		<h2 class="detail-title" style="text-align: center; font-size: large;">Werkverzeichnis der Zeichnungen</h2>
+		<p class="detail-title" style="text-align: center; font-size: xx-large;">Ein Aufruf</p>
+		<p>Anton von Werner hat mehrere tausend Handzeichnungen sowohl
+			als freie Kompositionen wie auch als Vorstudien und Skizzen für Gemälde geschaffen. Sämliche seiner
+			Arbeiten auf Papier sollen in einem Werkverzeichnis katalogisiert werden. Während die Bestände in
+			öffentlichem Besitz und teils auch in privatem Besitz erfasst sind, tritt doch auch immer wieder
+			Unbekanntes oder verschollen Geglaubtes zu Tage. Entsprechende Hinweise werden erbeten an:
+		</p>
+		<p> Dr. Dominik Bartmann<br><a class="contact"
+				href="mailto:dominik_bartmann@yahoo.de?subject=Werkverzeichnis%20der%20Zeichnungen">dominik_bartmann@yahoo.de</a>
+		</p>
+	</article>
+	<article>
+		<h2 class="article-title">Neuigkeiten</h2>
+		<table class="table">
+			<caption class="tableInfo">Neuigkeiten zu Anton von Werner (Stand 06.07.2024):</caption>
+			<thead>
+				<tr>
+					<th>Wann</th>
+					<th>Info</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>06.07.2024</td>
+					<td>Am 13. Juli versteigert das Auktionshaus Dawo (Auktion 262) acht Zeichnungen Anton von Werners.
+					</td>
+					<td> <a href="https://dawo.de/katalog/">Link</a> </td>
+				</tr>
+				<tr>
+					<td>26.05.2024</td>
+					<td>Das Auktionshaus Plückbaum versteigert am 15.06.2024 eine Studie von General von Podbielski zu
+						dem Diorama der Kapitulationsverhandlungen in Donchery zum Mindestgebot von 300 Euro. Zu diesem
+						Preis wurde das Blatt auch verkauft.</td>
+					<td> <a href="https://katalog.plueckbaum.de/#/catalogue/357/article/1362">Link</a> </td>
+				</tr>
+				<tr>
+					<td>04.05.2024</td>
+					<td>Am 31. Mai versteigert das Auktionshaus Bassenge eine Farbskizze der Ehefrau des Künstlers auf
+						der Veranda der Sommerresidenz in Berlin-Wannsee zum Schätzpreis von 3000 Euro. Verkauft wurden
+						sie für 2500 EUR (inkl. Aufgeld).</td>
+					<td> <a href="https://bassenge.com/lots/123/67170">Link</a> </td>
+				</tr>
+				<tr>
+					<td>04.05.2024</td>
+					<td>Am 30. Mai versteigert das Auktionshaus Grisebach in einem Los zwei Ölstudien des Vesuvs zum
+						geschätzten Preis von 4000 bis 6000 Euro. Verkauft wurden sie für 10160 EUR (inkl. Aufgeld).
+					</td>
+					<td> <a
+							href="https://www.grisebach.com/kaufen/kataloge/detailansicht.html?katalog%5Bkat_id%5D=358&amp;katalog%5Blistnum%5D=4068036">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>23.04.2024</td>
+					<td>Das Düsseldorfer Auktionshaus bietet mit Los 1174 eine Farbskizze eines lesenden Knaben an, die
+						typisch für die Düsseldorfer Malerschule ist. Die Zuordnung zu Anton von Werner ist laut Dr.
+						Bartmann fraglich, was ich stark unterstützen würde.</td>
+					<td> <a href="https://www.duesseldorfer-auktionshaus.de/de/katalog/view/01_2024/750">Link</a> </td>
+				</tr>
+				<tr>
+					<td>27.03.2024</td>
+					<td>Auf der Detailseite eines Briefs/Textes wird nun eine Karte mit den relevanten Orten angezeigt,
+						wie Besitzer, Absenderort, Empfängerort und Textinhalt. Auf der Suchseite gibt es dazu eine
+						Gesamtübersicht.</td>
+					<td> <a href="https://antonvonwerner.de/html/messageSearch.html">Link</a> </td>
+				</tr>
+				<tr>
+					<td>27.03.2024</td>
+					<td>Auf der Detailseite einer Beziehung werden nun alle Briefe zwischen den Personen und alle
+						Ereignisse, die beide betreffen, angezeigt</td>
+					<td> <a href="https://antonvonwerner.de/html/personRelSearch.html">Link</a> </td>
+				</tr>
+				<tr>
+					<td>17.03.2024</td>
+					<td>Auf der Detailseite eines Ereignisses wird nun eine Karte mit den Orten angezeigt, die mit
+						diesem Ereignis in Verbindung stehen. Entweder direkt oder über eine übergeordnete Gruppe. Falls
+						es die Datenlage zulässt, kann man einen Weg nachzeichnen, wie ich es als Beispiel in der von
+						Werner gut beschriebenen <a
+							href="https://antonvonwerner.de/html/event/detail/799CCE24-A57C-449C-9466-CAA013D50C55.html">Wanderung
+							durch den Odenwald 1863</a> umgesetzt habe.</td>
+					<td> <a href="https://antonvonwerner.de/html/eventSearch.html">Link</a> </td>
+				</tr>
+				<tr>
+					<td>15.03.2024</td>
+					<td>Das Auktionshaus Satow bietet eine Zeichnung des Monogrammisten 'A.v.W.' mit einem Startpreis
+						von 220 Euro an, die sie 'wohl' Anton von Werner zuordnen. Dr. Bartmann gibt jedoch an, was ich
+						auch vermutet habe, dass die Signatur und der Stil völlig untypisch für von Werner sind, die
+						Zuordnung also mehr als fraglich ist. Die Zeichnung wurde nicht verkauft</td>
+					<td> <a
+							href="https://satow.atgportals.net/auctions/8851/satow10045/lot-details/25417cc2-e228-485f-96cd-b1310114889b">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>10.03.2024</td>
+					<td>Auf der Detailseite eines Kunstwerks wird nun eine Karte mit den relevanten Orten angezeigt, die
+						für das Werk von Bedeutung sind, wie Ausstellungen, Besitzer, Auktionen, Ehrungen oder
+						Bildinhalt. Darüber hinaus gibt es eine Karte mit den Geburtsorten der Personen, mit denen Anton
+						von Werner in Beziehung stand.</td>
+					<td> <a href="https://antonvonwerner.de/html/imageSearch.html">Link</a> </td>
+				</tr>
+				<tr>
+					<td>09.03.2024</td>
+					<td>Das Datenmodell für Beziehungen wurde aktualisiert, um nun die Möglichkeit zu bieten, mehrere
+						Beziehungstypen zwischen zwei Personen zu erfassen. Auf der Beziehungsseite werden zudem die
+						Briefe zwischen ihnen angezeigt.</td>
+					<td> <a href="https://antonvonwerner.de/html/personRelSearch.html">Link</a> </td>
+				</tr>
+				<tr>
+					<td>08.03.2024</td>
+					<td>Das Auktionshaus Grob versteigert am 23. März ein dilettantisches Damenporträt aus dem Jahr
+						1870, welches sie ernsthaft Anton von Werner zuordnen. Verkauft wurde es für 900 Euro.</td>
+					<td> <a
+							href="https://www.auktionshaus-groben.de/de/l/8722/anton_von_werner_1843-1915_damenportr&aelig;t_1870?aid=15&amp;aname=fruehjahrsauktion">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>05.03.2024</td>
+					<td>Eine Karte der Orte wurde nun auch in die Übersichtsseiten für Ereignisse, Ehrungen, Ämter,
+						Besitzer, Ausstellungen und Auktionen integriert.</td>
+					<td> <a href="">Link</a> </td>
+				</tr>
+				<tr>
+					<td>04.03.2024</td>
+					<td>Das Auktionshaus Dannenberg versteigert vom 21.03.2024 bis zum 23.04.2024 zwei Zeichnungen Anton
+						von Werners zu 300 bzw. 400 Euro Startpreis. Verkauft wurden sie für 650 bzw. 600 Euro.</td>
+					<td> <a
+							href="https://www.auktion-dannenberg.de/de/l/708493/werner_anton_von_1843_franfurt-o_-_berlin_1915?aid=296329&amp;aname=173_kunst-_antiquit&aelig;tenauktion">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>01.03.2024</td>
+					<td>Das Auktionshaus Mag. Johann Sebök versteigert am 9. März eine Farbskizze eines Soldaten, die
+						sie Anton von Werner zuschreiben. Dem kann ich mich jedoch nicht anschließen, da es weder
+						inhaltlich noch technisch zu ihm passt. Das Bild fand kein Gebot.</td>
+					<td> <a
+							href="https://seb&oelig;k.atgportals.net/auctions/8837/seb&oelig;k10027/lot-details/838ce68a-bf63-4b4e-b066-b122010513d2">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>25.02.2024</td>
+					<td>Auf der Startseite finden Sie nun eine Übersicht der aktuell ausgestellten Werke. Für Hinweise
+						und Korrekturen bin ich sehr dankbar.</td>
+					<td> <a href="https://antonvonwerner.de/index.html#onDisplayMap">Link</a> </td>
+				</tr>
+				<tr>
+					<td>24.12.2023</td>
+					<td>Das Auktionshaus Rheine versteigert am 20.01.2024 eine Zeichnung des Bernhardiners der Familie
+						von Werner, Barry, mit Startpreis von 100 Euro. Verkauft wurde sie für 260 Euro.</td>
+					<td> <a
+							href="https://www.lot-tissimo.com/de-de/auction-catalogues/ah-rheine/catalogue-id-auktio2-10083/lot-053e382b-517e-4993-9e6e-b0de00ab14b7">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>09.11.2023</td>
+					<td>Die Galerie Bassenge bietet in ihrer Kunstauktion 122: Zeichnungen des 16.-19. Jahrhunderts
+						(1.12.2023) ein Los (<a
+							href="https://antonvonwerner.de/html/artwork/detail/6639118C-0107-4AC0-8468-B12B8F87A527.html">Bildnis
+							Julie Loewe mit blauem Kleid und roter Schleife</a>) von Anton von Werner zum Schätzpreis
+						von 1200 Euro an. Verkauft wurde es für 1612 Euro inklusive Aufgeld.</td>
+					<td> <a href="https://bassenge.com/lots/122/67590#mz-expanded-view-365644482400">Link</a> </td>
+				</tr>
+				<tr>
+					<td>04.11.2023</td>
+					<td>Das Auktionshaus Grisebach versteigert am 30.11.2023 eine <a
+							href="https://antonvonwerner.de/html/artwork/detail/A1F9ED4C-8955-49A7-8D40-86DDAF90288A.html">Studie</a>
+						zur Krönung Friedrichs I. mit Schätzpreis von 3000 bis 4000 Euro. Verkauft wurde das Blatt weit
+						über Schätzpreis für 8255 EUR inklusive Aufgeld.</td>
+					<td> <a
+							href="https://www.grisebach.com/kaufen/kataloge/detailansicht.html?katalog%5Bkat_id%5D=353&amp;katalog%5Blistnum%5D=4066070&amp;cHash=4c3f075e6adc170d22cab99b129210c9">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>14.10.2023</td>
+					<td>Das Auktionshaus Nosbüsch & Stucke versteigert am 9. November 2023 zwei Lose (562 und 563) von
+						Anton von Werner. Eine Modellstudie zu <cite>Konradin von Hohenstaufen und Friedrich von Baden,
+							das Todesurteil hörend</cite> und zwei Rückenakte. Die Lose gingen erst im Nachverkauf über
+						die Ladentheke.</td>
+					<td> <a href="https://nosbuesch-stucke.berlin/auktion/?tag=cat_11">Link</a> </td>
+				</tr>
+				<tr>
+					<td>14.10.2023</td>
+					<td>Am 18. November 2023 versteigert das Auktionshaus Schramm eine Gouache eines Alpenveilchens, die
+						mit der Signatur von Anton von Werner versehen ist. Das Auktionshaus vermerkt die Zuordnung mit
+						recht jedoch mit einem Fragezeichen. Das Blatt wurde nicht verkauft.</td>
+					<td> <a
+							href="https://www.lot-tissimo.com/de-de/auction-catalogues/antiquariat-schramm/catalogue-id-schramm10016/lot-469b624f-66da-4e11-a161-b098009e4433">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>29.09.2023</td>
+					<td>Am 10. Oktober 2023 versteigert das Auktionshaus Weidler eine Ölskizze mit dem Titel
+						<cite>Angriff des 107. Regiments bei Sedan</cite>. Der Startpreis beträgt 1500 Euro. Dr.
+						Bartmann hat meine Vermutung bestätigt, dass die Zuordnung aufgrund der Malweise fraglich ist.
+						Das Los wurde nicht verkauft</td>
+					<td> <a
+							href="https://www.lot-tissimo.com/de-de/auction-catalogues/weidler/catalogue-id-auktio53-10052/lot-34796209-5f62-4017-9ad9-b08a00efe6b8">Link</a>
+					</td>
+				</tr>
+				<tr>
+					<td>23.09.2023</td>
+					<td>Am 21. Oktober 2023 versteigert das Auktionshaus Quentin zwei Zeichnungen von Anton von Werner
+						unter den Losnummern 158 und 159. Eine Studie zu den Treppenhausbildern in Kiel und eine Studie
+						zu "Don Quijote und den Ziegenhirten". Beide Lose wurden verkauft.</td>
+					<td> <a
+							href="https://www.lot-tissimo.com/de-de/auction-catalogues/quentin/catalogue-id-auktio44-10011">Link</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</article>
+	<article>
+		<h2 class="article-title">Änderungshistorie</h2>
+		<table class="table">
+			<caption class="tableInfo">Letzte Änderungen (Stand 16.06.2024):</caption>
+			<thead>
+				<tr>
+					<th>Bild</th>
+					<th>Wann</th>
+					<th>Was</th>
+					<th>Aktion</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/AB60CA8D-297A-4EDB-A5B8-448917D25CD7.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/AB60CA8D-297A-4EDB-A5B8-448917D25CD7.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>16.06.2024</td>
-					<td>Hagenbeck, Evelyn Galerie und Verlag (Hrsg.) (1977) <cite>Gemälde - Handzeichnungen - Graphik. 19. und 20. Jahrhundert</cite>. Katalog 1. Hamburg: Galerie Hagenbeck</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Hagenbeck, Evelyn Galerie und Verlag (Hrsg.) (1977) <cite>Gemälde - Handzeichnungen - Graphik.
+							19. und 20. Jahrhundert</cite>. Katalog 1. Hamburg: Galerie Hagenbeck</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>16.06.2024</td>
-					<td>Kunsthalle Bremen</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Kunsthalle Bremen</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/AE517670-A92C-4640-A50F-C2E6E0FC780B.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/AE517670-A92C-4640-A50F-C2E6E0FC780B.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>16.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 37. Auktion (1981)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 37. Auktion (1981)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/D985C20A-753D-4C9A-B63B-491D61D416BC.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/D985C20A-753D-4C9A-B63B-491D61D416BC.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>16.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 39. Auktion (1982)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 39. Auktion (1982)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/03456FE6-9AA1-4EB6-806D-D953694F8B06.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/03456FE6-9AA1-4EB6-806D-D953694F8B06.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>16.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 26. Alte und Neue Kunst, Teil 1 (November 1975)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 26. Alte und Neue Kunst, Teil 1 (November 1975)
+					</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/54078F89-0C8B-4520-A28B-E484BADE5917.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/54078F89-0C8B-4520-A28B-E484BADE5917.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner - Tanzordnung (1869 ?)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Tanzordnung (1869 ?)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/C0367D79-ADA2-4AC6-BC16-CD80DD486F6E.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/9587CD4F-895A-4D75-9DD0-8945080920CA_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/C0367D79-ADA2-4AC6-BC16-CD80DD486F6E.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/9587CD4F-895A-4D75-9DD0-8945080920CA_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner - Herrenporträt in Uniform (1885)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Herrenporträt in Uniform (1885)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/A24DB9AF-3C58-4691-88F0-332F28EA9A8B.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/9D9AD95D-3005-4578-99B3-7408CFFEABA5_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/A24DB9AF-3C58-4691-88F0-332F28EA9A8B.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/9D9AD95D-3005-4578-99B3-7408CFFEABA5_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner - Albumblatt für die Hauschronik der Herzogin Alexandrine von Sachsen-Coburg-Gotha, gewidmet ihrem Gemahl, Herzog Ernst II., zur silbernen Hochzeit, das Jahr 1857 betreffend (1867)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Albumblatt für die Hauschronik der Herzogin Alexandrine von
+						Sachsen-Coburg-Gotha, gewidmet ihrem Gemahl, Herzog Ernst II., zur silbernen Hochzeit, das Jahr
+						1857 betreffend (1867)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/50ABA1A2-915E-413C-BAF4-139523AC6784.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/8CE546DC-A6CE-4B17-9BF5-846D0F3FB83D_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/50ABA1A2-915E-413C-BAF4-139523AC6784.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/8CE546DC-A6CE-4B17-9BF5-846D0F3FB83D_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner - Albumblatt für die Hauschronik der Herzogin Alexandrine von Sachsen-Coburg-Gotha, gewidmet ihrem Gemahl, Herzog Ernst II., zur silbernen Hochzeit, das Jahr 1856 betreffend (1867)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Albumblatt für die Hauschronik der Herzogin Alexandrine von
+						Sachsen-Coburg-Gotha, gewidmet ihrem Gemahl, Herzog Ernst II., zur silbernen Hochzeit, das Jahr
+						1856 betreffend (1867)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/E29C421B-5A15-4C37-9760-6750C9A91663.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/8CDA5C32-E6E4-4A64-BF84-81E9E11D5B41_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/E29C421B-5A15-4C37-9760-6750C9A91663.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/8CDA5C32-E6E4-4A64-BF84-81E9E11D5B41_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner - Albumblatt für die Hauschronik der Herzogin Alexandrine von Sachsen-Coburg-Gotha, gewidmet ihrem Gemahl, Herzog Ernst II., zur silbernen Hochzeit, das Jahr 1851 betreffend (1867)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Albumblatt für die Hauschronik der Herzogin Alexandrine von
+						Sachsen-Coburg-Gotha, gewidmet ihrem Gemahl, Herzog Ernst II., zur silbernen Hochzeit, das Jahr
+						1851 betreffend (1867)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/48D31F79-46C8-4BF8-9D20-67167A761757.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/6FC693D4-3FA5-4E8B-B6D7-577B0F771FDE_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/48D31F79-46C8-4BF8-9D20-67167A761757.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/6FC693D4-3FA5-4E8B-B6D7-577B0F771FDE_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner - Sitzender Mann (Studie) (1867)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Sitzender Mann (Studie) (1867)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/761DBE46-18DA-47EB-A96F-FDC4F00A03AB.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/761DBE46-18DA-47EB-A96F-FDC4F00A03AB.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge (1978, Mai) <cite>Auktion 31: Alte und Neue Kunst, Teil 1</cite>. Berlin: Galerie Bassenge</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Galerie Bassenge (1978, Mai) <cite>Auktion 31: Alte und Neue Kunst, Teil 1</cite>. Berlin:
+						Galerie Bassenge</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/5533B82B-4DD0-49E8-B41F-34DB0178B7C9.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/5533B82B-4DD0-49E8-B41F-34DB0178B7C9.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge (1972) <cite>Auktion 20: Alte und Neue Kunst, Teil 1</cite>. Berlin: Galerie Bassenge</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Galerie Bassenge (1972) <cite>Auktion 20: Alte und Neue Kunst, Teil 1</cite>. Berlin: Galerie
+						Bassenge</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/F55019CF-ED37-4D0B-A499-E2212ED4979C.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/F55019CF-ED37-4D0B-A499-E2212ED4979C.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Karl & Faber (1968, Juni) <cite>Auktion 113</cite>. München: Karl & Faber</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Karl & Faber (1968, Juni) <cite>Auktion 113</cite>. München: Karl & Faber</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/50B66568-7643-467F-A9DD-F027E368C9D0.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/50B66568-7643-467F-A9DD-F027E368C9D0.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Noack, Friedrich (1927) <cite>Das Deutschtum in Rom seit dem Ausgang des Mittelalters</cite>. Band 2. Stuttgart: Deutsche Verlags-Anstalt</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Noack, Friedrich (1927) <cite>Das Deutschtum in Rom seit dem Ausgang des Mittelalters</cite>.
+						Band 2. Stuttgart: Deutsche Verlags-Anstalt</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/8E1DE3AB-7170-46B0-B2D3-6D6404116CEC.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/8E1DE3AB-7170-46B0-B2D3-6D6404116CEC.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Precht, Friedrich (Hrsg.) (Sa, 01.02.1890) <cite>Die Kunst für Alle</cite>.  Jg. 5 Heft 9. München: Verlagsanstalt für Kunst und Wissenschaft</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Precht, Friedrich (Hrsg.) (Sa, 01.02.1890) <cite>Die Kunst für Alle</cite>. Jg. 5 Heft 9.
+						München: Verlagsanstalt für Kunst und Wissenschaft</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/8C785059-25E4-4143-B5A3-0350ED8BDD86.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/8C785059-25E4-4143-B5A3-0350ED8BDD86.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Auktionshaus Plückbaum (2024) <cite>Auktion 357: Kunst- und Antiquitätenauktion</cite>. Reichsstraße 4 (Berlin-Charlottenburg): Auktionshaus Plückbaum</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Auktionshaus Plückbaum (2024) <cite>Auktion 357: Kunst- und Antiquitätenauktion</cite>.
+						Reichsstraße 4 (Berlin-Charlottenburg): Auktionshaus Plückbaum</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/4542C1D4-8CDF-47DD-8D30-D9E017D7FF69.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/4542C1D4-8CDF-47DD-8D30-D9E017D7FF69.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Kröner, Adolf (Hrsg.) (1915) <cite>Die Gartenlaube</cite>.  Jg. 1915. Leipzig: Ernst Keil</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Kröner, Adolf (Hrsg.) (1915) <cite>Die Gartenlaube</cite>. Jg. 1915. Leipzig: Ernst Keil</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/20AF2BE8-D438-48F7-9672-98B5ACED09EF.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/20AF2BE8-D438-48F7-9672-98B5ACED09EF.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td> Sachsen-Coburg-Gotha, Alexandrine von (1867) <cite>Haus-Chronik 1842–1867</cite>. Einband-Slg. / F 61,136. Landesbibliothek Coburg: Landesbibliothek Coburg</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td> Sachsen-Coburg-Gotha, Alexandrine von (1867) <cite>Haus-Chronik 1842–1867</cite>. Einband-Slg.
+						/ F 61,136. Landesbibliothek Coburg: Landesbibliothek Coburg</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/D8EDCA8E-419E-4321-B632-1F196B51E8FA.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/D8EDCA8E-419E-4321-B632-1F196B51E8FA.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Pantenius, Theodor Hermann (Hrsg.) / Szczepanski, Paul von (Hrsg.) (1895, August) <cite>Velhagen & Klasings Monatshefte</cite>.  Jg. 9 Heft 12. Bielefeld: Verlag Velhagen und Klasing</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Pantenius, Theodor Hermann (Hrsg.) / Szczepanski, Paul von (Hrsg.) (1895, August) <cite>Velhagen
+							& Klasings Monatshefte</cite>. Jg. 9 Heft 12. Bielefeld: Verlag Velhagen und Klasing</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/CB62BAFF-7D59-4306-9E80-8ADDAB115FDD.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/CB62BAFF-7D59-4306-9E80-8ADDAB115FDD.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Gries, Wilhelm (Red.) (Do, 03.08.1950) <cite>Der Tag</cite>.  Jg. 3. Reichsstraße 4 (Berlin-Charlottenburg): Deutschland-Verlag GmbH</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Gries, Wilhelm (Red.) (Do, 03.08.1950) <cite>Der Tag</cite>. Jg. 3. Reichsstraße 4
+						(Berlin-Charlottenburg): Deutschland-Verlag GmbH</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/7AC8711E-E949-4C38-A3B1-A4B2B40A33B8.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/7AC8711E-E949-4C38-A3B1-A4B2B40A33B8.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge (1983) <cite>Auktion 41: Alte und Neue Kunst, Teil 2</cite>. Berlin: Galerie Bassenge</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Galerie Bassenge (1983) <cite>Auktion 41: Alte und Neue Kunst, Teil 2</cite>. Berlin: Galerie
+						Bassenge</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Marianne_Breslauer">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Marianne Breslauer</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Marianne Breslauer</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Alfred Caspari</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Alfred Caspari</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Fritz_Sturm_(Maler)">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Fritz Sturm</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Fritz Sturm</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://www.galerie20.smb.museum/kunsthandel/K46.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Margarethe Noelle</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Margarethe Noelle</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/message/detail/AD883D46-4F05-4F4A-896E-76A31AA93858.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/message.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/message/detail/AD883D46-4F05-4F4A-896E-76A31AA93858.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/message.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Anton von Werner (Fr, 16.12.1870)</td> 
-		  			<td>Einf&uuml;gen: Brief/Text</td>
+					<td>Anton von Werner (Fr, 16.12.1870)</td>
+					<td>Einf&uuml;gen: Brief/Text</td>
 				</tr>
-		   
-				<tr>
-					<td>
-						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>01.06.2024</td>
-					<td>Privatsammlung Rom</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
-				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Privatsammlung Karlsruhe</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Privatsammlung Rom</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
+				<tr>
+					<td>
+						<a href="#">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>01.06.2024</td>
+					<td>Privatsammlung Karlsruhe</td>
+					<td>Einf&uuml;gen: Institution</td>
+				</tr>
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Deutsche_Akademie_Rom_Villa_Massimo'">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Deutsche Akademie Rom Villa Massimo</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Deutsche Akademie Rom Villa Massimo</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://www.galerie20.smb.museum/kunsthandel/K46.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Matthiesen</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Galerie Matthiesen</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://www.plueckbaum.de/index.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Auktionshaus Plückbaum</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Auktionshaus Plückbaum</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Landesbibliothek_Coburg">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Landesbibliothek Coburg</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Landesbibliothek Coburg</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Deutschland-Verlag GmbH</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Deutschland-Verlag GmbH</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Exil-CDU">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Exil-CDU</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Exil-CDU</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Kunsthandel Sabine Helms</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Kunsthandel Sabine Helms</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://antonvonwerner.de/html/event/detail/B40F94C8-71B1-469F-BD4B-73A75034BE9C.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/event.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/event.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Von April 1902 bis Mai 1902: Aufenthalt in Rom</td> 
-		  			<td>Einf&uuml;gen: Ereignis</td>
+					<td>Von April 1902 bis Mai 1902: Aufenthalt in Rom</td>
+					<td>Einf&uuml;gen: Ereignis</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/357BA9D4-B3F1-4E63-9A0E-D1536D1222F0.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/357BA9D4-B3F1-4E63-9A0E-D1536D1222F0.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 31. Alte und Neue Kunst, Teil 2 (Mai 1978)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 31. Alte und Neue Kunst, Teil 2 (Mai 1978)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/6590DB9E-4203-4168-BEA3-E988D779E78E.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/6590DB9E-4203-4168-BEA3-E988D779E78E.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 20. Alte und Neue Kunst, Teil 1 (November 1972)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 20. Alte und Neue Kunst, Teil 1 (November 1972)
+					</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/3D4FDF73-F073-4CCF-8B00-3A6B550AA97F.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/3D4FDF73-F073-4CCF-8B00-3A6B550AA97F.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Joseph Fach. Oberursel (Taunus). Auktion: 36. Auktion (1986)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Joseph Fach. Oberursel (Taunus). Auktion: 36. Auktion (1986)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/2E5113BA-DADB-4960-8732-535105B0BF2F.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/2E5113BA-DADB-4960-8732-535105B0BF2F.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 36. Auktion (1980)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 36. Auktion (1980)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/2257A47A-1F6A-4529-8497-A50E9DC58BE1.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/2257A47A-1F6A-4529-8497-A50E9DC58BE1.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Karl &amp; Faber. München. Auktion: 113. Auktion von Do, 06.06.1968 bis Fr, 07.06.1968</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Karl &amp; Faber. München. Auktion: 113. Auktion von Do, 06.06.1968 bis Fr, 07.06.1968</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/2AD431E8-7F0E-4E42-A16C-B0DF947204FF.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/2AD431E8-7F0E-4E42-A16C-B0DF947204FF.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 525. Auktion (1983)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 525. Auktion (1983)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/B80D0D56-D504-4892-898C-533765C63360.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/B80D0D56-D504-4892-898C-533765C63360.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 35. Alte und Neue Kunst (April 1980)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 35. Alte und Neue Kunst (April 1980)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/C18AC08A-147B-46E1-997C-8D92E98BE6BE.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/C18AC08A-147B-46E1-997C-8D92E98BE6BE.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 46. Alte und Neue Kunst, Teil 2 von Fr, 06.12.1985 bis Sa, 07.12.1985</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 46. Alte und Neue Kunst, Teil 2 von Fr, 06.12.1985
+						bis Sa, 07.12.1985</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/91290CC2-53EE-41B7-BFD8-C353B59E6DF7.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/91290CC2-53EE-41B7-BFD8-C353B59E6DF7.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 45. Alte und Neue Kunst, Teil 2 (Mai 1985)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 45. Alte und Neue Kunst, Teil 2 (Mai 1985)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/5455AE51-6512-4E65-B403-5DED477154CE.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/5455AE51-6512-4E65-B403-5DED477154CE.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 8. Auktion (1966)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 8. Auktion (1966)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/0B4B5FD4-5064-4F45-BB84-A2742625F4D7.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/0B4B5FD4-5064-4F45-BB84-A2742625F4D7.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 9. Auktion (April 1967)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 9. Auktion (April 1967)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/BAFB58AA-239B-4B25-B0D7-5306BFB8919E.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/BAFB58AA-239B-4B25-B0D7-5306BFB8919E.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Auktionshaus Pl&uuml;ckbaum. Auktionshaus Pl&uuml;ckbaum. Auktion: 357. Kunst- und Antiquitätenauktion von Fr, 14.06.2024 bis Sa, 15.06.2024</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Auktionshaus Pl&uuml;ckbaum. Auktionshaus Pl&uuml;ckbaum. Auktion: 357. Kunst- und
+						Antiquitätenauktion von Fr, 14.06.2024 bis Sa, 15.06.2024</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/0E46EBE5-5237-4584-995A-9714C50C8BD3.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/0E46EBE5-5237-4584-995A-9714C50C8BD3.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 21. Auktion (Mo, 14.05.1973)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 21. Auktion (Mo, 14.05.1973)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/0699C567-A438-4DFF-97CA-7365625AAE34.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/0699C567-A438-4DFF-97CA-7365625AAE34.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Rudolph Lepke&rsquo;s Kunst-Auctions-Haus. Berlin. Auktion: 1222. Auktion (1900)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Rudolph Lepke&rsquo;s Kunst-Auctions-Haus. Berlin. Auktion: 1222. Auktion (1900)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/F96DE314-9ABE-4F63-85AA-B48B0B678D73.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/F96DE314-9ABE-4F63-85AA-B48B0B678D73.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 22. Auktion (Di, 06.11.1973)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 22. Auktion (Di, 06.11.1973)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/51806201-78B4-4C75-BAEB-A53080CBDADE.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/51806201-78B4-4C75-BAEB-A53080CBDADE.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Auktionshaus Lempertz. Köln. Auktion: 637. Auktion (Fr, 26.05.1989)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Auktionshaus Lempertz. Köln. Auktion: 637. Auktion (Fr, 26.05.1989)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/B98F039F-5A50-4AFE-B7AF-7525F44E928E.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/B98F039F-5A50-4AFE-B7AF-7525F44E928E.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>01.06.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 41. Alte und Neue Kunst, Teil 2 (1983)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 41. Alte und Neue Kunst, Teil 2 (1983)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/92CF1D27-04F5-491A-83B6-508B59536F46.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/B6954BE4-9DF9-4620-999C-26851E010BDE_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/92CF1D27-04F5-491A-83B6-508B59536F46.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/B6954BE4-9DF9-4620-999C-26851E010BDE_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Anton von Werner - Ölstudie des Vesuvs am „Abend“ (1869)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Ölstudie des Vesuvs am „Abend“ (1869)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/B6A585B7-04F6-434A-856E-641721A3106F.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/B811BE81-486C-4C8B-B426-E318BC29057C_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/B6A585B7-04F6-434A-856E-641721A3106F.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/B811BE81-486C-4C8B-B426-E318BC29057C_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Anton von Werner - Ölstudie des Vesuvs am „Morgen“ (1869)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Ölstudie des Vesuvs am „Morgen“ (1869)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/23723F37-CE96-488F-8D28-5530224EBAA7.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/23723F37-CE96-488F-8D28-5530224EBAA7.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Anton von Werner - Saarbrücker Straßentypen (1876)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - Saarbrücker Straßentypen (1876)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/945C6F86-72BA-42D8-902F-476EE65E857C.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/copyrightInfo.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/945C6F86-72BA-42D8-902F-476EE65E857C.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/copyrightInfo.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Anton von Werner (Fraglich) - Lesender Knabe (1885)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner (Fraglich) - Lesender Knabe (1885)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/EC855BD4-92F5-4276-8E34-4C85C6961136.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/EC855BD4-92F5-4276-8E34-4C85C6961136.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Anton von Werner - „Bemooster Bursche zieh‘ ich aus“, Entwurf zu dem gleichnamigen Liedtext von Gustav Schwab bzw. für ein <cite>Wartburg-Album</cite> (1863)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
+					<td>Anton von Werner - „Bemooster Bursche zieh‘ ich aus“, Entwurf zu dem gleichnamigen Liedtext von
+						Gustav Schwab bzw. für ein <cite>Wartburg-Album</cite> (1863)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/94B23DDB-4099-4F6C-BB4C-67C77FAEAF72.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/94B23DDB-4099-4F6C-BB4C-67C77FAEAF72.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Villa Grisebach (2024, Mai) <cite>Auktion 358: Kunst des 19. Jahrhunderts</cite>. Berlin: Grisebach</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Villa Grisebach (2024, Mai) <cite>Auktion 358: Kunst des 19. Jahrhunderts</cite>. Berlin:
+						Grisebach</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/F0FBFCEA-A400-4456-92E0-8338E0E0CB8E.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/F0FBFCEA-A400-4456-92E0-8338E0E0CB8E.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Galerie Bassenge (1979) <cite>Auktion 34: Alte und Neue Kunst, Teil 2</cite>. Berlin: Galerie Bassenge</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Galerie Bassenge (1979) <cite>Auktion 34: Alte und Neue Kunst, Teil 2</cite>. Berlin: Galerie
+						Bassenge</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/01CFF425-7592-46DD-BD7A-A9D803339C15.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/01CFF425-7592-46DD-BD7A-A9D803339C15.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Karl & Faber (1990) <cite>Auktion 180: Kunst alter und neuer Meister</cite>. München: Karl & Faber</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Karl & Faber (1990) <cite>Auktion 180: Kunst alter und neuer Meister</cite>. München: Karl &
+						Faber</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/D8E8800B-8C5D-4764-A2CC-FA842E2BC2DD.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/D8E8800B-8C5D-4764-A2CC-FA842E2BC2DD.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Karl & Faber (1978) <cite>Auktion 147: Kunst. Graphik, Zeichnungen, Aquarelle und Ölgemälde alter und neuer Meister, Landkarten, Veduten, dekorative Graphik</cite>. München: Karl & Faber</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Karl & Faber (1978) <cite>Auktion 147: Kunst. Graphik, Zeichnungen, Aquarelle und Ölgemälde
+							alter und neuer Meister, Landkarten, Veduten, dekorative Graphik</cite>. München: Karl &
+						Faber</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/26E92D02-4FFA-4DD3-93C0-47BF4F5D80D0.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/26E92D02-4FFA-4DD3-93C0-47BF4F5D80D0.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Düsseldorfer Auktionshaus (2024, April) <cite>Kunstauktion</cite>. Düsseldorf: Düsseldorfer Auktionshaus</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Düsseldorfer Auktionshaus (2024, April) <cite>Kunstauktion</cite>. Düsseldorf: Düsseldorfer
+						Auktionshaus</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/personRel/detail/D91BD031-0B7A-4126-9E7A-D5012A47EE7C.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/relation.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/personRel/detail/D91BD031-0B7A-4126-9E7A-D5012A47EE7C.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/relation.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Freund: Carl Cowen Schirm</td> 
-		  			<td>Einf&uuml;gen: Beziehung zu einer Person</td>
+					<td>Freund: Carl Cowen Schirm</td>
+					<td>Einf&uuml;gen: Beziehung zu einer Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Werner_Zabel">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Werner Zabel</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Werner Zabel</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://www.legimi.de/e-book-constanze-manziarly-stefan-dietrich,b2516034.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Andrä Manziarly</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Andrä Manziarly</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Paul Söborg</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Paul Söborg</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>B. Freudmann</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>B. Freudmann</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Rudolf_Hellgrewe">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Rudolf Hellgrewe</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Rudolf Hellgrewe</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Richard_Scholz_(Maler)">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Richard Scholz</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Richard Scholz</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>C. Reinke</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>C. Reinke</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Walter Busch</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Walter Busch</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://nat.museum-digital.de/people/152066">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Otto Andres</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Otto Andres</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Richard_Friese">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Richard Friese</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Richard Friese</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Eugen_Bracht">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Eugen Bracht</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Eugen Bracht</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Carl_Alexander_(Sachsen-Weimar-Eisenach)">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Großherzog Carl Alexander von Sachsen-Weimar-Eisenac</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Großherzog Carl Alexander von Sachsen-Weimar-Eisenac</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/message/detail/2F6A8722-C62A-4EF3-B942-B497019A5903.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/message/6CB294E7-1E11-412A-BABA-3C4E503E03BE_thumb.jpg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/message/detail/2F6A8722-C62A-4EF3-B942-B497019A5903.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/message/6CB294E7-1E11-412A-BABA-3C4E503E03BE_thumb.jpg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Anton von Werner an Carl Cowen Schirm (So, 31.03.1912)</td> 
-		  			<td>Einf&uuml;gen: Brief/Text</td>
+					<td>Anton von Werner an Carl Cowen Schirm (So, 31.03.1912)</td>
+					<td>Einf&uuml;gen: Brief/Text</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://antonvonwerner.de/html/misc/detail/666A6121-FBB1-44FE-B9DC-9BF9E8ECC830.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Illustrationsentwürfe (4 Skizzenblätter)</td> 
-		  			<td>Einf&uuml;gen: Sonstiges</td>
+					<td>Illustrationsentwürfe (4 Skizzenblätter)</td>
+					<td>Einf&uuml;gen: Sonstiges</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Privatsammlung Münsterland</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Privatsammlung Münsterland</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Sammlung Wredemann</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Sammlung Wredemann</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Kunstkabinett Dagmar Fleischmann</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Kunstkabinett Dagmar Fleischmann</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://www.sfg-ht.de/verband/sparkassen-kulturstiftung">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Sparkassen-Kulturstiftung Hessen-Thüringen</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Sparkassen-Kulturstiftung Hessen-Thüringen</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Schloss_Wernigerode">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Schloß Wernigerode. Zentrum für Kunst- und Kulturgeschichte des 19. Jahrhunderts</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Schloß Wernigerode. Zentrum für Kunst- und Kulturgeschichte des 19. Jahrhunderts</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://zeller.de/">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Auktionshaus Michael Zeller</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Auktionshaus Michael Zeller</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Kunstforum_Ostdeutsche_Galerie">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Kunstforum Ostdeutsche Galerie</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Kunstforum Ostdeutsche Galerie</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://antonvonwerner.de/html/event/detail/4E23CB83-7816-4B40-B9FB-30FAFA0E41EA.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/event.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/event.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Von Fr, 01.10.1869 bis So, 03.10.1869: Studienetappe Neapel</td> 
-		  			<td>Einf&uuml;gen: Ereignis</td>
+					<td>Von Fr, 01.10.1869 bis So, 03.10.1869: Studienetappe Neapel</td>
+					<td>Einf&uuml;gen: Ereignis</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/0E0BCF9C-38B3-4F52-9715-63287A35F892.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/0E0BCF9C-38B3-4F52-9715-63287A35F892.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 123. Zeichnungen des 16. bis 19. Jahrhunderts (Fr, 31.05.2024)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 123. Zeichnungen des 16. bis 19. Jahrhunderts (Fr,
+						31.05.2024)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/ED90B84C-F906-4AAC-A613-89D5821C19C3.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/ED90B84C-F906-4AAC-A613-89D5821C19C3.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Grisebach. Berlin. Auktion: 358. Kunst des 19. Jahrhunderts (Do, 30.05.2024)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Grisebach. Berlin. Auktion: 358. Kunst des 19. Jahrhunderts (Do, 30.05.2024)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/8FCDBA98-8022-4D83-81F4-75A21C57432C.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/8FCDBA98-8022-4D83-81F4-75A21C57432C.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 34. Alte und Neue Kunst (Dezember 1979)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 34. Alte und Neue Kunst (Dezember 1979)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/372D424D-DA96-444F-88FC-D7DB3D567904.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/372D424D-DA96-444F-88FC-D7DB3D567904.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Karl &amp; Faber. München. Auktion: 180. Kunst alter und neuer Meister (November 1990)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Karl &amp; Faber. München. Auktion: 180. Kunst alter und neuer Meister (November 1990)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/A9CF4371-8E92-4EA5-92A6-4D39C8503674.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/A9CF4371-8E92-4EA5-92A6-4D39C8503674.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Karl &amp; Faber. München. Auktion: 147. Kunst. Graphik, Zeichnungen, Aquarelle und Ölgemälde alter und neuer Meister, Landkarten, Veduten, dekorative Graphik von Fr, 26.05.1978 bis Di, 29.05.1979</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Karl &amp; Faber. München. Auktion: 147. Kunst. Graphik, Zeichnungen, Aquarelle und Ölgemälde
+						alter und neuer Meister, Landkarten, Veduten, dekorative Graphik von Fr, 26.05.1978 bis Di,
+						29.05.1979</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/E64CC8C8-DEC7-4201-98DA-19EBCA7DDDD7.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/E64CC8C8-DEC7-4201-98DA-19EBCA7DDDD7.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>D&uuml;sseldorfer Auktionshaus. D&uuml;sseldorfer Auktionshaus. Auktion: 01/2024. Kunstauktion von Fr, 03.05.2024 bis Sa, 04.05.2024</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>D&uuml;sseldorfer Auktionshaus. D&uuml;sseldorfer Auktionshaus. Auktion: 01/2024. Kunstauktion
+						von Fr, 03.05.2024 bis Sa, 04.05.2024</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/B25B21EC-CB13-4737-8800-2861D4D54AD6.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/B25B21EC-CB13-4737-8800-2861D4D54AD6.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 504. Auktion (1978)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 504. Auktion (1978)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/63D9F5E8-D762-420E-8708-4CAABB278D2A.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/63D9F5E8-D762-420E-8708-4CAABB278D2A.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Auktionshaus Mich&aelig;l Zeller. Auktionshaus Mich&aelig;l Zeller. Auktion: XXI.. Internationale Bodensee-Kunstauktion (1979)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Auktionshaus Mich&aelig;l Zeller. Auktionshaus Mich&aelig;l Zeller. Auktion: XXI..
+						Internationale Bodensee-Kunstauktion (1979)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/32480A66-9967-4802-BF6D-5761F488CF7A.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/32480A66-9967-4802-BF6D-5761F488CF7A.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 28. Auktion (1976)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 28. Auktion (1976)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/8D118702-2EB7-42DB-AB9A-7F8E75DF8FE3.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/8D118702-2EB7-42DB-AB9A-7F8E75DF8FE3.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 30. Auktion (1977)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 30. Auktion (1977)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/F0D00F90-5A2B-4CB1-AFCE-542CD84CF3DB.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/F0D00F90-5A2B-4CB1-AFCE-542CD84CF3DB.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>04.05.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 24. Auktion (1974)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 24. Auktion (1974)</td>
+					<td>Einf&uuml;gen: Auktion</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/59585DD1-1F37-40BF-B6E1-FE1EF4242595.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/59585DD1-1F37-40BF-B6E1-FE1EF4242595.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Leo Spik (1982) <cite>Auktion 522</cite>. Berlin: LEO SPIK Auktionshaus</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Leo Spik (1982) <cite>Auktion 522</cite>. Berlin: LEO SPIK Auktionshaus</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/550AD6D0-E91F-44CA-8297-17BE02ED7F01.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/550AD6D0-E91F-44CA-8297-17BE02ED7F01.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Leo Spik (1986) <cite>Auktion 536</cite>. Berlin: LEO SPIK Auktionshaus</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
+					<td>Leo Spik (1986) <cite>Auktion 536</cite>. Berlin: LEO SPIK Auktionshaus</td>
+					<td>Einf&uuml;gen: Publikation</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=nid%3D116482516">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Otto Feucht</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Otto Feucht</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Dr. Beuß</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Dr. Beuß</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Anna Groß</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Anna Groß</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://de.wikipedia.org/wiki/Elisabeth_Rohde">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Elisabeth Rohde</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Elisabeth Rohde</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="#">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/person.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Jens-Peter Ketels</td> 
-		  			<td>Einf&uuml;gen: Person</td>
+					<td>Jens-Peter Ketels</td>
+					<td>Einf&uuml;gen: Person</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://holy-verlag.com/">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Holy Verlag</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Holy Verlag</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://lobid.org/gnd/1012574-7">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Haus der Bücher AG, Basel - L'Art Ancien S. A., Zürich</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Haus der Bücher AG, Basel - L'Art Ancien S. A., Zürich</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://www.galerie20.smb.museum/kunsthandel/K40.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>L’Art Ancien</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>L’Art Ancien</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
+
 				<tr>
 					<td>
 						<a href="https://lobid.org/gnd/1012574-7">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg" alt = "Link zum News-Bild">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/institution.svg"
+								alt="Link zum News-Bild">
 						</a>
 					</td>
 					<td>14.04.2024</td>
-					<td>Haus der Bücher</td> 
-		  			<td>Einf&uuml;gen: Institution</td>
+					<td>Haus der Bücher</td>
+					<td>Einf&uuml;gen: Institution</td>
 				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/B90AC276-0266-4F45-8DA8-94D5358BF206.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 521. Auktion (1982)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/4AE4E190-89C8-4DE4-915A-43239FE15FDC.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 12. Auktion (1968)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/FD653F24-37C0-4547-A438-64F304E87586.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 10. Auktion von Di, 07.11.1967 bis Sa, 11.11.1967</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/A982BB0D-90AC-4A6A-B40F-9318EAAAE81B.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 15. Auktion (1970)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/C7DCC6C5-159C-4056-86EC-EFBFE99377B5.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 54. Auktion (Mi, 08.11.1989)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/B8C8C0ED-51EA-40F4-99E9-00E91BD4CC3F.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 52. Auktion (Mi, 02.11.1988)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/0318904E-0E40-476C-B060-D11239BF0301.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>Haus der B&uuml;cher AG, Basel - L&apos;Art Ancien S. A., Z&uuml;rich. Schweiz. Auktion: 44. Autographen, Widmungsexemplare, Handzeichnungen u. Graphik, moderne illustrierte Bücher (Mi, 18.10.1967)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/C5FF33AE-3A66-4A57-A1EB-C6763EDC2E24.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 526. Auktion (1983)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/E2B081CE-4596-47EB-A6F0-4B74BC8CA4C2.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 488. Auktion (1974)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/F4971263-748E-458A-B261-DC81855CB15E.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 522. Auktion von Do, 07.10.1982 bis Sa, 09.10.1982</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/auction/detail/BD4DF798-5B52-47A4-B501-5CBFBB993957.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>14.04.2024</td>
-					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 536. Auktion (April 1986)</td> 
-		  			<td>Einf&uuml;gen: Auktion</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/3DEF6992-5A42-41E1-B175-06B640698BFD.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Anton von Werner - Victor von Scheffel (1878)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/artwork/detail/4FB0FD57-7806-4971-B010-4F078CF78330.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/art/95C0DF09-4A98-457B-95D9-7F704BCD370C_thumb.jpg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Anton von Werner - Die Ehefrau des Künstlers auf der Veranda der Sommerresidenz in Berlin-Wannsee (1882)</td> 
-		  			<td>Einf&uuml;gen: Kunstwerk</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/4580B0A5-69D3-4F9D-B6F5-F77923750201.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Pretzell, Lothar (1949) <cite>Adolph Menzel und seine Zeit</cite>. Celler Schloss: Kunstgutlager Schloss Celle (Zonal Fine Arts Repository)</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/55E7113F-F30A-4F50-89FE-FCE9E9D3DF1C.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Vorstand der Deutschen Jahrhundertausstellung (Hrsg.) (1906) <cite>Ausstellung deutscher Kunst aus der Zeit von 1775-1875 in der Königlichen Nationalgalerie, Berlin 1906</cite>. Band 2. München: Bruckmann Verlag</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/AD55B824-B511-4DC4-A1D3-29159486330D.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Wirth, Irmgard (1990) <cite>Berliner Malerei im 19. Jahrhundert</cite>. Berlin: Siedler Verlag</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/BD0010E8-3FDC-4162-B7D1-FFB543C015CD.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Honisch, Dieter (1979) <cite>Die Nationalgalerie Berlin</cite>. Recklinghausen: Verlag Aurel Bongers</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
-				</tr>
-		   
-				<tr>
-					<td>
-						<a href="https://antonvonwerner.de/html/publication/detail/C41BB86B-1036-452D-8673-ADF2B5C31E38.html">
-							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg" alt = "Link zum News-Bild">
-						</a>
-					</td>
-					<td>27.03.2024</td>
-					<td>Dieterich, Barbara / Krieger, Peter / Krimmel-Decker, Elisabeth (1976) <cite>Verzeichnis der Gemälde und Skulpturen des 19. Jahrhunderts</cite>. Band 1. Berlin: Staatliche Museen zu Berlin</td> 
-		  			<td>Einf&uuml;gen: Publikation</td>
-				</tr>
-		   
-				</tbody>
-            </table>
-    </article>
 
-    <footer>
-    <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
-	- Anton von Werner-Archiv (2024) /
-        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
-    </p>
-    </footer>
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/B90AC276-0266-4F45-8DA8-94D5358BF206.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 521. Auktion (1982)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/4AE4E190-89C8-4DE4-915A-43239FE15FDC.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 12. Auktion (1968)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/FD653F24-37C0-4547-A438-64F304E87586.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 10. Auktion von Di, 07.11.1967 bis Sa, 11.11.1967
+					</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/A982BB0D-90AC-4A6A-B40F-9318EAAAE81B.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 15. Auktion (1970)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/C7DCC6C5-159C-4056-86EC-EFBFE99377B5.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 54. Auktion (Mi, 08.11.1989)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/B8C8C0ED-51EA-40F4-99E9-00E91BD4CC3F.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>Galerie Bassenge. Galerie Bassenge. Auktion: 52. Auktion (Mi, 02.11.1988)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/0318904E-0E40-476C-B060-D11239BF0301.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>Haus der B&uuml;cher AG, Basel - L&apos;Art Ancien S. A., Z&uuml;rich. Schweiz. Auktion: 44.
+						Autographen, Widmungsexemplare, Handzeichnungen u. Graphik, moderne illustrierte Bücher (Mi,
+						18.10.1967)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/C5FF33AE-3A66-4A57-A1EB-C6763EDC2E24.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 526. Auktion (1983)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/E2B081CE-4596-47EB-A6F0-4B74BC8CA4C2.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 488. Auktion (1974)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/F4971263-748E-458A-B261-DC81855CB15E.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 522. Auktion von Do, 07.10.1982 bis Sa, 09.10.1982</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/auction/detail/BD4DF798-5B52-47A4-B501-5CBFBB993957.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/auction.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>14.04.2024</td>
+					<td>LEO SPIK Auktionshaus. Berlin. Auktion: 536. Auktion (April 1986)</td>
+					<td>Einf&uuml;gen: Auktion</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/3DEF6992-5A42-41E1-B175-06B640698BFD.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/noImage.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Anton von Werner - Victor von Scheffel (1878)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/artwork/detail/4FB0FD57-7806-4971-B010-4F078CF78330.html">
+							<img class="newsImg"
+								src="https://antonvonwerner.de/shared/resources/art/95C0DF09-4A98-457B-95D9-7F704BCD370C_thumb.jpg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Anton von Werner - Die Ehefrau des Künstlers auf der Veranda der Sommerresidenz in
+						Berlin-Wannsee (1882)</td>
+					<td>Einf&uuml;gen: Kunstwerk</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/4580B0A5-69D3-4F9D-B6F5-F77923750201.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Pretzell, Lothar (1949) <cite>Adolph Menzel und seine Zeit</cite>. Celler Schloss: Kunstgutlager
+						Schloss Celle (Zonal Fine Arts Repository)</td>
+					<td>Einf&uuml;gen: Publikation</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/55E7113F-F30A-4F50-89FE-FCE9E9D3DF1C.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Vorstand der Deutschen Jahrhundertausstellung (Hrsg.) (1906) <cite>Ausstellung deutscher Kunst
+							aus der Zeit von 1775-1875 in der Königlichen Nationalgalerie, Berlin 1906</cite>. Band 2.
+						München: Bruckmann Verlag</td>
+					<td>Einf&uuml;gen: Publikation</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/AD55B824-B511-4DC4-A1D3-29159486330D.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Wirth, Irmgard (1990) <cite>Berliner Malerei im 19. Jahrhundert</cite>. Berlin: Siedler Verlag
+					</td>
+					<td>Einf&uuml;gen: Publikation</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/BD0010E8-3FDC-4162-B7D1-FFB543C015CD.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Honisch, Dieter (1979) <cite>Die Nationalgalerie Berlin</cite>. Recklinghausen: Verlag Aurel
+						Bongers</td>
+					<td>Einf&uuml;gen: Publikation</td>
+				</tr>
+
+				<tr>
+					<td>
+						<a
+							href="https://antonvonwerner.de/html/publication/detail/C41BB86B-1036-452D-8673-ADF2B5C31E38.html">
+							<img class="newsImg" src="https://antonvonwerner.de/shared/resources/publication.svg"
+								alt="Link zum News-Bild">
+						</a>
+					</td>
+					<td>27.03.2024</td>
+					<td>Dieterich, Barbara / Krieger, Peter / Krimmel-Decker, Elisabeth (1976) <cite>Verzeichnis der
+							Gemälde und Skulpturen des 19. Jahrhunderts</cite>. Band 1. Berlin: Staatliche Museen zu
+						Berlin</td>
+					<td>Einf&uuml;gen: Publikation</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</article>
+
+	<footer>
+		<p> <a href="https://antonvonwerner.de/html/privacy.html"
+				style="border-style: dotted;">Impressum/Datenschutz</a>
+			- Anton von Werner-Archiv (2024) /
+			<a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img
+					src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
+		</p>
+	</footer>
 
 </body>
 
-</html>
-
+</html>Dawo

@@ -106,7 +106,7 @@
         <div class="value">25.00 x 62.00</div>
     </div><div class="label-value-pair">
 	   <div class="label">Signatur</div>
-        <div class="value">Unten <cite>AvW Churwalden 1884</cite></div>
+        <div class="value">Unten:<br><cite>A.v.W. Churwalden 1884</cite></div>
     </div><div class="label-value-pair">
 	   <div class="label">Material</div>
         <div class="value"><ul><li><a href="https://antonvonwerner.de/html/artwork/list/medium_WAS.html">Wasserfarbe</a></li></ul></div>
@@ -128,7 +128,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
 	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
-	   <div><article><div id="idMapArtwork_4082" class="openStreetMap"></div> <script>const idMapArtwork_4082 = L.map("idMapArtwork_4082").setView([46.800000000,8.233333000], 6); const idMapArtwork_4082_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_4082);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([46.800000000,8.233333000], {icon: orangeIcon,title: "Schweiz"}).addTo(idMapArtwork_4082).bindPopup('<div>Schweiz: Bildinhalt</div>'); L.marker([46.900000000,9.467222000], {icon: orangeIcon,title: "Calanda (Gebirgsmassiv)"}).addTo(idMapArtwork_4082).bindPopup('<div>Calanda (Gebirgsmassiv): Bildinhalt</div>'); L.marker([46.781033000,9.543481000], {icon: orangeIcon,title: "Churwalden"}).addTo(idMapArtwork_4082).bindPopup('<div>Churwalden: Bildinhalt</div>');</script></article></div>
+	   <div><article><div id="idMapArtwork_4082" class="openStreetMap"></div> <script>const idMapArtwork_4082 = L.map("idMapArtwork_4082").setView([46.800000000,8.233333000], 6); const idMapArtwork_4082_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_4082);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([46.800000000,8.233333000], {icon: orangeIcon,title: "Schweiz"}).addTo(idMapArtwork_4082).bindPopup('<div>Schweiz: Bildinhalt</div>'); L.marker([46.900000000,9.467222000], {icon: orangeIcon,title: "Calanda (Gebirgsmassiv)"}).addTo(idMapArtwork_4082).bindPopup('<div>Calanda (Gebirgsmassiv): Bildinhalt</div>'); L.marker([46.781033000,9.543481000], {icon: orangeIcon,title: "Churwalden"}).addTo(idMapArtwork_4082).bindPopup('<div>Churwalden: Bildinhalt</div>'); L.marker([52.523121000,13.365090000], {title: "ULAP"}).addTo(idMapArtwork_4082).bindPopup('<div>ULAP: Ausstellungen</div>'); L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapArtwork_4082).bindPopup('<div>Berlin: Besitzer</div>');</script></article></div>
     </div>     
 
     <div class="info-block openClose">
@@ -150,6 +150,30 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkOwnerShort" name="idArtworkOwnerShort" checked="checked" >
+	   <label for="idArtworkOwnerShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Besitzer</label>
+	   <label for="idArtworkOwnerShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Besitzer</label>
+	   <div class="label-value-pair">
+	   <div class="label">Besitzer</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/76D161B2-EDA6-4FBE-AFD5-ACB2E534D626.html">Auf jeden Fall bis 1908 / Sammlung Anton von Werner, Berlin</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkExhibitionShort" name="idArtworkExhibitionShort" checked="checked" >
+	   <label for="idArtworkExhibitionShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Ausstellungen</label>
+	   <label for="idArtworkExhibitionShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Ausstellungen</label>
+	   <div class="label-value-pair">
+	   <div class="label">Ausstellungen</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/exhibition/detail/69E1B6C4-B9B0-41F3-BDDE-49E368792149.html">Aquarell-Ausstellung (So, 18.10.1908 - So, 29.11.1908), K&ouml;nigliche akademische Hochschule f&uuml;r die Bildenden K&uuml;nste. Glaspalast (Lehrter Bahnhof). Nummer 280. Saal VIII</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkPublication" name="idArtworkPublication" checked="checked" >
 	   <label for="idArtworkPublication" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Literatur</label>
@@ -157,7 +181,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Literatur</label>
 	   <div class="label-value-pair">
 	   <div class="label">Zum Bild</div>
-        <div class="value"><div class="detail-title">Detailgrad noch festzulegen:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/3025BC08-F983-4239-8EAD-960BB94D6F0C.html">Werner, Anton von (1913) <cite>Erlebnisse und Eindrücke 1870-1890</cite>. Berlin: E. S. Mittler & Sohn, S. 418 (Abb.)</a></li></ul></div>
+        <div class="value"><div class="detail-title">Erwähnung mit Daten:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/59BB1B4E-7D8D-4B61-884F-4DDCBCFF2850.html">Königliche Akademie der Künste zu Berlin (1908) <cite>Aquarell-Ausstellung 1908</cite>. Berlin: Union Deutsche Verlagsgesellschaft, S. 53</a></li></ul><br><div class="detail-title">Detailgrad noch festzulegen:</div><ul><li><a href="https://antonvonwerner.de/html/publication/detail/3025BC08-F983-4239-8EAD-960BB94D6F0C.html">Werner, Anton von (1913) <cite>Erlebnisse und Eindrücke 1870-1890</cite>. Berlin: E. S. Mittler & Sohn, S. 418 (Abb.)</a></li></ul></div>
     </div>
     </div>     
 
@@ -172,7 +196,7 @@
         <div class="value">18.12.2020</div>
     </div><div class="label-value-pair">
 	   <div class="label">Letzte &Auml;nderung</div>
-        <div class="value">29.12.2023</div>
+        <div class="value">27.08.2024</div>
     </div>
     </div>     
 

@@ -108,7 +108,7 @@
 	   <div class="label">H&ouml;he x Breite (cm)</div>
         <div class="value">26.50 x 36.00</div>
     </div><div class="label-value-pair">
-	   <div class="label">Beschriftung</div>
+	   <div class="label">Inschrift</div>
         <div class="value">Oben rechts schräg die Nachlassnummer:<br><cite>1402</cite></div>
     </div><div class="label-value-pair">
 	   <div class="label">Material</div>
@@ -122,7 +122,12 @@
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gr&ouml;ßenvergleich</label>
 	   <label for="idArtworkSizeComparison" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Gr&ouml;ßenvergleich</label>
-	   <div> <div class="sizeComparison" style="display: grid; grid-template-columns: auto auto; align-items: center;"><img class="compRelationImg" alt="Bild Größenvergleich" src="https://antonvonwerner.de/shared/resources/compRelationImg.svg" style="height:87.17%;max-height:220px;justify-self:end;padding-right: 5%;"><img class="compArtImg" src="https://antonvonwerner.de/shared/resources/art/4B6569C1-A95B-4464-8D2C-D62D5E9266B3_preview.jpg" alt="Bild zum Kunstwerk" style="height:12.83%;max-height:220px;box-shadow:0px 4px 10px black;"></div></div>
+	   <div> <div class="sizeComparison" style="display: grid; grid-template-columns: auto auto; align-items: center;"><img class="compRelationImg" alt="Bild Größenvergleich" src="https://antonvonwerner.de/shared/resources/compRelationImg.svg" style="height:87.17%;max-height:220px;justify-self:end;padding-right: 5%;"><div style="height:12.83%;max-height:220px; display: inline-block; overflow: hidden;">
+					<div style="height:26.50px;width:36.00px;background-color: antiquewhite;box-shadow:0px 4px 10px black; 
+					background-image: url(' + @pathToArtImg + ');
+					 background-repeat:no-repeat;
+					background-position: center;"></div>
+					</div></div></div>
     </div>     
 
     <div class="info-block openClose">

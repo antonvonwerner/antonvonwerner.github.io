@@ -138,7 +138,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
 	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
-	   <div><article><div id="idMapArtwork_3732" class="openStreetMap"></div> <script>const idMapArtwork_3732 = L.map("idMapArtwork_3732").setView([48.371667000,10.898333000], 6); const idMapArtwork_3732_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_3732);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([48.371667000,10.898333000], {icon: orangeIcon,title: "Augsburg"}).addTo(idMapArtwork_3732).bindPopup('<div>Augsburg: Besitzer</div>'); L.marker([48.142820075,11.575231254], {title: "Karl & Faber"}).addTo(idMapArtwork_3732).bindPopup('<div>Karl & Faber: Auktionen</div>');</script></article></div>
+	   <div><article><div id="idMapArtwork_3732" class="openStreetMap"></div> <script>const idMapArtwork_3732 = L.map("idMapArtwork_3732").setView([48.371667000,10.898333000], 6); const idMapArtwork_3732_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_3732);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([48.371667000,10.898333000], {icon: orangeIcon,title: "Augsburg"}).addTo(idMapArtwork_3732).bindPopup('<div>Augsburg: Besitzer</div>'); L.marker([48.142820075,11.575231254], {title: "Karl & Faber"}).addTo(idMapArtwork_3732).bindPopup('<div>Karl & Faber: Auktionen</div>'); L.marker([52.416472066,13.146391564], {title: "Galerie Mutter Fourage"}).addTo(idMapArtwork_3732).bindPopup('<div>Galerie Mutter Fourage: Ausstellungen</div>');</script></article></div>
     </div>     
 
     <div class="info-block openClose">
@@ -184,6 +184,18 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkExhibitionShort" name="idArtworkExhibitionShort" checked="checked" >
+	   <label for="idArtworkExhibitionShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Ausstellungen</label>
+	   <label for="idArtworkExhibitionShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Ausstellungen</label>
+	   <div class="label-value-pair">
+	   <div class="label">Ausstellungen</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/exhibition/detail/C431E0F3-EF61-4312-912E-7F8DF11C0532.html">Anton von Werner - Sammlung Ketels (So, 17.11.2024 - So, 19.01.2025), Galerie Mutter Fourage. Nummer 36</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkPublication" name="idArtworkPublication" checked="checked" >
 	   <label for="idArtworkPublication" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Literatur</label>
@@ -202,7 +214,7 @@
 	   <label for="idArtworkGroups" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Verbindungen</label>
 	   <div><ul class="no-bullets"><li><div class="label-value-pair">
-	   <div class="label"><b>Beidseitig: Selbstporträt mit Hund und drei Hundestudien</b></div>
+	   <div class="label"><b>Beidseitig: Selbstporträt mit Hund / Drei Hundestudien</b></div>
         <div class="value"><ul class="no-bullets"><li><a href="https://antonvonwerner.de/html/artwork/detail/EB5FF865-3C30-4454-8F6E-6533F277AE61.html"><img  class="li-img-small" src="https://antonvonwerner.de/shared/resources/noImage.svg" alt="Bild zum Kunstwerk">Vorder- und Rückseite: Anton von Werner - Drei Hundestudien (Unbekannt)</a></li></ul></div>
     </div></li></ul></div>
     </div>     

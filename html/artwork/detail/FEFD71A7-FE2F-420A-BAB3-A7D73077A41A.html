@@ -130,6 +130,15 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkMap" name="idArtworkMap" checked="checked" >
+	   <label for="idArtworkMap" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
+	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
+	   <div><article><div id="idMapArtwork_10337" class="openStreetMap"></div> <script>const idMapArtwork_10337 = L.map("idMapArtwork_10337").setView([52.416472066,13.146391564], 6); const idMapArtwork_10337_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_10337);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([52.416472066,13.146391564], {title: "Galerie Mutter Fourage"}).addTo(idMapArtwork_10337).bindPopup('<div>Galerie Mutter Fourage: Ausstellungen</div>');</script></article></div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkCategories" name="idArtworkCategories" checked="checked" >
 	   <label for="idArtworkCategories" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gruppierungen</label>
@@ -144,6 +153,18 @@
     </div><div class="label-value-pair">
 	   <div class="label">Schlagwort</div>
         <div class="value"><ul><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5100.html">Familie</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_1008.html">Frau/Frauen</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_8560.html">Pringsheim, Hedwig</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_8558.html">Pringsheim, Paula (geb. Deutschmann)</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_8559.html">R&ouml;hrscheidt, Martha von (geb. Pringsheim)</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5968.html">Sitzen</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_8647.html">Stehen</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkExhibitionShort" name="idArtworkExhibitionShort" checked="checked" >
+	   <label for="idArtworkExhibitionShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Ausstellungen</label>
+	   <label for="idArtworkExhibitionShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Ausstellungen</label>
+	   <div class="label-value-pair">
+	   <div class="label">Ausstellungen</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/exhibition/detail/C431E0F3-EF61-4312-912E-7F8DF11C0532.html">Anton von Werner - Sammlung Ketels (So, 17.11.2024 - So, 19.01.2025), Galerie Mutter Fourage. Nummer 31</a></li></ul></div>
     </div>
     </div>     
 

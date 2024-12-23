@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suche nach Ausstellungen</title>
+    <meta name="description" content="Anton von Werner-Archiv">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="labelwords" content="Anton von Werner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+    <link rel="icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://antonvonwerner.de/shared/resources/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://antonvonwerner.de/shared/resources/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">	
+	<link rel="icon" type="image/png" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">	
+	<link rel="apple-touch-icon" sizes="180x180" href="https://antonvonwerner.de/shared/resources/favicon-180x180.png">
+	<link rel="apple-touch-icon" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
+
+    <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
+</head>
+
+<body onload="init();">
+    <header>
+        <div class="header-title">
+            <h1>
+                <a href="https://antonvonwerner.de/index.html" class="logo-container">
+                    <img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von Werner-Archiv
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
+            <a href="https://antonvonwerner.de/html/artworkSearch.html">Bilder</a>
+            <a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte/Reden</a>
+            <a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
+            <a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
+            <a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
+            <a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
+            <a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
+            <a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
+            <a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
+            <a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
+        </nav>
+    </header>
+    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem
+        Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen).<br><cite>"...seinem <a href="https://antonvonwerner.de/">Archiv</a>,
+  das eine Fülle an Abbildungen und Querbezügen bereithält, verdanke ich zahlreiche Informationen. Seine
+        akribische Durchsicht meines Manuskripts hat mich vor etlichen Fehlern, Unstimmigkeiten und Lücken bewahrt."</cite> (Bartmann, Dominik. Anton von Werner - Werkverzeichnis. 2024)
+    </div>
+
+     <article style="border-style: dotted;">
+        <p></p><h2 class="detail-title" style="text-align: center; font-size: large;">Vollständiges Werkverzeichnis</h2>
+<p>Vom 17.11.2024 bis 19.1.2025 zeigt die Galerie Mutter Fourage in Berlin-Wannsee die Ausstellung „Anton von
+            Werner – Sammlung Ketels“. Der zugehörige, von Dominik Bartmann erarbeitete Katalog erscheint im Oktober
+            2024 im Berliner <a href="https://holy-verlag.com/">Holy Verlag</a>. Mit dieser Publikation ist ein Link
+            zum Download des nun vorliegenden Werkverzeichnisses verbunden. Aufgelistet sind dort sämtliche Bilder –
+            Gemälde, Zeichnungen, Skizzenbücher und Illustrationen –, die der Autor im Zeitraum von über vier
+            Jahrzehnten registrieren konnte: 2582 Positionen auf 657 Seiten. Das Werkverzeichnis enthält zudem eine
+            Transkription des Nachlassverzeichnisses inklusive Konkordanz zu den Verzeichnissen der Gemälde und der
+            Zeichnungen, einen Einblick in die Handschrift „Das Werk Anton von Werners – Ikonographie“ von Georg Galland
+            aus dem Jahr 1913 sowie ein Porträtregister.</p>     </article>
+        <article>
+        <h2 class="article-title">Ausstellungen nach:</h2>
+		<p><article><div id="idMapExhibitions" class="openStreetMap"></div> <script>const idMapExhibitions = L.map("idMapExhibitions").setView([51.3154546,9.4924096], 6); const idMapExhibitions_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Alle Ausstellungen. <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapExhibitions);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([38.638517475,-90.283790721], {title: "Forest Park (St. Louis)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13398.html">Forest Park (St. Louis) - Anzahl: 1</a></div>'); L.marker([38.891467341,-77.019954677], {title: "National Gallery of Art - Westgebäude"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12222.html">National Gallery of Art - Westgebäude - Anzahl: 3</a></div>'); L.marker([40.776051162,-73.961637232], {title: "Shepherd W & K Galleries"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12211.html">Shepherd W & K Galleries - Anzahl: 1</a></div>'); L.marker([48.135100000,11.573050000], {title: "Münchner Stadtmuseum"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18485.html">Münchner Stadtmuseum - Anzahl: 1</a></div>'); L.marker([48.141879619,11.565574038], {title: "Glaspalast (München, Gebäude)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12195.html">Glaspalast (München, Gebäude) - Anzahl: 5</a></div>'); L.marker([48.186104699,16.312685328], {title: "Schönbrunnerhaus"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12214.html">Schönbrunnerhaus - Anzahl: 1</a></div>'); L.marker([48.200657741,16.371555682], {title: "Künstlerhaus Wien"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12236.html">Künstlerhaus Wien - Anzahl: 4</a></div>'); L.marker([48.215636272,16.400173883], {title: "Wiener Prater"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12208.html">Wiener Prater - Anzahl: 1</a></div>'); L.marker([48.775556000,9.182778000], {icon: orangeIcon,title: "Stuttgart"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8887.html">Stuttgart - Anzahl: 2</a></div>'); L.marker([48.779578729,9.177978268], {title: "Königsbau"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13478.html">Königsbau - Anzahl: 1</a></div>'); L.marker([48.855959971,2.298355140], {title: "Champs de Mars"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12189.html">Champs de Mars - Anzahl: 1</a></div>'); L.marker([48.860773415,2.337611811], {title: "Louvre"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12227.html">Louvre - Anzahl: 1</a></div>'); L.marker([48.861512187,2.319695682], {title: "Fondation Custodia"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13441.html">Fondation Custodia - Anzahl: 1</a></div>'); L.marker([49.001344013,8.383673926], {title: "Staatliche Kunsthalle Karlsruhe (Gebäude)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12210.html">Staatliche Kunsthalle Karlsruhe (Gebäude) - Anzahl: 2</a></div>'); L.marker([49.011233779,8.394879011], {title: "Prinz-Max-Palais (Karlsruhe)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12217.html">Prinz-Max-Palais (Karlsruhe) - Anzahl: 1</a></div>'); L.marker([49.011245315,8.399675540], {title: "Badischer Kunstverein (Gebäude)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14735.html">Badischer Kunstverein (Gebäude) - Anzahl: 2</a></div>'); L.marker([49.013420419,8.399601183], {title: "Botanischer Garten Karlsruhe"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12187.html">Botanischer Garten Karlsruhe - Anzahl: 3</a></div>'); L.marker([49.999366690,8.271327082], {title: "Staatstheater Mainz (früher Stadttheater)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13492.html">Staatstheater Mainz (früher Stadttheater) - Anzahl: 1</a></div>'); L.marker([50.103100000,8.674000000], {title: "Städelsches Kunstinstitut"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18461.html">Städelsches Kunstinstitut - Anzahl: 1</a></div>'); L.marker([50.133567601,11.000245440], {title: "Kloster Banz"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12203.html">Kloster Banz - Anzahl: 1</a></div>'); L.marker([50.773596979,6.095715916], {title: "Suermondt-Ludwig-Museum (Gebäude)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14705.html">Suermondt-Ludwig-Museum (Gebäude) - Anzahl: 1</a></div>'); L.marker([50.983215058,11.325468540], {title: "Bertuchhaus"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12186.html">Bertuchhaus - Anzahl: 1</a></div>'); L.marker([51.036111000,7.033333000], {title: "Museum Morsbroich"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14780.html">Museum Morsbroich - Anzahl: 1</a></div>'); L.marker([51.044773000,13.756396000], {title: "Städtischer Ausstellungspalast (Dresden)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13387.html">Städtischer Ausstellungspalast (Dresden) - Anzahl: 1</a></div>'); L.marker([51.049259000,13.738360000], {icon: orangeIcon,title: "Dresden"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13089.html">Dresden - Anzahl: 2</a></div>'); L.marker([51.220556000,4.399722000], {icon: orangeIcon,title: "Antwerpen"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13258.html">Antwerpen - Anzahl: 1</a></div>'); L.marker([51.235090316,6.772968313], {title: "Kunstpalast (Düsseldorf)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12230.html">Kunstpalast (Düsseldorf) - Anzahl: 1</a></div>'); L.marker([51.316667000,9.500000000], {icon: orangeIcon,title: "Kassel"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13215.html">Kassel - Anzahl: 1</a></div>'); L.marker([51.329968000,12.352859000], {title: "Ausstellungsgelände der Sächsisch-Thüringische Industrie- und Gewerbeausstellung Leipzig 1897"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13481.html">Ausstellungsgelände der Sächsisch-Thüringische Industrie- und Gewerbeausstellung Leipzig 1897 - Anzahl: 1</a></div>'); L.marker([52.200358038,0.119502340], {title: "Fitzwilliam-Museum"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13443.html">Fitzwilliam-Museum - Anzahl: 1</a></div>'); L.marker([52.342083000,14.551667000], {icon: orangeIcon,title: "Frankfurt (Oder)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8917.html">Frankfurt (Oder) - Anzahl: 1</a></div>'); L.marker([52.416472066,13.146391564], {title: "Galerie Mutter Fourage"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14996.html">Galerie Mutter Fourage - Anzahl: 1</a></div>'); L.marker([52.453635465,13.593543169], {title: "Künstlerhaus in der Bellevuestraße 3"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12231.html">Künstlerhaus in der Bellevuestraße 3 - Anzahl: 1</a></div>'); L.marker([52.498848333,13.362158126], {title: "Haus des Johanniter-Ordens Potsdamer Straße 134c"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13433.html">Haus des Johanniter-Ordens Potsdamer Straße 134c - Anzahl: 1</a></div>'); L.marker([52.501154157,13.313462240], {title: "Galerie Pels-Leusden"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12191.html">Galerie Pels-Leusden - Anzahl: 1</a></div>'); L.marker([52.502361000,13.395194000], {title: "Berlin Museum"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12726.html">Berlin Museum - Anzahl: 1</a></div>'); L.marker([52.504407000,13.353441000], {title: "Haus am Lützowplatz"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18435.html">Haus am Lützowplatz - Anzahl: 1</a></div>'); L.marker([52.506389000,13.381944000], {title: "Martin-Gropius-Bau"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14792.html">Martin-Gropius-Bau - Anzahl: 2</a></div>'); L.marker([52.509368239,13.401330127], {title: "Gerbersche Industriegebäude"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12192.html">Gerbersche Industriegebäude - Anzahl: 1</a></div>'); L.marker([52.515405360,13.412665167], {title: "Polytechnikum an der Charlottenburger Chaussee"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12218.html">Polytechnikum an der Charlottenburger Chaussee - Anzahl: 1</a></div>'); L.marker([52.515640196,13.381647656], {title: "Preußisches Ministerium der geistlichen, Unterrichts- und Medizinalangelegenheiten"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12196.html">Preußisches Ministerium der geistlichen, Unterrichts- und Medizinalangelegenheiten - Anzahl: 1</a></div>'); L.marker([52.516773008,13.403338611], {title: "Königliches Akademiegebäude (Marstall)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12205.html">Königliches Akademiegebäude (Marstall) - Anzahl: 11</a></div>'); L.marker([52.516933211,13.401819691], {title: "Kunstbaracke"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12234.html">Kunstbaracke - Anzahl: 6</a></div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12036.html">Zeughaus (Berlin) - Anzahl: 2</a></div>'); L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_5416.html">Berlin - Anzahl: 59</a></div>'); L.marker([52.520960449,13.398299240], {title: "Alte Nationalgalerie"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8903.html">Alte Nationalgalerie - Anzahl: 2</a></div>'); L.marker([52.521111000,13.295833000], {title: "Schloss Charlottenburg"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12905.html">Schloss Charlottenburg - Anzahl: 2</a></div>'); L.marker([52.523121000,13.365090000], {title: "ULAP"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12194.html">ULAP - Anzahl: 21</a></div>'); L.marker([52.623889000,10.077500000], {title: "Celler Schloss"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14995.html">Celler Schloss - Anzahl: 1</a></div>'); L.marker([53.075878000,8.807311000], {icon: orangeIcon,title: "Bremen"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13115.html">Bremen - Anzahl: 1</a></div>'); L.marker([53.555000000,10.003056000], {title: "Hamburger Kunsthalle"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12879.html">Hamburger Kunsthalle - Anzahl: 1</a></div>'); L.marker([54.328611000,10.146111000], {title: "Kunsthalle Kiel"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12901.html">Kunsthalle Kiel - Anzahl: 3</a></div>'); L.marker([54.733333000,20.483333000], {icon: orangeIcon,title: "Königsberg (Preußen)"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12023.html">Königsberg (Preußen) - Anzahl: 1</a></div>'); L.marker([55.688889000,12.578611000], {title: "Statens Museum for Kunst"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18490.html">Statens Museum for Kunst - Anzahl: 1</a></div>'); L.marker([56.154003000,10.199567000], {title: "ARoS Aarhus Kunstmuseum"}).addTo(idMapExhibitions).bindPopup('<div><a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18491.html">ARoS Aarhus Kunstmuseum - Anzahl: 1</a></div>');</script></article></p><div class="searchTabs">  <input type="radio" name="inhalt" id="tabExhibitionAll">
+            <label for="tabExhibitionAll">Alle</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionAll.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Übersicht (106)...</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabExhibitionYear">
+            <label for="tabExhibitionYear">Jahr</label>
+            <div class="searchTab"> <h2>Wählen sie ein Jahr:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1862.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1862 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1863.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1863 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1865.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1865 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1866.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1866 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1867.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1867 (5)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1868.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1868 (4)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1870.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1870 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1871.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1871 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1872.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1872 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1873.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1873 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1874.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1874 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1876.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1876 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1877.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1877 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1879.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1879 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1880.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1880 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1881.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1881 (4)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1882.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1882 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1883.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1883 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1884.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1884 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1886.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1886 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1887 (4)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1888.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1888 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1890.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1890 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1891.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1891 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1893.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1893 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1894.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1894 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1895.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1895 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1896 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1897 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1898.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1898 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1899.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1899 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1900.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1900 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1901 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1904.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1904 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1905.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1905 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1906.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1906 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1908.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1908 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1909.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1909 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1910.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1910 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1911.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1911 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1913.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1913 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1914.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1914 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1915.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1915 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1916.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1916 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1917.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1917 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1918.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1918 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1949.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1949 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1961.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1961 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1970.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1970 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1974.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1974 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1978.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1978 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1981.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1981 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1990.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1990 (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1991.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1991 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_1993.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1993 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_2008.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2008 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_2014.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2014 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_2017.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2017 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_2021.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2021 (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionYear_2024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2024 (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabExhibitionInstitution">
+            <label for="tabExhibitionInstitution">Veranstalter</label>
+            <div class="searchTab"> <h2>Wählen sie den Veranstalter:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_6619.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aarhus Kunstmuseum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_1101.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Allgemeine Deutsche Kunstgenossenschaft (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4474.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badischer Kunstverein (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3149.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_6596.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Festspiele (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_6604.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bezirksamt Tiergarten (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4476.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">B&uuml;rgerschule Frankfurt/Oder (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3124.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutsches Historisches Museum (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4420.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fitzwilliam Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4418.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fondation Custodia (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3251.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freie Vereinigung der Grafiker (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4382.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Fritz Gurlitt (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4515.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Mutter Fourage (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_1083.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Pels-Leusden (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3237.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Genossenschaft der bildenden K&uuml;nstler Wiens (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4312.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburger Kunsthalle (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3112.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Historisches Museum Saar (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4429.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Komitee der S&auml;chsisch-Th&uuml;ringische Industrie- und Gewerbeausstellung Leipzig 1897 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_16.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigliche (Preußische) Akademie der K&uuml;nste (18)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_21.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigliche akademische Hochschule f&uuml;r die Bildenden K&uuml;nste (16)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4323.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Koninklijke Academie voor Schone Kunsten van Antwerpen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3249.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstakademie D&uuml;sseldorf (9)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3209.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstakademie K&ouml;nigsberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4516.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstgutlager Schloss Celle (Zonal Fine Arts Repository) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4343.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthalle Kiel (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4330.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&uuml;nstlerhaus Wien (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3250.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&uuml;nstlerschaft D&uuml;sseldorf (12)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4414.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstsalon Mathilde Rabl (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3109.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchner K&uuml;nstlergenossenschaft (4)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_6616.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchner Stadtmuseum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3217.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum f&uuml;r Literatur am Oberrhein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3216.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum Kloster Banz (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4501.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum Morsbroich (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_1088.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">National Gallery of Art (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4425.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nationalgalerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3213.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Norddeutscher Gesamtverein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3223.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oesterreichischer Kunstverein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3207.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinischer Kunstverein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_1098.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rudolph Lepke&rsquo;s Kunst-Auctions-Haus (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4434.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">S&auml;chsischer Kunstverein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_1055.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Salon de Paris (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3225.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig-Holsteinischer Kunstverein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4347.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Charlottenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_1071.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Shepherd W &amp; K Galleries (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3202.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatliche Akademie der Bildenden K&uuml;nste Karlsruhe (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_10.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatliche Kunsthalle Karlsruhe (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_6611.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St&auml;delsches Kunstinstitut (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3215.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum Weimar (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_6618.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Statens Museum for Kunst (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4346.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stiftung Preußische Schl&ouml;sser und G&auml;rten Berlin-Brandenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4472.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Suermondt-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4503.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verband der Berliner Kunst- und Antiquit&auml;tenh&auml;ndler (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3247.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verband deutscher Illustratoren (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_20.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verein Berliner K&uuml;nstler (15)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3222.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verein f&uuml;r bildende Kunst (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4432.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verein f&uuml;r die Geschichte Berlins (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4514.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vorstand der Deutschen Jahrhundertausstellung (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_3211.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weltausstellung (Organisation) (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibitionInstitution_4426.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">W&uuml;rttembergischer Kunstverein Stuttgart (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabExhibitionPlace">
+            <label for="tabExhibitionPlace">Ort</label>
+            <div class="searchTab"> <h2>Wählen sie einen Ort:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13575.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aachen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18488.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aarhus (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8903.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alte Nationalgalerie (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13258.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antwerpen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18491.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">ARoS Aarhus Kunstmuseum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13481.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ausstellungsgel&auml;nde der S&auml;chsisch-Th&uuml;ringische Industrie- und Gewerbeausstellung Leipzig 1897 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13211.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Staffelstein (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-W&uuml;rttemberg (10)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14735.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badischer Kunstverein (Geb&auml;ude) (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bayern (7)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12238.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Belgien (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_5416.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (57)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12726.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_5417.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin-Charlottenburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12186.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bertuchhaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12187.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Botanischer Garten Karlsruhe (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Brandenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13115.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bremen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13445.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cambridge (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13444.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cambridgeshire (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14994.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Celle (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14995.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Celler Schloss (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12189.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Champs de Mars (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12239.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&auml;nemark (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12240.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutschland (86)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13089.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dresden (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13092.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;sseldorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13443.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fitzwilliam-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13283.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flandern (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13441.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fondation Custodia (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13398.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Forest Park (St. Louis) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8917.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt (Oder) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_5771.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt am Main (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_5339.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankreich (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13297.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freie Hansestadt Bremen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14996.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Mutter Fourage (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12191.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Pels-Leusden (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12192.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gerbersche Industriegeb&auml;ude (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12195.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Glaspalast (M&uuml;nchen, Geb&auml;ude) (5)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13117.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12879.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburger Kunsthalle (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18435.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Haus am L&uuml;tzowplatz (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13433.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Haus des Johanniter-Ordens Potsdamer Straße 134c (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13298.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hessen (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Icirc;le-de-France (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_6140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karlsruhe (8)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13215.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kassel (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8552.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kiel (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12203.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kloster Banz (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12205.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigliches Akademiegeb&auml;ude (Marstall) (11)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13478.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigsbau (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12023.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigsberg (Preußen) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13188.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kopenhagen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12234.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstbaracke (6)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthalle Kiel (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12231.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&uuml;nstlerhaus in der Bellevuestraße 3 (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12236.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&uuml;nstlerhaus Wien (4)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12230.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstpalast (D&uuml;sseldorf) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8886.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leipzig (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14779.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leverkusen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12227.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Louvre (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13209.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mainz (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14792.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Martin-Gropius-Bau (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13396.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Missouri (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13081.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchen (6)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18485.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchner Stadtmuseum (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14780.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum Morsbroich (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12222.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">National Gallery of Art - Westgeb&auml;ude (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13085.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">New York (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13300.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niedersachsen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13301.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nordrhein-Westfalen (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13335.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oblast Kaliningrad (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12245.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Ouml;sterreich (6)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_5398.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Paris (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12218.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Polytechnikum an der Charlottenburger Chaussee (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12196.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Preußisches Ministerium der geistlichen, Unterrichts- und Medizinalangelegenheiten (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12217.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Prinz-Max-Palais (Karlsruhe) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13308.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Region Hovedstaden (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_15065.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Region Midtjylland (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13302.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinland-Pfalz (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12247.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Russland (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13303.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig-Holstein (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12905.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Charlottenburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12214.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sch&ouml;nbrunnerhaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12211.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Shepherd W &amp; K Galleries (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13397.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St. Louis (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12210.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatliche Kunsthalle Karlsruhe (Geb&auml;ude) (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13492.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatstheater Mainz (fr&uuml;her Stadttheater) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18461.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St&auml;delsches Kunstinstitut (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13387.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St&auml;dtischer Ausstellungspalast (Dresden) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_18490.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Statens Museum for Kunst (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_8887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stuttgart (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_14705.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Suermondt-Ludwig-Museum (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13307.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Th&uuml;ringen (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12194.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">ULAP (21)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12251.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte K&ouml;nigreich von Großbritannien und Nordirland (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12252.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte Staaten von Amerika (2)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13149.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Washington DC (3)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13096.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weimar (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_13090.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wien (6)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12208.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wiener Prater (1)</a>
+	    <a href="https://antonvonwerner.de/html/exhibition/list/exhibition_Location_12036.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Zeughaus (Berlin) (2)</a></div>     </div>
+ </div>
+    </article>
+
+    <footer>
+    <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
+	- Anton von Werner-Archiv (2024) /
+        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
+    </p>
+    </footer>
+
+</body>
+
+</html>
+

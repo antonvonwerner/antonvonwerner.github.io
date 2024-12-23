@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suche nach Besitzern</title>
+    <meta name="description" content="Anton von Werner-Archiv">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="labelwords" content="Anton von Werner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+    <link rel="icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://antonvonwerner.de/shared/resources/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://antonvonwerner.de/shared/resources/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">	
+	<link rel="icon" type="image/png" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">	
+	<link rel="apple-touch-icon" sizes="180x180" href="https://antonvonwerner.de/shared/resources/favicon-180x180.png">
+	<link rel="apple-touch-icon" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
+
+    <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
+</head>
+
+<body onload="init();">
+    <header>
+        <div class="header-title">
+            <h1>
+                <a href="https://antonvonwerner.de/index.html" class="logo-container">
+                    <img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von Werner-Archiv
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
+            <a href="https://antonvonwerner.de/html/artworkSearch.html">Bilder</a>
+            <a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte/Reden</a>
+            <a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
+            <a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
+            <a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
+            <a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
+            <a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
+            <a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
+            <a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
+            <a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
+        </nav>
+    </header>
+    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem
+        Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen).<br><cite>"...seinem <a href="https://antonvonwerner.de/">Archiv</a>,
+  das eine Fülle an Abbildungen und Querbezügen bereithält, verdanke ich zahlreiche Informationen. Seine
+        akribische Durchsicht meines Manuskripts hat mich vor etlichen Fehlern, Unstimmigkeiten und Lücken bewahrt."</cite> (Bartmann, Dominik. Anton von Werner - Werkverzeichnis. 2024)
+    </div>
+
+     <article style="border-style: dotted;">
+        <p></p><h2 class="detail-title" style="text-align: center; font-size: large;">Vollständiges Werkverzeichnis</h2>
+<p>Vom 17.11.2024 bis 19.1.2025 zeigt die Galerie Mutter Fourage in Berlin-Wannsee die Ausstellung „Anton von
+            Werner – Sammlung Ketels“. Der zugehörige, von Dominik Bartmann erarbeitete Katalog erscheint im Oktober
+            2024 im Berliner <a href="https://holy-verlag.com/">Holy Verlag</a>. Mit dieser Publikation ist ein Link
+            zum Download des nun vorliegenden Werkverzeichnisses verbunden. Aufgelistet sind dort sämtliche Bilder –
+            Gemälde, Zeichnungen, Skizzenbücher und Illustrationen –, die der Autor im Zeitraum von über vier
+            Jahrzehnten registrieren konnte: 2582 Positionen auf 657 Seiten. Das Werkverzeichnis enthält zudem eine
+            Transkription des Nachlassverzeichnisses inklusive Konkordanz zu den Verzeichnissen der Gemälde und der
+            Zeichnungen, einen Einblick in die Handschrift „Das Werk Anton von Werners – Ikonographie“ von Georg Galland
+            aus dem Jahr 1913 sowie ein Porträtregister.</p>     </article>
+    <article>
+        <h2 class="article-title">Besitzer nach:</h2><div class="searchTabs">  <input type="radio" name="inhalt" id="tabOwnerAll">
+            <label for="tabOwnerAll">Alle</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.de/html/owner/list/ownerAll.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Übersicht (307)...</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabOwnerCurrent">
+            <label for="tabOwnerCurrent">Nur aktuell/zuletzt bekannt</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.de/html/owner/list/ownerCurrent.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Übersicht (132)...</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabOwnerLocation">
+            <label for="tabOwnerLocation">Ort (Alle)</label>
+            <div class="searchTab"> <h2>Wählen sie einen Ort:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13575.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aachen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5869.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aachener Rathaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12182.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Albertinum (Dresden) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8903.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alte Nationalgalerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13273.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Altenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6288.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Altes Palais (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14726.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antiquit&auml;ten Pl&ouml;tz-Peters (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13258.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antwerpen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12832.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Archiv f&uuml;r Kunst und Geschichte (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8855.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Augsburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14739.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Godesberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13151.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-Baden (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-W&uuml;rttemberg (28)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badische Landesbibliothek (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14735.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badischer Kunstverein (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12911.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badisches Generallandesarchiv (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bayern (27)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13266.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Beierstedt (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12238.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Belgien (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6273.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berchtesgaden (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14854.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berghof (Obersalzberg) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5416.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (71)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12726.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5417.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin-Charlottenburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Dom (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_10985.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Rathaus (Rotes Rathaus) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6169.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Schloss (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12184.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlinische Galerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12932.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bibliotheca Hertziana (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14794.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bisingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14754.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bismarck-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13116.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bonn (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Brandenburg (9)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13154.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Braunschweig (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13115.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bremen (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6120.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Breslau (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14743.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bukarest (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18230.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bundesarchiv, Abteilung BE (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14793.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burg Hohenzollern (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14852.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Carinhall (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5282.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Casa Baldi (Olevano) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13083.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cincinnati (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12190.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cincinnati Art Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13314.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">City of London (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15113.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Coburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12919.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">DDR (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13159.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dessau (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14851.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutsch Wartenberg (Otyń) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12240.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutschland (242)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14858.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dorotheenstraße 15, Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13186.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dortmund (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12670.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dr. M&oelig;ller  &amp; Cie. Kunsthandel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13089.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dresden (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8575.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Duisburger Rathaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13256.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;ren (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13092.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;sseldorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13213.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eisenach (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13195.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eurasburg (Oberbayern) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13283.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flandern (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13441.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fondation Custodia (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8917.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt (Oder) (6)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5771.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt am Main (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5339.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankreich (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13297.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freie Hansestadt Bremen (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13156.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrichsruh (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13272.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fronhausen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13375.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">F&uuml;hrungsakademie der Bundeswehr (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12698.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie de Lo&euml;s (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18376.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Finkenstein (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14853.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Fischer (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12831.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie F&uuml;ßl &amp; Jakob (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_17140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie J. H. Bauer (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12722.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Joseph Fach (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14996.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Mutter Fourage (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12191.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Pels-Leusden (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13559.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Tableau (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12702.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Uwe Opper (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12705.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Westphal (Volker) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12686.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Geheimes Staatsarchiv Preußischer Kulturbesitz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13178.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Genf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12830.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Germanisches Nationalmuseum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18402.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">G&ouml;ppingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13514.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gut Hemmelmark (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12719.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">H. W. Fichter Kunsthandel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13117.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburg (9)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12879.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburger Kunsthalle (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13084.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hannover (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12197.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Haus Doorn (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5126.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heidelberg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12920.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Herzog Anton Ulrich-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13298.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hessen (16)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18273.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hill-Stone (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12198.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Historisches Museum der Pfalz (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18393.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hofheim am Taunus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18415.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Humboldt-Gymnasium (Gartenstr. 29) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Icirc;le-de-France (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8877.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Innsbruck (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_1024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Italien (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14843.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Johanna Ohloff Kunsthandlung (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">J&uuml;disches Museum Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14859.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Junkerhaus (Frankfurt (Oder)) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13287.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Genf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13289.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Luzern (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13292.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Z&uuml;rich (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karlsruhe (14)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13215.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kassel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12200.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Katrin Bellinger KUNSTHANDEL (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8552.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kiel (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12201.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kieler Gelehrtenschule (Altes Geb&auml;ude Dammstraße) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13105.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;ln (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13138.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kronberg im Taunus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13573.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kulturgeschichtliches Museum Osnabr&uuml;ck (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12661.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunkel Fine Art (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12233.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstbibliothek Berlin (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15041.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstforum Ostdeutsche Galerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthalle Kiel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12232.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthalle Mannheim (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15095.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthandel Sabine Helms (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18219.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthandlung Albert Neuhaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12627.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthaus Winterberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12777.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstverein Braunschweig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12229.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kupferstichkabinett Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14787.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lagow (Łag&oacute;w, Powiat Świebodziński) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15114.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landesbibliothek Coburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13516.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landesmuseum Mainz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13320.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Latium (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13332.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lebus (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8886.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leipzig (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12620.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">LEO SPIK Auktionshaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12876.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leopold-H&oelig;sch-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12243.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lettland (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12936.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lindenau-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14864.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Linz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13137.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">London (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14756.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Luisenhospital Aachen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6255.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Luzern (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12843.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">LWL-Museum f&uuml;r Kunst und Kultur (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13209.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mainz (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13110.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mannheim (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13228.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Marburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12655.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mark Murray Fine Paintings (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12898.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&auml;rkisches Museum (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14855.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Martin von Wagner Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18271.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Massachusetts (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13299.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mecklenburg-Vorpommern (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14861.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Memphis (Tennessee) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13136.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Minneapolis (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12225.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Minneapolis Institute of Art (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13345.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Minnesota (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18370.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Moskau (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13560.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mosse-Palais (1885) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13081.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchen (13)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13175.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nster (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15091.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nsterland (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13508.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum der bildenden K&uuml;nste Leipzig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum f&uuml;r Kommunikation Frankfurt (Bundespostmuseum) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12224.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum f&uuml;r Kunst und Kulturgeschichte Dortmund (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12223.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum Georg Sch&auml;fer (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12671.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">National Gallery of Art (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12877.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nationalmuseum Breslau (Muzeum Narodowe we Wrocławiu) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12221.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neue Galerie (Kassel) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neues Palais (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13085.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">New York (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_9965.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niederlande (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13300.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niedersachsen (9)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12908.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nieders&auml;chsisches Landesmuseum Hannover (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13330.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niederschlesien (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13301.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nordrhein-Westfalen (17)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8856.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">N&uuml;rnberg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13281.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ober&ouml;sterreich (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14867.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Obersalzberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13196.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oberursel (Taunus) (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13336.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oblast Leningrad (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18369.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oblast Moskau (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13347.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ohio (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_1025.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Olevano Romano (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13193.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Osnabr&uuml;ck (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12245.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Ouml;sterreich (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18288.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Palais Friedrichstraße (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_16113.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Palazzo Serlupi Crescenzi (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12219.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Panoramageb&auml;ude Alexanderplatz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5398.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Paris (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12721.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Peter Bierl Buch- &amp; Kunstantiquariat (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_9970.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Polen (5)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13150.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Potsdam (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12217.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Prinz-Max-Palais (Karlsruhe) (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13324.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Provinz Utrecht (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6211.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Radolfzell am Bodensee (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13223.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ralswiek (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13212.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Regensburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13302.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinland-Pfalz (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13123.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Riga (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5170.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rom (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5431.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ruhmeshalle (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14742.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rum&auml;nien (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12247.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Russland (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12035.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Saarbr&uuml;cken (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13304.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Saarland (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen (7)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13306.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen-Anhalt (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14857.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">S&auml;chsische Staatskanzlei (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13167.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sankt Petersburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12693.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schlesisches Museum der Bildenden K&uuml;nste (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13260.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13303.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig-Holstein (8)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12905.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Charlottenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14865.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Friedrichshof (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12216.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Gottorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13408.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Monbijou (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12215.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Ralswiek (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15060.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Wernigerode (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14868.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schorfheide (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13190.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweinfurt (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5360.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweiz (7)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5833.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Siegesss&auml;ule (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_17142.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sigmaringen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12914.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sowjetunion (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13189.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Speyer (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12210.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatliche Kunsthalle Karlsruhe (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12872.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatsbibliothek zu Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12793.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatsgalerie Stuttgart (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12694.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadt Duisburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12854.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtarchiv Frankfurt (Oder) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12873.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St&auml;dtische Galerie Karlsruhe (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12636.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14744.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum D&uuml;sseldorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12869.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum Radolfzell (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stuttgart (5)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14860.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tennessee (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13307.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Th&uuml;ringen (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14824.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tirol (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12834.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Universit&auml;t der K&uuml;nste Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13230.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Utrechtse Heuvelrug (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13318.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venetien (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12251.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte K&ouml;nigreich von Großbritannien und Nordirland (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12252.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte Staaten von Amerika (12)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14746.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verona (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5788.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa Eduard L. Behrens  (Hamburg) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6143.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa Louis Sussmann-Hellborn  (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13579.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Waldniel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13487.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wallraf-Richartz-Museum &amp; Fondation Corboud (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12209.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Warleberger Hof (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12791.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wartburg-Stiftung (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13149.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Washington DC (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13096.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weimar (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15059.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wernigerode (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13173.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wiesbaden (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8531.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Winterpalast (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13099.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">W&uuml;rzburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12036.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Zeughaus (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13143.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Z&uuml;rich (3)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabOwnerCurrentLocation">
+            <label for="tabOwnerCurrentLocation">Ort (Nur aktuell/zuletzt bekannt)</label>
+            <div class="searchTab"> <h2>Wählen sie einen Ort:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13575.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aachen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5869.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aachener Rathaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12182.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Albertinum (Dresden) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8903.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alte Nationalgalerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13273.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Altenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_6288.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Altes Palais (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12832.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Archiv f&uuml;r Kunst und Geschichte (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8855.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Augsburg (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13151.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-Baden (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-W&uuml;rttemberg (16)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badische Landesbibliothek (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12911.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Badisches Generallandesarchiv (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bayern (12)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5416.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (35)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12726.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5417.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin-Charlottenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Dom (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_10985.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Rathaus (Rotes Rathaus) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12184.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlinische Galerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12932.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bibliotheca Hertziana (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14794.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bisingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14754.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bismarck-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Brandenburg (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13154.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Braunschweig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13115.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bremen (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_6120.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Breslau (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_18230.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bundesarchiv, Abteilung BE (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14793.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burg Hohenzollern (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13083.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cincinnati (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12190.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cincinnati Art Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13314.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">City of London (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_15113.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Coburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13159.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dessau (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12240.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutschland (111)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13186.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dortmund (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13089.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dresden (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8575.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Duisburger Rathaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13256.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;ren (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13092.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;sseldorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13213.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eisenach (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13195.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eurasburg (Oberbayern) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13441.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fondation Custodia (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8917.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt (Oder) (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5771.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt am Main (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5339.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankreich (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13297.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freie Hansestadt Bremen (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13156.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrichsruh (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13375.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">F&uuml;hrungsakademie der Bundeswehr (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12831.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie F&uuml;ßl &amp; Jakob (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12722.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Joseph Fach (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14996.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Mutter Fourage (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12705.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Westphal (Volker) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12686.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Geheimes Staatsarchiv Preußischer Kulturbesitz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12830.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Germanisches Nationalmuseum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_18402.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">G&ouml;ppingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13117.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburg (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12879.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburger Kunsthalle (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13084.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hannover (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12197.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Haus Doorn (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5126.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heidelberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12920.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Herzog Anton Ulrich-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13298.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hessen (7)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_18273.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hill-Stone (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12198.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Historisches Museum der Pfalz (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Icirc;le-de-France (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_1024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Italien (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">J&uuml;disches Museum Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14859.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Junkerhaus (Frankfurt (Oder)) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_6140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karlsruhe (8)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13215.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kassel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8552.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kiel (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12233.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstbibliothek Berlin (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_15041.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstforum Ostdeutsche Galerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthalle Kiel (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12232.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthalle Mannheim (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12229.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kupferstichkabinett Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_15114.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landesbibliothek Coburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13516.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landesmuseum Mainz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13320.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Latium (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8886.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leipzig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12876.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leopold-H&oelig;sch-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12936.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lindenau-Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13137.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">London (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12843.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">LWL-Museum f&uuml;r Kunst und Kultur (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13209.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mainz (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13110.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mannheim (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13228.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Marburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12655.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mark Murray Fine Paintings (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14855.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Martin von Wagner Museum (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_18271.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Massachusetts (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13299.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mecklenburg-Vorpommern (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13081.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchen (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13175.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nster (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13508.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum der bildenden K&uuml;nste Leipzig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum f&uuml;r Kommunikation Frankfurt (Bundespostmuseum) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12224.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum f&uuml;r Kunst und Kulturgeschichte Dortmund (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12223.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Museum Georg Sch&auml;fer (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12671.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">National Gallery of Art (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12877.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nationalmuseum Breslau (Muzeum Narodowe we Wrocławiu) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12221.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neue Galerie (Kassel) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neues Palais (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13085.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">New York (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_9965.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niederlande (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13300.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niedersachsen (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12908.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nieders&auml;chsisches Landesmuseum Hannover (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13330.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niederschlesien (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13301.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nordrhein-Westfalen (7)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8856.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">N&uuml;rnberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13196.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oberursel (Taunus) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13336.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oblast Leningrad (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13347.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ohio (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_18288.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Palais Friedrichstraße (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_16113.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Palazzo Serlupi Crescenzi (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5398.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Paris (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12721.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Peter Bierl Buch- &amp; Kunstantiquariat (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_9970.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Polen (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13150.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Potsdam (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12217.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Prinz-Max-Palais (Karlsruhe) (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13324.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Provinz Utrecht (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_6211.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Radolfzell am Bodensee (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13223.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ralswiek (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13212.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Regensburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13302.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinland-Pfalz (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5170.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rom (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12247.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Russland (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12035.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Saarbr&uuml;cken (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13304.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Saarland (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13306.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen-Anhalt (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13167.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sankt Petersburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12693.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schlesisches Museum der Bildenden K&uuml;nste (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13260.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13303.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig-Holstein (4)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12216.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Gottorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13408.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Monbijou (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12215.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Ralswiek (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_15060.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Wernigerode (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13190.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweinfurt (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_5833.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Siegesss&auml;ule (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13189.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Speyer (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12210.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatliche Kunsthalle Karlsruhe (Geb&auml;ude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12872.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatsbibliothek zu Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12793.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Staatsgalerie Stuttgart (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12694.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadt Duisburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12854.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtarchiv Frankfurt (Oder) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12873.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St&auml;dtische Galerie Karlsruhe (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12636.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_14744.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum D&uuml;sseldorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12869.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stadtmuseum Radolfzell (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stuttgart (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13307.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Th&uuml;ringen (3)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12834.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Universit&auml;t der K&uuml;nste Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13230.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Utrechtse Heuvelrug (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12251.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte K&ouml;nigreich von Großbritannien und Nordirland (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12252.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte Staaten von Amerika (5)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_6143.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa Louis Sussmann-Hellborn  (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12209.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Warleberger Hof (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12791.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wartburg-Stiftung (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13149.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Washington DC (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_15059.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wernigerode (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13173.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wiesbaden (2)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_8531.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Winterpalast (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_13099.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">W&uuml;rzburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/owner/list/ownerCurrentLocation_12036.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Zeughaus (Berlin) (1)</a></div>     </div>
+</div><article><h2 class="article-title">Ausgestellt</h2><div id="onDisplayMap" class="openStreetMap"></div> <script>const onDisplayMap = L.map("onDisplayMap").setView([51.3154546,9.4924096], 6); const onDisplayMap_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Ich vermute, dass die Bilder derzeit ausgestellt sind, aber um sicher zu gehen, empfehle ich, direkt vor Ort nachzufragen.'}).addTo(onDisplayMap);L.marker([50.776240460,6.083772469], {title: "Aachener Rathaus"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/4FC9928B-2179-4785-A49E-74DD25192FB6_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/AE8217F6-5D66-48DC-91C8-ECB74AFDD1F9.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://www.stadt-koeln.de/">Stadt Aachen</a>, <a href="https://de.wikipedia.org/wiki/Aachen">Aachen</a>'); L.marker([52.520960449,13.398299240], {title: "Alte Nationalgalerie"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/8658D8BB-1A5D-4101-AD28-0E86A2104112_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/3713B2F8-981A-486E-A1B1-3D03C1B5D611.html">Ausgestellte Kunstwerke: 3</a></div></div><a href="https://de.wikipedia.org/wiki/Staatliche_Museen_zu_Berlin">Staatliche Museen zu Berlin</a>, <a href="https://de.wikipedia.org/wiki/Berlin">Berlin</a>'); L.marker([52.519204398,13.401067269], {title: "Berliner Dom"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/1C9F88C6-6D34-4B88-9695-6A541E01D389_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/87536DA3-1CB6-4D70-A2AE-9BCF97401E8D.html">Ausgestellte Kunstwerke: 24</a></div></div><a href="https://de.wikipedia.org/wiki/Berliner_Dom">Berliner Dom</a>, <a href="https://de.wikipedia.org/wiki/Berlin">Berlin</a>'); L.marker([52.518421101,13.408655026], {title: "Berliner Rathaus (Rotes Rathaus)"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/8412D246-6B95-4409-A92C-83B30E542A01_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/48C5BAEB-2153-4736-830D-DF8F57259B85.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Senat_von_Berlin">Senat Berlin</a>, <a href="https://de.wikipedia.org/wiki/Berlin">Berlin</a>'); L.marker([52.504099875,13.398136427], {title: "Berlinische Galerie"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/72857A5F-89E0-4E88-B56E-D922A1152D78_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/80361203-D144-4009-ABF9-B1F44A72E118.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Berlinische_Galerie">Berlinische Galerie</a>, <a href="https://de.wikipedia.org/wiki/Berlin">Berlin</a>'); L.marker([53.529168926,10.340006614], {title: "Bismarck-Museum"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/8E891E1B-3E11-4B9C-B0AE-AA9A09DFBB2A_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/4BC61FDA-61DD-4070-A3D4-02B4C44C9EDC.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Bismarck-Museum_Friedrichsruh">Bismarck-Museum</a>, <a href="https://de.wikipedia.org/wiki/Friedrichsruh">Friedrichsruh</a>'); L.marker([48.323194000,8.967722000], {title: "Burg Hohenzollern"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/ACF63133-67EF-45C5-BFB1-8D4327ACC76B_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/4F70F64F-D14E-46B1-8F44-F24820818E31.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Hohenzollern">Haus Hohenzollern</a>, <a href="https://de.wikipedia.org/wiki/Bisingen">Bisingen</a>'); L.marker([51.436712038,6.770780712], {title: "Duisburger Rathaus"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/5FE9EC39-7790-4A78-8920-D3CC6CCC4C1B_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/42F9E4A4-0D93-4F97-9C23-C6740F4C0860.html">Ausgestellte Kunstwerke: 2</a></div></div><a href="https://www.duisburg.de/">Stadt Duisburg</a>, <a href="https://www.duisburg.de/">Duisburg</a>'); L.marker([53.562671000,9.830454000], {title: "Führungsakademie der Bundeswehr"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/11439FBB-20F0-4833-95AA-89E018A4B0DB_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/9A8B3B0E-9D2F-49CA-BF44-B910F76E028B.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/F%C3%BChrungsakademie_der_Bundeswehr">F&uuml;hrungsakademie der Bundeswehr</a>, <a href="https://de.wikipedia.org/wiki/Hamburg">Hamburg</a>'); L.marker([52.416472066,13.146391564], {title: "Galerie Mutter Fourage"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/C55861F2-77C2-4E20-A979-DE8C4480462F_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/exhibition/detail/C431E0F3-EF61-4312-912E-7F8DF11C0532.html">Ausgestellte Kunstwerke: 59</a></div></div>Anton von Werner - Sammlung Ketels (So, 17.11.2024 - So, 19.01.2025), <a href="https://galeriemutterfourage.de/">Galerie Mutter Fourage</a><div><img src="https://antonvonwerner.de/shared/resources/art/D3B0B082-DD80-4699-961E-888E0DE9379D_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/730826C7-E982-4E7B-95CD-87D5FE766927.html">Ausgestellte Kunstwerke: 1</a></div></div>Sammlung <a href="https://de.wikipedia.org/wiki/Wolfgang_Immenhausen">Wolfgang Immenhausen</a>'); L.marker([53.555000000,10.003056000], {title: "Hamburger Kunsthalle"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/CC219E64-7134-401F-9A17-46A469457CCE_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/FC8BAFD8-85B9-46FD-A845-5668466CDE3F.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Hamburger_Kunsthalle">Hamburger Kunsthalle</a>, <a href="https://de.wikipedia.org/wiki/Hamburg">Hamburg</a>'); L.marker([52.031595890,5.338581111], {title: "Haus Doorn"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/29385B64-A4A6-4216-829F-57DCD5600B01_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/B7AC0058-46CD-4740-8253-9C10094FBB98.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Haus_Doorn#Museum">Museum Haus Doorn</a>, <a href="https://de.wikipedia.org/wiki/Utrechtse_Heuvelrug">Utrechtse Heuvelrug</a>'); L.marker([49.482822850,8.475182297], {title: "Kunsthalle Mannheim (Gebäude)"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/A079A235-DDEC-4795-852F-505E2243E3FA_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/91B06160-E29E-4A3A-AAD8-C8833EBF505C.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Kunsthalle_Mannheim">Kunsthalle Mannheim</a>, <a href="https://de.wikipedia.org/wiki/Mannheim">Mannheim</a>'); L.marker([51.516800876,7.463019069], {title: "Museum für Kunst und Kulturgeschichte Dortmund"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/B4D26907-D48D-4F58-BE9D-828F7A0EFAB4_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/C2199504-3C43-4C4A-A229-CA3169CDBFC4.html">Ausgestellte Kunstwerke: 2</a></div></div><a href="https://de.wikipedia.org/wiki/Museum_f%C3%BCr_Kunst_und_Kulturgeschichte_Dortmund">Museum f&uuml;r Kunst und Kulturgeschichte Dortmund</a>, <a href="https://de.wikipedia.org/wiki/Dortmund">Dortmund</a>'); L.marker([50.080329193,8.240833009], {title: "Palais Friedrichstraße"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/3EA3D945-4957-4CE9-9C3D-9F6C2DDB04F3_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/9BFFF1BC-139C-4CD0-A7A1-8EB4A0DD99A9.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Wiesbadener_Casino-Gesellschaft">Wiesbadener Casino-Gesellschaft</a>, <a href="https://de.wikipedia.org/wiki/Wiesbaden">Wiesbaden</a>'); L.marker([49.011233779,8.394879011], {title: "Prinz-Max-Palais (Karlsruhe)"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/8E19E98C-3F71-4209-942A-35A55F44A712_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/5A2891F7-8D12-4358-B530-491F7B4AE727.html">Ausgestellte Kunstwerke: 2</a></div></div><a href="https://de.wikipedia.org/wiki/Museum_f%C3%BCr_Literatur_am_Oberrhein">Museum f&uuml;r Literatur am Oberrhein</a>, <a href="https://de.wikipedia.org/wiki/Karlsruhe">Karlsruhe</a>'); L.marker([52.514653455,13.350108497], {title: "Siegesssäule (Berlin)"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/9B4C8F56-D212-453D-8A28-B9B91AD43073_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/0D66B403-C91B-406B-8C5D-3D23AF64CE4F.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://www.berlin.de/">Stadt Berlin</a>, <a href="https://de.wikipedia.org/wiki/Berlin">Berlin</a>'); L.marker([51.222216450,6.769738500], {title: "Stadtmuseum Düsseldorf"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/88130432-7731-47EA-92D5-10CA4F3000BF_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/CAB93F91-6F7E-49C6-AEAF-6E3904CE891A.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Stadtmuseum_Landeshauptstadt_D%C3%BCsseldorf">Stadtmuseum D&uuml;sseldorf</a>, <a href="https://de.wikipedia.org/wiki/D%C3%BCsseldorf">Düsseldorf</a>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(onDisplayMap).bindPopup('<div><img src="https://antonvonwerner.de/shared/resources/art/B068CA50-D454-4DBB-A7C5-2084FDFAC7C9_preview.jpg" alt="Kunstwerk" class="mapImg"><div><a href="https://antonvonwerner.de/html/owner/detail/6B82D113-75F9-435F-82E2-ED28181D2C1E.html">Ausgestellte Kunstwerke: 1</a></div></div><a href="https://de.wikipedia.org/wiki/Deutsches_Historisches_Museum">Deutsches Historisches Museum</a>, <a href="https://de.wikipedia.org/wiki/Berlin">Berlin</a>');</script></article><h2 class="article-title">Alle Besitzer (ehemals und aktuell)</h2><article><div id="idMapOwners" class="openStreetMap"></div> <script>const idMapOwners = L.map("idMapOwners").setView([51.3154546,9.4924096], 6); const idMapOwners_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapOwners);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([35.149444000,-90.048889000], {icon: orangeIcon,title: "Memphis (Tennessee)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14861.html">Memphis (Tennessee) - Anzahl: 1</a></div>'); L.marker([38.891389000,-77.020000000], {title: "National Gallery of Art"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12671.html">National Gallery of Art - Anzahl: 1</a></div>'); L.marker([39.114641908,-84.496807932], {title: "Cincinnati Art Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12190.html">Cincinnati Art Museum - Anzahl: 1</a></div>'); L.marker([40.000000000,-100.000000000], {icon: orangeIcon,title: "Vereinigte Staaten von Amerika"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12252.html">Vereinigte Staaten von Amerika - Anzahl: 12</a></div>'); L.marker([40.712778000,-74.005833000], {icon: orangeIcon,title: "New York"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13085.html">New York - Anzahl: 4</a></div>'); L.marker([40.764494832,-73.967836013], {title: "Mark Murray Fine Paintings"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12655.html">Mark Murray Fine Paintings - Anzahl: 1</a></div>'); L.marker([41.590777212,-70.946980988], {icon: orangeIcon,title: "Hill-Stone"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18273.html">Hill-Stone - Anzahl: 1</a></div>'); L.marker([41.861417403,13.034288583], {title: "Casa Baldi (Olevano)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5282.html">Casa Baldi (Olevano) - Anzahl: 1</a></div>'); L.marker([41.883333000,12.483333000], {icon: orangeIcon,title: "Rom"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5170.html">Rom - Anzahl: 3</a></div>'); L.marker([41.899242967,12.478232399], {title: "Palazzo Serlupi Crescenzi"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_16113.html">Palazzo Serlupi Crescenzi - Anzahl: 1</a></div>'); L.marker([41.905403000,12.484277000], {title: "Bibliotheca Hertziana"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12932.html">Bibliotheca Hertziana - Anzahl: 1</a></div>'); L.marker([44.433333000,26.100000000], {icon: orangeIcon,title: "Bukarest"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14743.html">Bukarest - Anzahl: 1</a></div>'); L.marker([44.958682277,-93.273250189], {title: "Minneapolis Institute of Art"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12225.html">Minneapolis Institute of Art - Anzahl: 1</a></div>'); L.marker([45.438690000,10.993380000], {icon: orangeIcon,title: "Verona"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14746.html">Verona - Anzahl: 1</a></div>'); L.marker([46.200805590,6.147707897], {title: "Galerie de Loës"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12698.html">Galerie de Loës - Anzahl: 1</a></div>'); L.marker([46.316667000,2.533333000], {icon: orangeIcon,title: "Frankreich"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5339.html">Frankreich - Anzahl: 4</a></div>'); L.marker([46.800000000,8.233333000], {icon: orangeIcon,title: "Schweiz"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5360.html">Schweiz - Anzahl: 7</a></div>'); L.marker([47.051274476,8.341009356], {title: "Galerie Fischer"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14853.html">Galerie Fischer - Anzahl: 1</a></div>'); L.marker([47.052070000,8.305850000], {icon: orangeIcon,title: "Luzern"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6255.html">Luzern - Anzahl: 2</a></div>'); L.marker([47.267222000,11.392778000], {icon: orangeIcon,title: "Innsbruck"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8877.html">Innsbruck - Anzahl: 1</a></div>'); L.marker([47.371740000,8.542260000], {icon: orangeIcon,title: "Zürich"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13143.html">Zürich - Anzahl: 3</a></div>'); L.marker([47.631389000,13.004167000], {icon: orangeIcon,title: "Berchtesgaden"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6273.html">Berchtesgaden - Anzahl: 1</a></div>'); L.marker([47.633611000,13.041944000], {title: "Berghof (Obersalzberg)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14854.html">Berghof (Obersalzberg) - Anzahl: 1</a></div>'); L.marker([47.649360663,10.722712184], {title: "Kotte Autographs"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12864.html">Kotte Autographs - Anzahl: 1</a></div>'); L.marker([47.727500000,9.004444000], {icon: orangeIcon,title: "Mettnau"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6265.html">Mettnau - Anzahl: 1</a></div>'); L.marker([47.736917318,8.968950000], {title: "Stadtmuseum Radolfzell"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12869.html">Stadtmuseum Radolfzell - Anzahl: 1</a></div>'); L.marker([47.852391088,11.402527256], {title: "Peter Bierl Buch- & Kunstantiquariat"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12721.html">Peter Bierl Buch- & Kunstantiquariat - Anzahl: 1</a></div>'); L.marker([47.908889000,11.281389000], {icon: orangeIcon,title: "Tutzing"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13253.html">Tutzing - Anzahl: 1</a></div>'); L.marker([48.086389000,9.214722000], {icon: orangeIcon,title: "Sigmaringen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_17142.html">Sigmaringen - Anzahl: 1</a></div>'); L.marker([48.139722000,11.574444000], {icon: orangeIcon,title: "München"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13081.html">München - Anzahl: 14</a></div>'); L.marker([48.140842096,11.601109955], {title: "Kunkel Fine Art"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12661.html">Kunkel Fine Art - Anzahl: 1</a></div>'); L.marker([48.142920826,11.576344468], {title: "Katrin Bellinger KUNSTHANDEL"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12200.html">Katrin Bellinger KUNSTHANDEL - Anzahl: 1</a></div>'); L.marker([48.149374652,11.583667461], {title: "Kunsthandel Sabine Helms"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15095.html">Kunsthandel Sabine Helms - Anzahl: 1</a></div>'); L.marker([48.181339279,11.475027825], {title: "Antiquariat Abaton"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12865.html">Antiquariat Abaton - Anzahl: 1</a></div>'); L.marker([48.185183801,11.550340253], {title: "Galerie Füßl & Jakob"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12831.html">Galerie Füßl & Jakob - Anzahl: 1</a></div>'); L.marker([48.213892658,16.356943071], {title: "Antiquariat Inlibris"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12866.html">Antiquariat Inlibris - Anzahl: 1</a></div>'); L.marker([48.303056000,14.290556000], {icon: orangeIcon,title: "Linz"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14864.html">Linz - Anzahl: 1</a></div>'); L.marker([48.323194000,8.967722000], {title: "Burg Hohenzollern"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14793.html">Burg Hohenzollern - Anzahl: 1</a></div>'); L.marker([48.371667000,10.898333000], {icon: orangeIcon,title: "Augsburg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8855.html">Augsburg - Anzahl: 2</a></div>'); L.marker([48.702500000,9.652778000], {icon: orangeIcon,title: "Göppingen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18402.html">Göppingen - Anzahl: 1</a></div>'); L.marker([48.761944000,8.240833000], {icon: orangeIcon,title: "Baden-Baden"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13151.html">Baden-Baden - Anzahl: 2</a></div>'); L.marker([48.775556000,9.182778000], {icon: orangeIcon,title: "Stuttgart"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8887.html">Stuttgart - Anzahl: 5</a></div>'); L.marker([48.780228000,9.186875000], {title: "Staatsgalerie Stuttgart"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12793.html">Staatsgalerie Stuttgart - Anzahl: 1</a></div>'); L.marker([48.856667000,2.351667000], {icon: orangeIcon,title: "Paris"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5398.html">Paris - Anzahl: 3</a></div>'); L.marker([48.861512187,2.319695682], {title: "Fondation Custodia"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13441.html">Fondation Custodia - Anzahl: 1</a></div>'); L.marker([48.949444000,11.395000000], {icon: orangeIcon,title: "Bayern"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13296.html">Bayern - Anzahl: 30</a></div>'); L.marker([49.000684993,8.383054100], {title: "Städtische Galerie Karlsruhe"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12873.html">Städtische Galerie Karlsruhe - Anzahl: 1</a></div>'); L.marker([49.001344013,8.383673926], {title: "Staatliche Kunsthalle Karlsruhe (Gebäude)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12210.html">Staatliche Kunsthalle Karlsruhe (Gebäude) - Anzahl: 1</a></div>'); L.marker([49.007940000,8.398618000], {title: "Badische Landesbibliothek"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12937.html">Badische Landesbibliothek - Anzahl: 1</a></div>'); L.marker([49.011233779,8.394879011], {title: "Prinz-Max-Palais (Karlsruhe)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12217.html">Prinz-Max-Palais (Karlsruhe) - Anzahl: 2</a></div>'); L.marker([49.011245315,8.399675540], {title: "Badischer Kunstverein (Gebäude)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14735.html">Badischer Kunstverein (Gebäude) - Anzahl: 1</a></div>'); L.marker([49.013010000,8.383525000], {title: "Badisches Generallandesarchiv"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12911.html">Badisches Generallandesarchiv - Anzahl: 1</a></div>'); L.marker([49.014000000,8.404300000], {icon: orangeIcon,title: "Karlsruhe"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6140.html">Karlsruhe - Anzahl: 14</a></div>'); L.marker([49.019833000,12.082222000], {title: "Kunstforum Ostdeutsche Galerie"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15041.html">Kunstforum Ostdeutsche Galerie - Anzahl: 1</a></div>'); L.marker([49.232650000,6.996190000], {icon: orangeIcon,title: "Saarbrücken"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12035.html">Saarbrücken - Anzahl: 2</a></div>'); L.marker([49.316435559,8.441621862], {title: "Historisches Museum der Pfalz (Gebäude)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12198.html">Historisches Museum der Pfalz (Gebäude) - Anzahl: 1</a></div>'); L.marker([49.383333000,6.833333000], {icon: orangeIcon,title: "Saarland"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13304.html">Saarland - Anzahl: 3</a></div>'); L.marker([49.410320000,8.697070000], {icon: orangeIcon,title: "Heidelberg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5126.html">Heidelberg - Anzahl: 2</a></div>'); L.marker([49.448249000,11.075511000], {title: "Germanisches Nationalmuseum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12830.html">Germanisches Nationalmuseum - Anzahl: 1</a></div>'); L.marker([49.455556000,11.078611000], {icon: orangeIcon,title: "Nürnberg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8856.html">Nürnberg - Anzahl: 2</a></div>'); L.marker([49.472138764,8.675301393], {title: "Kunsthaus Winterberg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12627.html">Kunsthaus Winterberg - Anzahl: 1</a></div>'); L.marker([49.482822850,8.475182297], {title: "Kunsthalle Mannheim (Gebäude)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12232.html">Kunsthalle Mannheim (Gebäude) - Anzahl: 1</a></div>'); L.marker([49.487760000,8.466220000], {icon: orangeIcon,title: "Mannheim"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13110.html">Mannheim - Anzahl: 2</a></div>'); L.marker([49.792720000,9.939260000], {title: "Martin von Wagner Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14855.html">Martin von Wagner Museum - Anzahl: 1</a></div>'); L.marker([49.798412602,9.938101726], {title: "Kunsthandlung Albert Neuhaus"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18219.html">Kunsthandlung Albert Neuhaus - Anzahl: 1</a></div>'); L.marker([50.000000000,8.271111000], {icon: orangeIcon,title: "Mainz"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13209.html">Mainz - Anzahl: 2</a></div>'); L.marker([50.003850000,8.267780000], {title: "Landesmuseum Mainz"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13516.html">Landesmuseum Mainz - Anzahl: 1</a></div>'); L.marker([50.044105524,10.236329122], {title: "Museum Georg Schäfer"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12223.html">Museum Georg Schäfer - Anzahl: 1</a></div>'); L.marker([50.045000000,10.234167000], {icon: orangeIcon,title: "Schweinfurt"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13190.html">Schweinfurt - Anzahl: 2</a></div>'); L.marker([50.080329193,8.240833009], {title: "Palais Friedrichstraße"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18288.html">Palais Friedrichstraße - Anzahl: 1</a></div>'); L.marker([50.082500000,8.240000000], {icon: orangeIcon,title: "Wiesbaden"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13173.html">Wiesbaden - Anzahl: 3</a></div>'); L.marker([50.087569000,8.444722000], {icon: orangeIcon,title: "Hofheim am Taunus"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18393.html">Hofheim am Taunus - Anzahl: 1</a></div>'); L.marker([50.104444000,8.675278000], {title: "Museum für Kommunikation Frankfurt (Bundespostmuseum)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12896.html">Museum für Kommunikation Frankfurt (Bundespostmuseum) - Anzahl: 1</a></div>'); L.marker([50.110556000,8.682222000], {icon: orangeIcon,title: "Frankfurt am Main"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5771.html">Frankfurt am Main - Anzahl: 4</a></div>'); L.marker([50.118328545,8.660298746], {title: "H. W. Fichter Kunsthandel"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12719.html">H. W. Fichter Kunsthandel - Anzahl: 1</a></div>'); L.marker([50.179919089,8.508512336], {title: "Galerie Uwe Opper"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12702.html">Galerie Uwe Opper - Anzahl: 1</a></div>'); L.marker([50.188889000,8.510000000], {title: "Schloss Friedrichshof"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14865.html">Schloss Friedrichshof - Anzahl: 1</a></div>'); L.marker([50.218532441,8.552165953], {title: "Galerie Joseph Fach"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12722.html">Galerie Joseph Fach - Anzahl: 1</a></div>'); L.marker([50.258056000,10.967222000], {title: "Landesbibliothek Coburg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15114.html">Landesbibliothek Coburg - Anzahl: 1</a></div>'); L.marker([50.599501000,9.024946000], {icon: orangeIcon,title: "Hessen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13298.html">Hessen - Anzahl: 17</a></div>'); L.marker([50.684722000,7.155000000], {icon: orangeIcon,title: "Bad Godesberg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14739.html">Bad Godesberg - Anzahl: 1</a></div>'); L.marker([50.703889000,8.694722000], {icon: orangeIcon,title: "Fronhausen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13272.html">Fronhausen - Anzahl: 1</a></div>'); L.marker([50.733992000,7.099814000], {icon: orangeIcon,title: "Bonn"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13116.html">Bonn - Anzahl: 1</a></div>'); L.marker([50.767811141,6.076747326], {title: "Luisenhospital Aachen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14756.html">Luisenhospital Aachen - Anzahl: 1</a></div>'); L.marker([50.776240460,6.083772469], {title: "Aachener Rathaus"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5869.html">Aachener Rathaus - Anzahl: 1</a></div>'); L.marker([50.801500000,6.479333000], {title: "Leopold-Hoesch-Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12876.html">Leopold-Hoesch-Museum - Anzahl: 1</a></div>'); L.marker([50.808453000,8.771796000], {icon: orangeIcon,title: "Marburg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13228.html">Marburg - Anzahl: 3</a></div>'); L.marker([50.809959000,8.774799000], {title: "Kunstgebäude der Philipps-Universität Marburg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14849.html">Kunstgebäude der Philipps-Universität Marburg - Anzahl: 1</a></div>'); L.marker([50.861444000,11.052246000], {icon: orangeIcon,title: "Thüringen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13307.html">Thüringen - Anzahl: 4</a></div>'); L.marker([50.937674343,6.958275100], {title: "Wallraf-Richartz-Museum & Fondation Corboud"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13487.html">Wallraf-Richartz-Museum & Fondation Corboud - Anzahl: 1</a></div>'); L.marker([50.938056000,6.956944000], {icon: orangeIcon,title: "Köln"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13105.html">Köln - Anzahl: 4</a></div>'); L.marker([50.966677000,10.306279000], {title: "Wartburg-Stiftung"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12791.html">Wartburg-Stiftung - Anzahl: 1</a></div>'); L.marker([50.979444000,11.329722000], {icon: orangeIcon,title: "Weimar"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13096.html">Weimar - Anzahl: 1</a></div>'); L.marker([50.991889000,12.444944000], {title: "Lindenau-Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12936.html">Lindenau-Museum - Anzahl: 1</a></div>'); L.marker([51.049259000,13.738360000], {icon: orangeIcon,title: "Dresden"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13089.html">Dresden - Anzahl: 4</a></div>'); L.marker([51.049333000,13.738139000], {icon: orangeIcon,title: "Sachsen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13305.html">Sachsen - Anzahl: 7</a></div>'); L.marker([51.052155358,13.744333569], {title: "Albertinum (Dresden)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12182.html">Albertinum (Dresden) - Anzahl: 1</a></div>'); L.marker([51.057631300,13.749115253], {title: "Sächsische Staatskanzlei"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14857.html">Sächsische Staatskanzlei - Anzahl: 1</a></div>'); L.marker([51.060259234,13.741415471], {title: "Galerie Finkenstein"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18376.html">Galerie Finkenstein - Anzahl: 1</a></div>'); L.marker([51.104167000,17.025556000], {title: "Schlesisches Museum der Bildenden Künste"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12693.html">Schlesisches Museum der Bildenden Künste - Anzahl: 1</a></div>'); L.marker([51.111000000,17.047500000], {title: "Nationalmuseum Breslau (Muzeum Narodowe we Wrocławiu)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12877.html">Nationalmuseum Breslau (Muzeum Narodowe we Wrocławiu) - Anzahl: 1</a></div>'); L.marker([51.165000000,10.455278000], {icon: orangeIcon,title: "Deutschland"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12240.html">Deutschland - Anzahl: 258</a></div>'); L.marker([51.213056000,6.273056000], {icon: orangeIcon,title: "Waldniel"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13579.html">Waldniel - Anzahl: 1</a></div>'); L.marker([51.220556000,4.399722000], {icon: orangeIcon,title: "Antwerpen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13258.html">Antwerpen - Anzahl: 1</a></div>'); L.marker([51.222216450,6.769738500], {title: "Stadtmuseum Düsseldorf"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14744.html">Stadtmuseum Düsseldorf - Anzahl: 1</a></div>'); L.marker([51.309865400,9.493532526], {title: "Neue Galerie (Kassel)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12221.html">Neue Galerie (Kassel) - Anzahl: 1</a></div>'); L.marker([51.340333000,12.374750000], {icon: orangeIcon,title: "Leipzig"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8886.html">Leipzig - Anzahl: 2</a></div>'); L.marker([51.342222000,12.375556000], {title: "Museum der bildenden Künste Leipzig"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13508.html">Museum der bildenden Künste Leipzig - Anzahl: 1</a></div>'); L.marker([51.436712038,6.770780712], {title: "Duisburger Rathaus"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8575.html">Duisburger Rathaus - Anzahl: 1</a></div>'); L.marker([51.478333000,7.555000000], {icon: orangeIcon,title: "Nordrhein-Westfalen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13301.html">Nordrhein-Westfalen - Anzahl: 18</a></div>'); L.marker([51.509390000,-0.118320000], {icon: orangeIcon,title: "London"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13137.html">London - Anzahl: 3</a></div>'); L.marker([51.516800876,7.463019069], {title: "Museum für Kunst und Kulturgeschichte Dortmund"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12224.html">Museum für Kunst und Kulturgeschichte Dortmund - Anzahl: 1</a></div>'); L.marker([51.830530000,10.794990000], {title: "Schloss Wernigerode"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15060.html">Schloss Wernigerode - Anzahl: 1</a></div>'); L.marker([51.834167000,12.237778000], {icon: orangeIcon,title: "Dessau"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13159.html">Dessau - Anzahl: 1</a></div>'); L.marker([51.850000000,15.716667000], {icon: orangeIcon,title: "Deutsch Wartenberg (Otyń)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14851.html">Deutsch Wartenberg (Otyń) - Anzahl: 1</a></div>'); L.marker([51.916667000,5.566667000], {icon: orangeIcon,title: "Niederlande"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_9965.html">Niederlande - Anzahl: 2</a></div>'); L.marker([51.961944000,7.624444000], {title: "LWL-Museum für Kunst und Kultur"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12843.html">LWL-Museum für Kunst und Kultur - Anzahl: 1</a></div>'); L.marker([51.962944000,7.628694000], {icon: orangeIcon,title: "Münster"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13175.html">Münster - Anzahl: 2</a></div>'); L.marker([51.962944000,7.628694000], {icon: orangeIcon,title: "Münsterland"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_15091.html">Münsterland - Anzahl: 1</a></div>'); L.marker([52.031595890,5.338581111], {title: "Haus Doorn"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12197.html">Haus Doorn - Anzahl: 1</a></div>'); L.marker([52.052000000,12.389000000], {icon: orangeIcon,title: "DDR"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12919.html">DDR - Anzahl: 1</a></div>'); L.marker([52.073611000,10.858611000], {icon: orangeIcon,title: "Beierstedt"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13266.html">Beierstedt - Anzahl: 1</a></div>'); L.marker([52.146944000,19.378056000], {icon: orangeIcon,title: "Polen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_9970.html">Polen - Anzahl: 5</a></div>'); L.marker([52.257778000,10.525139000], {title: "Kunstverein Braunschweig"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12777.html">Kunstverein Braunschweig - Anzahl: 1</a></div>'); L.marker([52.263333000,10.533056000], {title: "Herzog Anton Ulrich-Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12920.html">Herzog Anton Ulrich-Museum - Anzahl: 1</a></div>'); L.marker([52.269167000,10.521111000], {icon: orangeIcon,title: "Braunschweig"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13154.html">Braunschweig - Anzahl: 4</a></div>'); L.marker([52.275418000,8.038580000], {title: "Kulturgeschichtliches Museum Osnabrück"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13573.html">Kulturgeschichtliches Museum Osnabrück - Anzahl: 1</a></div>'); L.marker([52.332500000,15.293611000], {icon: orangeIcon,title: "Lagow (Łagów, Powiat Świebodziński)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14787.html">Lagow (Łagów, Powiat Świebodziński) - Anzahl: 1</a></div>'); L.marker([52.342083000,14.551667000], {icon: orangeIcon,title: "Frankfurt (Oder)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8917.html">Frankfurt (Oder) - Anzahl: 8</a></div>'); L.marker([52.345195000,14.555281000], {title: "Junkerhaus (Frankfurt (Oder))"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14859.html">Junkerhaus (Frankfurt (Oder)) - Anzahl: 1</a></div>'); L.marker([52.346941000,14.548872000], {title: "Stadtarchiv Frankfurt (Oder)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12854.html">Stadtarchiv Frankfurt (Oder) - Anzahl: 1</a></div>'); L.marker([52.365556000,9.740000000], {title: "Niedersächsisches Landesmuseum Hannover"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12908.html">Niedersächsisches Landesmuseum Hannover - Anzahl: 1</a></div>'); L.marker([52.371380000,9.732274000], {title: "Galerie J. H. Bauer"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_17140.html">Galerie J. H. Bauer - Anzahl: 1</a></div>'); L.marker([52.374444000,9.738611000], {icon: orangeIcon,title: "Hannover"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13084.html">Hannover - Anzahl: 3</a></div>'); L.marker([52.395833000,13.061389000], {icon: orangeIcon,title: "Potsdam"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13150.html">Potsdam - Anzahl: 2</a></div>'); L.marker([52.401464621,13.015987082], {title: "Neues Palais"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5937.html">Neues Palais - Anzahl: 1</a></div>'); L.marker([52.416472066,13.146391564], {title: "Galerie Mutter Fourage"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14996.html">Galerie Mutter Fourage - Anzahl: 1</a></div>'); L.marker([52.427164557,13.198898684], {title: "Archiv für Kunst und Geschichte"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12832.html">Archiv für Kunst und Geschichte - Anzahl: 1</a></div>'); L.marker([52.431420000,13.299140000], {title: "Bundesarchiv, Abteilung BE"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18230.html">Bundesarchiv, Abteilung BE - Anzahl: 1</a></div>'); L.marker([52.440652055,13.583859626], {title: "Dorotheenstraße 15, Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14858.html">Dorotheenstraße 15, Berlin - Anzahl: 1</a></div>'); L.marker([52.461111000,13.292778000], {title: "Geheimes Staatsarchiv Preußischer Kulturbesitz"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12686.html">Geheimes Staatsarchiv Preußischer Kulturbesitz - Anzahl: 1</a></div>'); L.marker([52.498122541,13.323350126], {title: "Galerie Westphal (Volker)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12705.html">Galerie Westphal (Volker) - Anzahl: 1</a></div>'); L.marker([52.500678152,13.309766485], {title: "LEO SPIK Auktionshaus"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12620.html">LEO SPIK Auktionshaus - Anzahl: 1</a></div>'); L.marker([52.501154157,13.313462240], {title: "Galerie Pels-Leusden"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12191.html">Galerie Pels-Leusden - Anzahl: 1</a></div>'); L.marker([52.501389000,13.395556000], {title: "Jüdisches Museum Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12897.html">Jüdisches Museum Berlin - Anzahl: 1</a></div>'); L.marker([52.502361000,13.395194000], {title: "Berlin Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12726.html">Berlin Museum - Anzahl: 1</a></div>'); L.marker([52.502568914,13.346188582], {title: "Antiquitäten Plötz-Peters"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14726.html">Antiquitäten Plötz-Peters - Anzahl: 1</a></div>'); L.marker([52.504099875,13.398136427], {title: "Berlinische Galerie"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12184.html">Berlinische Galerie - Anzahl: 1</a></div>'); L.marker([52.505800405,13.366290000], {title: "Verein Berliner Künstler"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6167.html">Verein Berliner Künstler - Anzahl: 1</a></div>'); L.marker([52.506389000,13.370278000], {title: "Staatsbibliothek zu Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12872.html">Staatsbibliothek zu Berlin - Anzahl: 1</a></div>'); L.marker([52.506394579,13.318486269], {title: "Galerie Tableau"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13559.html">Galerie Tableau - Anzahl: 1</a></div>'); L.marker([52.508056000,13.331111000], {title: "Universität der Künste Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12834.html">Universität der Künste Berlin - Anzahl: 1</a></div>'); L.marker([52.508584393,13.358370626], {title: "Villa Louis Sussmann-Hellborn  (Berlin)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6143.html">Villa Louis Sussmann-Hellborn  (Berlin) - Anzahl: 1</a></div>'); L.marker([52.508593561,13.366919256], {title: "Kunstbibliothek Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12233.html">Kunstbibliothek Berlin - Anzahl: 2</a></div>'); L.marker([52.508894662,13.365992926], {title: "Kupferstichkabinett Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12229.html">Kupferstichkabinett Berlin - Anzahl: 1</a></div>'); L.marker([52.510556000,13.378333000], {title: "Mosse-Palais (1885)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13560.html">Mosse-Palais (1885) - Anzahl: 1</a></div>'); L.marker([52.513352276,13.389274997], {title: "Johanna Ohloff Kunsthandlung"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14843.html">Johanna Ohloff Kunsthandlung - Anzahl: 1</a></div>'); L.marker([52.513752845,13.415022526], {title: "Märkisches Museum (Berlin)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12898.html">Märkisches Museum (Berlin) - Anzahl: 1</a></div>'); L.marker([52.514653455,13.350108497], {title: "Siegesssäule (Berlin)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5833.html">Siegesssäule (Berlin) - Anzahl: 1</a></div>'); L.marker([52.516311537,13.406889840], {title: "Stadtmuseum Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12636.html">Stadtmuseum Berlin - Anzahl: 1</a></div>'); L.marker([52.517041133,13.400682727], {title: "Berliner Schloss"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6169.html">Berliner Schloss - Anzahl: 1</a></div>'); L.marker([52.517076148,13.392856697], {title: "Altes Palais (Berlin)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_6288.html">Altes Palais (Berlin) - Anzahl: 1</a></div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12036.html">Zeughaus (Berlin) - Anzahl: 1</a></div>'); L.marker([52.518268058,13.396930611], {title: "Ruhmeshalle (Berlin)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5431.html">Ruhmeshalle (Berlin) - Anzahl: 1</a></div>'); L.marker([52.518421101,13.408655026], {title: "Berliner Rathaus (Rotes Rathaus)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_10985.html">Berliner Rathaus (Rotes Rathaus) - Anzahl: 1</a></div>'); L.marker([52.519204398,13.401067269], {title: "Berliner Dom"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5311.html">Berliner Dom - Anzahl: 2</a></div>'); L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5416.html">Berlin - Anzahl: 76</a></div>'); L.marker([52.520960449,13.398299240], {title: "Alte Nationalgalerie"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8903.html">Alte Nationalgalerie - Anzahl: 1</a></div>'); L.marker([52.521111000,13.295833000], {title: "Schloss Charlottenburg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12905.html">Schloss Charlottenburg - Anzahl: 1</a></div>'); L.marker([52.522749390,13.411531891], {title: "Panoramagebäude Alexanderplatz"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12219.html">Panoramagebäude Alexanderplatz - Anzahl: 1</a></div>'); L.marker([52.523333000,13.396667000], {title: "Schloss Monbijou"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13408.html">Schloss Monbijou - Anzahl: 2</a></div>'); L.marker([52.532939770,13.388583686], {title: "Humboldt-Gymnasium (Gartenstr. 29)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18415.html">Humboldt-Gymnasium (Gartenstr. 29) - Anzahl: 1</a></div>'); L.marker([53.008611000,13.636389000], {title: "Carinhall"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14852.html">Carinhall - Anzahl: 1</a></div>'); L.marker([53.075878000,8.807311000], {icon: orangeIcon,title: "Bremen"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13115.html">Bremen - Anzahl: 4</a></div>'); L.marker([53.529168926,10.340006614], {title: "Bismarck-Museum"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_14754.html">Bismarck-Museum - Anzahl: 1</a></div>'); L.marker([53.529286337,10.340023635], {icon: orangeIcon,title: "Friedrichsruh"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13156.html">Friedrichsruh - Anzahl: 2</a></div>'); L.marker([53.552173487,9.986060836], {icon: orangeIcon,title: "Hamburg"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13117.html">Hamburg - Anzahl: 10</a></div>'); L.marker([53.555000000,10.003056000], {title: "Hamburger Kunsthalle"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12879.html">Hamburger Kunsthalle - Anzahl: 1</a></div>'); L.marker([53.556383093,9.937472798], {title: "Antiquariat Halkyone"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12867.html">Antiquariat Halkyone - Anzahl: 1</a></div>'); L.marker([53.562671000,9.830454000], {title: "Führungsakademie der Bundeswehr"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13375.html">Führungsakademie der Bundeswehr - Anzahl: 1</a></div>'); L.marker([53.566500079,9.994199140], {title: "Dr. Moeller  & Cie. Kunsthandel"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12670.html">Dr. Moeller  & Cie. Kunsthandel - Anzahl: 1</a></div>'); L.marker([53.571427964,9.998625269], {title: "Villa Eduard L. Behrens  (Hamburg)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_5788.html">Villa Eduard L. Behrens  (Hamburg) - Anzahl: 1</a></div>'); L.marker([54.323210000,10.140190000], {icon: orangeIcon,title: "Kiel"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8552.html">Kiel - Anzahl: 4</a></div>'); L.marker([54.323319259,10.130390469], {title: "Kieler Gelehrtenschule (Altes Gebäude Dammstraße)"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12201.html">Kieler Gelehrtenschule (Altes Gebäude Dammstraße) - Anzahl: 1</a></div>'); L.marker([54.324466398,10.141010711], {title: "Warleberger Hof"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12209.html">Warleberger Hof - Anzahl: 1</a></div>'); L.marker([54.328611000,10.146111000], {title: "Kunsthalle Kiel"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12901.html">Kunsthalle Kiel - Anzahl: 1</a></div>'); L.marker([54.476879485,13.441757167], {title: "Schloss Ralswiek"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12215.html">Schloss Ralswiek - Anzahl: 1</a></div>'); L.marker([54.488843056,9.875342657], {title: "Gut Hemmelmark"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13514.html">Gut Hemmelmark - Anzahl: 1</a></div>'); L.marker([54.511782228,9.540333979], {title: "Schloss Gottorf"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12216.html">Schloss Gottorf - Anzahl: 1</a></div>'); L.marker([55.750000000,37.616667000], {icon: orangeIcon,title: "Moskau"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_18370.html">Moskau - Anzahl: 1</a></div>'); L.marker([56.950000000,24.100000000], {icon: orangeIcon,title: "Riga"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_13123.html">Riga - Anzahl: 1</a></div>'); L.marker([59.940535501,30.313806927], {title: "Winterpalast"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_8531.html">Winterpalast - Anzahl: 1</a></div>'); L.marker([65.000000000,90.000000000], {icon: orangeIcon,title: "Sowjetunion"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12914.html">Sowjetunion - Anzahl: 1</a></div>'); L.marker([9.231333000,6.982000000], {title: "Stadtarchiv Saarbrücken"}).addTo(idMapOwners).bindPopup('<div><a href="https://antonvonwerner.de/html/owner/list/ownerLocation_12906.html">Stadtarchiv Saarbrücken - Anzahl: 1</a></div>');</script></article></article>
+    <footer>
+    <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
+	- Anton von Werner-Archiv (2024) /
+        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
+    </p>
+    </footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suche nach Ehrung/Amt</title>
+    <meta name="description" content="Anton von Werner-Archiv">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="labelwords" content="Anton von Werner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+    <link rel="icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://antonvonwerner.de/shared/resources/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://antonvonwerner.de/shared/resources/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">	
+	<link rel="icon" type="image/png" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">	
+	<link rel="apple-touch-icon" sizes="180x180" href="https://antonvonwerner.de/shared/resources/favicon-180x180.png">
+	<link rel="apple-touch-icon" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
+
+    <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
+</head>
+
+<body onload="init();">
+    <header>
+        <div class="header-title">
+            <h1>
+                <a href="https://antonvonwerner.de/index.html" class="logo-container">
+                    <img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von Werner-Archiv
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
+            <a href="https://antonvonwerner.de/html/artworkSearch.html">Bilder</a>
+            <a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte/Reden</a>
+            <a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
+            <a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
+            <a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
+            <a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
+            <a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
+            <a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
+            <a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
+            <a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
+        </nav>
+    </header>
+    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem
+        Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen).<br><cite>"...seinem <a href="https://antonvonwerner.de/">Archiv</a>,
+  das eine Fülle an Abbildungen und Querbezügen bereithält, verdanke ich zahlreiche Informationen. Seine
+        akribische Durchsicht meines Manuskripts hat mich vor etlichen Fehlern, Unstimmigkeiten und Lücken bewahrt."</cite> (Bartmann, Dominik. Anton von Werner - Werkverzeichnis. 2024)
+    </div>
+
+     <article style="border-style: dotted;">
+        <p></p><h2 class="detail-title" style="text-align: center; font-size: large;">Vollständiges Werkverzeichnis</h2>
+<p>Vom 17.11.2024 bis 19.1.2025 zeigt die Galerie Mutter Fourage in Berlin-Wannsee die Ausstellung „Anton von
+            Werner – Sammlung Ketels“. Der zugehörige, von Dominik Bartmann erarbeitete Katalog erscheint im Oktober
+            2024 im Berliner <a href="https://holy-verlag.com/">Holy Verlag</a>. Mit dieser Publikation ist ein Link
+            zum Download des nun vorliegenden Werkverzeichnisses verbunden. Aufgelistet sind dort sämtliche Bilder –
+            Gemälde, Zeichnungen, Skizzenbücher und Illustrationen –, die der Autor im Zeitraum von über vier
+            Jahrzehnten registrieren konnte: 2582 Positionen auf 657 Seiten. Das Werkverzeichnis enthält zudem eine
+            Transkription des Nachlassverzeichnisses inklusive Konkordanz zu den Verzeichnissen der Gemälde und der
+            Zeichnungen, einen Einblick in die Handschrift „Das Werk Anton von Werners – Ikonographie“ von Georg Galland
+            aus dem Jahr 1913 sowie ein Porträtregister.</p>     </article>
+        <article>
+        <h2 class="article-title">Ehrungen, Ämter und Ausstellungsmedaillen nach:</h2><p><article><div id="idMapAwards" class="openStreetMap"></div> <script>const idMapAwards = L.map("idMapAwards").setView([51.3154546,9.4924096], 6); const idMapAwards_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Alle Ehrungen und Ämter. <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapAwards);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([10.504700000,-66.914500000], {icon: orangeIcon,title: "Caracas"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13257.html">Caracas - Anzahl: 1</a></div>'); L.marker([-37.800000000,144.950000000], {icon: orangeIcon,title: "Melbourne"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_14832.html">Melbourne - Anzahl: 2</a></div>'); L.marker([38.627500000,-90.198889000], {icon: orangeIcon,title: "St. Louis"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13397.html">St. Louis - Anzahl: 1</a></div>'); L.marker([41.881944000,-87.627778000], {icon: orangeIcon,title: "Chicago"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13259.html">Chicago - Anzahl: 1</a></div>'); L.marker([41.883333000,12.483333000], {icon: orangeIcon,title: "Rom"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_5170.html">Rom - Anzahl: 1</a></div>'); L.marker([41.988056000,13.067500000], {icon: orangeIcon,title: "Cervara di Roma"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_14829.html">Cervara di Roma - Anzahl: 1</a></div>'); L.marker([43.000000000,12.000000000], {icon: orangeIcon,title: "Italien"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_1024.html">Italien - Anzahl: 5</a></div>'); L.marker([45.437500000,12.335833000], {icon: orangeIcon,title: "Venedig"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_5789.html">Venedig - Anzahl: 1</a></div>'); L.marker([46.316667000,2.533333000], {icon: orangeIcon,title: "Frankreich"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_5339.html">Frankreich - Anzahl: 4</a></div>'); L.marker([47.593970000,14.124560000], {icon: orangeIcon,title: "Österreich"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12245.html">Österreich - Anzahl: 6</a></div>'); L.marker([48.139722000,11.574444000], {icon: orangeIcon,title: "München"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13081.html">München - Anzahl: 8</a></div>'); L.marker([48.141879619,11.565574038], {title: "Glaspalast (München, Gebäude)"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12195.html">Glaspalast (München, Gebäude) - Anzahl: 1</a></div>'); L.marker([48.208333000,16.373056000], {icon: orangeIcon,title: "Wien"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13090.html">Wien - Anzahl: 5</a></div>'); L.marker([48.856667000,2.351667000], {icon: orangeIcon,title: "Paris"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_5398.html">Paris - Anzahl: 2</a></div>'); L.marker([48.938889000,7.745833000], {icon: orangeIcon,title: "Wœrth"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_6308.html">Wœrth - Anzahl: 1</a></div>'); L.marker([49.014000000,8.404300000], {icon: orangeIcon,title: "Karlsruhe"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_6140.html">Karlsruhe - Anzahl: 2</a></div>'); L.marker([51.049259000,13.738360000], {icon: orangeIcon,title: "Dresden"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13089.html">Dresden - Anzahl: 5</a></div>'); L.marker([51.049333000,13.738139000], {icon: orangeIcon,title: "Sachsen"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13305.html">Sachsen - Anzahl: 6</a></div>'); L.marker([51.054508000,13.735169000], {title: "Semperoper"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_14834.html">Semperoper - Anzahl: 1</a></div>'); L.marker([51.220556000,4.399722000], {icon: orangeIcon,title: "Antwerpen"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13258.html">Antwerpen - Anzahl: 1</a></div>'); L.marker([51.225556000,6.782778000], {icon: orangeIcon,title: "Düsseldorf"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13092.html">Düsseldorf - Anzahl: 1</a></div>'); L.marker([51.509390000,-0.118320000], {icon: orangeIcon,title: "London"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13137.html">London - Anzahl: 1</a></div>'); L.marker([52.269167000,10.521111000], {icon: orangeIcon,title: "Braunschweig"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13154.html">Braunschweig - Anzahl: 1</a></div>'); L.marker([52.342083000,14.551667000], {icon: orangeIcon,title: "Frankfurt (Oder)"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_8917.html">Frankfurt (Oder) - Anzahl: 1</a></div>'); L.marker([52.370197000,4.890444000], {icon: orangeIcon,title: "Amsterdam"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13152.html">Amsterdam - Anzahl: 1</a></div>'); L.marker([52.453635465,13.593543169], {title: "Künstlerhaus in der Bellevuestraße 3"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12231.html">Künstlerhaus in der Bellevuestraße 3 - Anzahl: 4</a></div>'); L.marker([52.509368239,13.401330127], {title: "Gerbersche Industriegebäude"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12192.html">Gerbersche Industriegebäude - Anzahl: 2</a></div>'); L.marker([52.512697018,13.382221442], {title: "Architektenhaus - Wilhelmstraße 92/93"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12183.html">Architektenhaus - Wilhelmstraße 92/93 - Anzahl: 11</a></div>'); L.marker([52.516773008,13.403338611], {title: "Königliches Akademiegebäude (Marstall)"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12205.html">Königliches Akademiegebäude (Marstall) - Anzahl: 2</a></div>'); L.marker([52.517041133,13.400682727], {title: "Berliner Schloss"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_6169.html">Berliner Schloss - Anzahl: 1</a></div>'); L.marker([52.517413332,13.396769642], {title: "Kronprinzenpalais (Berlin)"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12050.html">Kronprinzenpalais (Berlin) - Anzahl: 1</a></div>'); L.marker([52.518550000,13.368700000], {title: "Krolloper"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12206.html">Krolloper - Anzahl: 1</a></div>'); L.marker([52.518611000,13.376111000], {title: "Reichstagsgebäude"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_6256.html">Reichstagsgebäude - Anzahl: 2</a></div>'); L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_5416.html">Berlin - Anzahl: 70</a></div>'); L.marker([52.520960449,13.398299240], {title: "Alte Nationalgalerie"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_8903.html">Alte Nationalgalerie - Anzahl: 1</a></div>'); L.marker([52.523121000,13.365090000], {title: "ULAP"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12194.html">ULAP - Anzahl: 11</a></div>'); L.marker([55.675706000,12.578745000], {icon: orangeIcon,title: "Kopenhagen"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13188.html">Kopenhagen - Anzahl: 1</a></div>'); L.marker([55.783333000,9.783333000], {icon: orangeIcon,title: "Dänemark"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12239.html">Dänemark - Anzahl: 2</a></div>'); L.marker([59.325000000,18.050000000], {icon: orangeIcon,title: "Stockholm"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_13094.html">Stockholm - Anzahl: 1</a></div>'); L.marker([7.666667000,-65.216667000], {icon: orangeIcon,title: "Venezuela"}).addTo(idMapAwards).bindPopup('<div><a href="https://antonvonwerner.de/html/award/list/awardLocation_12250.html">Venezuela - Anzahl: 2</a></div>');</script></article></p><div class="searchTabs">  <input type="radio" name="inhalt" id="tabAward">
+            <label for="tabAward">Alle</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.de/html/award/list/awardsAll.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Übersicht...</a><a href="https://antonvonwerner.de/html/award/list/awardsOffice.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Amt (51)</a><a href="https://antonvonwerner.de/html/award/list/awardsHonor.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrung (65)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabAwardYear">
+            <label for="tabAwardYear">Jahr</label>
+            <div class="searchTab"> <h2>Wählen sie ein Jahr:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/award/list/year_1859.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1859 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1861.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1861 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1862.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1862 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1866.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1866 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1869.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1869 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1871.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1871 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1872.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1872 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1873.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1873 (4)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1874.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1874 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1875.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1875 (4)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1876.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1876 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1877.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1877 (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1878.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1878 (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1879.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1879 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1880.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1880 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1881.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1881 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1882.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1882 (6)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1885.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1885 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1886.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1886 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1887 (4)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1888.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1888 (8)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1889.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1889 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1890.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1890 (4)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1891.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1891 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1892.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1892 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1893.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1893 (6)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1894.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1894 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1895.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1895 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1896 (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1897 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1898.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1898 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1899.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1899 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1900.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1900 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1901 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1902.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1902 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1903.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1903 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1904.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1904 (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1905.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1905 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1906.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1906 (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1908.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1908 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_1912.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1912 (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/year_Schätzung.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sch&auml;tzung (7)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabAwardClass">
+            <label for="tabAwardClass">Klasse</label>
+            <div class="searchTab"> <h2>Wählen sie eine Klasse:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/award/list/class_1020.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1. Platz (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_2.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1. Vorsitzender (14)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1021.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1. Vorsteher (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Außerordentliches Mitglied (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1022.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ausstellung (12)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1026.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Charakter (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1028.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Diplom (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Direktor (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1032.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrengeschenk (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1033.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrenliste (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_10.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrenmitglied (6)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1034.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrenpr&auml;dikat (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1029.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Erinnerungszeichen (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_14.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Feier (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_17.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gestaltung / Dekoration (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_11.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Große Goldene Medaille (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1019.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Jubil&auml;um (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_5.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Jurymitglied (8)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_12.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kleine goldene Medaille (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_3.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kommissionsleitung (3)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1023.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kommissionsmitglied (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1030.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lorbeerkranz (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_4.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Medaille (6)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1025.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mitglied (11)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_8.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Orden (21)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_7.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ordentliches Mitglied (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_19.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Pr&auml;sident (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_6.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Professor (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1031.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachverst&auml;ndiger (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/class_1035.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vertrauensmann (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabAwardLocation">
+            <label for="tabAwardLocation">Ort</label>
+            <div class="searchTab"> <h2>Wählen sie einen Ort:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_8903.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alte Nationalgalerie (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13152.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Amsterdam (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13258.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antwerpen (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12183.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Architektenhaus - Wilhelmstraße 92/93 (11)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_14830.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Australien (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-Württemberg (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bayern (8)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12238.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Belgien (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_5416.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (70)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_6169.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Schloss (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_8937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Brandenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13154.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Braunschweig (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13257.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Caracas (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_14829.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cervara di Roma (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13259.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Chicago (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13314.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">City of London (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12239.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dänemark (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12240.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutschland (89)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13089.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dresden (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13092.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Düsseldorf (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13283.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flandern (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_8917.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt (Oder) (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_5339.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankreich (4)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12192.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gerbersche Industriegebäude (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12195.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Glaspalast (München, Gebäude) (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13310.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Grand Est (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Île-de-France (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13343.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Illinois (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_1024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Italien (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_6140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karlsruhe (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12205.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Königliches Akademiegebäude (Marstall) (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13188.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kopenhagen (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12206.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Krolloper (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12050.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kronprinzenpalais (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12231.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Künstlerhaus in der Bellevuestraße 3 (4)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13320.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Latium (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13137.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">London (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_14832.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Melbourne (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13349.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Miranda (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13396.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Missouri (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13081.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">München (8)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_9965.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niederlande (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13300.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niedersachsen (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13301.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nordrhein-Westfalen (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12245.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Österreich (6)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_5398.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Paris (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13323.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Provinz Noord-Holland (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13308.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Region Hovedstaden (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_6256.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Reichstagsgebäude (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_5170.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rom (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen (6)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12248.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweden (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_14834.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Semperoper (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13397.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">St. Louis (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13094.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stockholm (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13338.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stockholms län (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12194.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">ULAP (11)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_5789.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venedig (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13318.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venetien (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12250.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venezuela (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12251.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte Königreich von Großbritannien und Nordirland (1)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_12252.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte Staaten von Amerika (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_14831.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Victoria (Australien) (2)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_13090.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wien (5)</a>
+	    <a href="https://antonvonwerner.de/html/award/list/awardLocation_6308.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wœrth (1)</a></div>     </div>
+ </div>
+    </article>
+
+    <footer>
+    <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
+	- Anton von Werner-Archiv (2024) /
+        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
+    </p>
+    </footer>
+
+</body>
+
+</html>
+

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suche nach Auktionen</title>
+    <meta name="description" content="Anton von Werner-Archiv">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="labelwords" content="Anton von Werner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+    <link rel="icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://antonvonwerner.de/shared/resources/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://antonvonwerner.de/shared/resources/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">	
+	<link rel="icon" type="image/png" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">	
+	<link rel="apple-touch-icon" sizes="180x180" href="https://antonvonwerner.de/shared/resources/favicon-180x180.png">
+	<link rel="apple-touch-icon" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
+
+    <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
+</head>
+
+<body onload="init();">
+    <header>
+        <div class="header-title">
+            <h1>
+                <a href="https://antonvonwerner.de/index.html" class="logo-container">
+                    <img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von Werner-Archiv
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
+            <a href="https://antonvonwerner.de/html/artworkSearch.html">Bilder</a>
+            <a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte/Reden</a>
+            <a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
+            <a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
+            <a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
+            <a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
+            <a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
+            <a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
+            <a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
+            <a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
+        </nav>
+    </header>
+    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem
+        Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen).<br><cite>"...seinem <a href="https://antonvonwerner.de/">Archiv</a>,
+  das eine Fülle an Abbildungen und Querbezügen bereithält, verdanke ich zahlreiche Informationen. Seine
+        akribische Durchsicht meines Manuskripts hat mich vor etlichen Fehlern, Unstimmigkeiten und Lücken bewahrt."</cite> (Bartmann, Dominik. Anton von Werner - Werkverzeichnis. 2024)
+    </div>
+
+     <article style="border-style: dotted;">
+        <p></p><h2 class="detail-title" style="text-align: center; font-size: large;">Vollständiges Werkverzeichnis</h2>
+<p>Vom 17.11.2024 bis 19.1.2025 zeigt die Galerie Mutter Fourage in Berlin-Wannsee die Ausstellung „Anton von
+            Werner – Sammlung Ketels“. Der zugehörige, von Dominik Bartmann erarbeitete Katalog erscheint im Oktober
+            2024 im Berliner <a href="https://holy-verlag.com/">Holy Verlag</a>. Mit dieser Publikation ist ein Link
+            zum Download des nun vorliegenden Werkverzeichnisses verbunden. Aufgelistet sind dort sämtliche Bilder –
+            Gemälde, Zeichnungen, Skizzenbücher und Illustrationen –, die der Autor im Zeitraum von über vier
+            Jahrzehnten registrieren konnte: 2582 Positionen auf 657 Seiten. Das Werkverzeichnis enthält zudem eine
+            Transkription des Nachlassverzeichnisses inklusive Konkordanz zu den Verzeichnissen der Gemälde und der
+            Zeichnungen, einen Einblick in die Handschrift „Das Werk Anton von Werners – Ikonographie“ von Georg Galland
+            aus dem Jahr 1913 sowie ein Porträtregister.</p>     </article>
+        <article>
+        <h2 class="article-title">Auktionen nach:</h2>
+		<p><article><div id="idMapAuctions" class="openStreetMap"></div> <script>const idMapAuctions = L.map("idMapAuctions").setView([51.3154546,9.4924096], 6); const idMapAuctions_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Alle Auktionen. <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapAuctions);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([-22.908333000,-43.196389000], {icon: orangeIcon,title: "Rio de Janeiro"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18390.html">Rio de Janeiro - Anzahl: 1</a></div>'); L.marker([33.756944000,-84.390278000], {icon: orangeIcon,title: "Atalanta"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13247.html">Atalanta - Anzahl: 1</a></div>'); L.marker([38.716667000,-9.166667000], {icon: orangeIcon,title: "Lissabon"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13141.html">Lissabon - Anzahl: 1</a></div>'); L.marker([40.712778000,-74.005833000], {icon: orangeIcon,title: "New York"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13085.html">New York - Anzahl: 6</a></div>'); L.marker([40.803056000,-74.188889000], {icon: orangeIcon,title: "Bloomfield (New Jersey)"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14841.html">Bloomfield (New Jersey) - Anzahl: 1</a></div>'); L.marker([42.527778000,-92.445556000], {icon: orangeIcon,title: "Cedar Falls"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13192.html">Cedar Falls - Anzahl: 2</a></div>'); L.marker([46.800000000,8.233333000], {icon: orangeIcon,title: "Schweiz"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5360.html">Schweiz - Anzahl: 7</a></div>'); L.marker([46.947980000,7.447430000], {icon: orangeIcon,title: "Bern"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13139.html">Bern - Anzahl: 3</a></div>'); L.marker([46.951093918,7.461307197], {title: "Auktionshaus Stuker Bern"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17144.html">Auktionshaus Stuker Bern - Anzahl: 1</a></div>'); L.marker([47.371740000,8.542260000], {icon: orangeIcon,title: "Zürich"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13143.html">Zürich - Anzahl: 3</a></div>'); L.marker([47.546569152,9.686010000], {title: "Auktionshaus Michael Zeller"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_15048.html">Auktionshaus Michael Zeller - Anzahl: 1</a></div>'); L.marker([47.606111000,-122.331944000], {icon: orangeIcon,title: "Seattle"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13197.html">Seattle - Anzahl: 2</a></div>'); L.marker([47.651111000,-118.151667000], {icon: orangeIcon,title: "Davenport (Washington)"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13198.html">Davenport (Washington) - Anzahl: 1</a></div>'); L.marker([47.653889000,10.718333000], {icon: orangeIcon,title: "Roßhaupten"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13252.html">Roßhaupten - Anzahl: 1</a></div>'); L.marker([47.766667000,9.158333000], {icon: orangeIcon,title: "Überlingen"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_6263.html">Überlingen - Anzahl: 1</a></div>'); L.marker([47.800000000,13.033333000], {icon: orangeIcon,title: "Salzburg"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13166.html">Salzburg - Anzahl: 3</a></div>'); L.marker([47.840278000,7.709167000], {icon: orangeIcon,title: "Sulzburg"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13124.html">Sulzburg - Anzahl: 3</a></div>'); L.marker([47.854444000,11.406111000], {icon: orangeIcon,title: "Eurasburg (Oberbayern)"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13195.html">Eurasburg (Oberbayern) - Anzahl: 1</a></div>'); L.marker([47.908889000,11.281389000], {icon: orangeIcon,title: "Tutzing"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13253.html">Tutzing - Anzahl: 1</a></div>'); L.marker([48.033333000,11.200000000], {icon: orangeIcon,title: "Seefeld (Oberbayern)"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13120.html">Seefeld (Oberbayern) - Anzahl: 2</a></div>'); L.marker([48.042222000,7.866944000], {icon: orangeIcon,title: "Gundelfingen (Breisgau)"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14840.html">Gundelfingen (Breisgau) - Anzahl: 1</a></div>'); L.marker([48.139722000,11.574444000], {icon: orangeIcon,title: "München"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13081.html">München - Anzahl: 49</a></div>'); L.marker([48.142820075,11.575231254], {title: "Karl & Faber"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12613.html">Karl & Faber - Anzahl: 22</a></div>'); L.marker([48.208333000,16.373056000], {icon: orangeIcon,title: "Wien"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13090.html">Wien - Anzahl: 4</a></div>'); L.marker([48.537222000,12.152222000], {icon: orangeIcon,title: "Landshut"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13106.html">Landshut - Anzahl: 1</a></div>'); L.marker([48.775556000,9.182778000], {icon: orangeIcon,title: "Stuttgart"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_8887.html">Stuttgart - Anzahl: 5</a></div>'); L.marker([48.890700000,8.702450000], {icon: orangeIcon,title: "Pforzheim"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13109.html">Pforzheim - Anzahl: 9</a></div>'); L.marker([49.232650000,6.996190000], {icon: orangeIcon,title: "Saarbrücken"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12035.html">Saarbrücken - Anzahl: 4</a></div>'); L.marker([49.249091641,7.061346997], {title: "Dawo Auktionen"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12667.html">Dawo Auktionen - Anzahl: 3</a></div>'); L.marker([49.410320000,8.697070000], {icon: orangeIcon,title: "Heidelberg"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5126.html">Heidelberg - Anzahl: 17</a></div>'); L.marker([49.487760000,8.466220000], {icon: orangeIcon,title: "Mannheim"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13110.html">Mannheim - Anzahl: 2</a></div>'); L.marker([49.891667000,10.891667000], {icon: orangeIcon,title: "Bamberg"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_8581.html">Bamberg - Anzahl: 6</a></div>'); L.marker([50.110556000,8.682222000], {icon: orangeIcon,title: "Frankfurt am Main"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5771.html">Frankfurt am Main - Anzahl: 4</a></div>'); L.marker([50.177500000,8.735278000], {icon: orangeIcon,title: "Bad Vibel"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13187.html">Bad Vibel - Anzahl: 1</a></div>'); L.marker([50.183125000,8.463542000], {icon: orangeIcon,title: "Königstein im Taunus"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13129.html">Königstein im Taunus - Anzahl: 5</a></div>'); L.marker([50.356667000,7.593889000], {icon: orangeIcon,title: "Koblenz"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13140.html">Koblenz - Anzahl: 1</a></div>'); L.marker([50.496124586,12.143415387], {title: "Auktionshaus Mehlis"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17188.html">Auktionshaus Mehlis - Anzahl: 1</a></div>'); L.marker([50.733992000,7.099814000], {icon: orangeIcon,title: "Bonn"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13116.html">Bonn - Anzahl: 2</a></div>'); L.marker([50.744686376,7.051683442], {title: "Auktionshaus Plückbaum"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_16110.html">Auktionshaus Plückbaum - Anzahl: 1</a></div>'); L.marker([50.918333000,0.481944000], {icon: orangeIcon,title: "Battle"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13148.html">Battle - Anzahl: 1</a></div>'); L.marker([50.937350323,6.949853695], {title: "Venator & Hanstein"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18235.html">Venator & Hanstein - Anzahl: 1</a></div>'); L.marker([50.938056000,6.956944000], {icon: orangeIcon,title: "Köln"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13105.html">Köln - Anzahl: 21</a></div>'); L.marker([51.049259000,13.738360000], {icon: orangeIcon,title: "Dresden"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13089.html">Dresden - Anzahl: 1</a></div>'); L.marker([51.225556000,6.782778000], {icon: orangeIcon,title: "Düsseldorf"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13092.html">Düsseldorf - Anzahl: 5</a></div>'); L.marker([51.233781609,6.780247627], {title: "Düsseldorfer Auktionshaus"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12688.html">Düsseldorfer Auktionshaus - Anzahl: 2</a></div>'); L.marker([51.332620000,6.562380000], {icon: orangeIcon,title: "Krefeld"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13250.html">Krefeld - Anzahl: 10</a></div>'); L.marker([51.458069000,7.014761000], {icon: orangeIcon,title: "Essen"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13132.html">Essen - Anzahl: 1</a></div>'); L.marker([51.509390000,-0.118320000], {icon: orangeIcon,title: "London"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13137.html">London - Anzahl: 6</a></div>'); L.marker([51.962944000,7.628694000], {icon: orangeIcon,title: "Münster"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13175.html">Münster - Anzahl: 1</a></div>'); L.marker([52.018614456,8.532617242], {title: "Auktionshaus OWL"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18400.html">Auktionshaus OWL - Anzahl: 1</a></div>'); L.marker([52.021820000,8.535090000], {icon: orangeIcon,title: "Bielefeld"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13128.html">Bielefeld - Anzahl: 4</a></div>'); L.marker([52.269167000,10.521111000], {icon: orangeIcon,title: "Braunschweig"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13154.html">Braunschweig - Anzahl: 1</a></div>'); L.marker([52.283333000,7.433333000], {icon: orangeIcon,title: "Rheine"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14654.html">Rheine - Anzahl: 1</a></div>'); L.marker([52.370197000,4.890444000], {icon: orangeIcon,title: "Amsterdam"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13152.html">Amsterdam - Anzahl: 3</a></div>'); L.marker([52.371380000,9.732274000], {title: "Galerie J. H. Bauer"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17140.html">Galerie J. H. Bauer - Anzahl: 3</a></div>'); L.marker([52.374444000,9.738611000], {icon: orangeIcon,title: "Hannover"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13084.html">Hannover - Anzahl: 5</a></div>'); L.marker([52.491260459,13.274307597], {title: "Galerie Bassenge"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12601.html">Galerie Bassenge - Anzahl: 81</a></div>'); L.marker([52.510301238,13.323736168], {title: "Galerie Gerd Rosen"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17159.html">Galerie Gerd Rosen - Anzahl: 3</a></div>'); L.marker([52.516851627,13.390109471], {title: "Automobil Forum Unter den Linden"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17185.html">Automobil Forum Unter den Linden - Anzahl: 1</a></div>'); L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5416.html">Berlin - Anzahl: 182</a></div>'); L.marker([52.524370000,13.410530000], {title: "Hellmut Meyer und Ernst, Autographenhandlung und Antiquariat"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18210.html">Hellmut Meyer und Ernst, Autographenhandlung und Antiquariat - Anzahl: 1</a></div>'); L.marker([52.759000000,9.550800000], {icon: orangeIcon,title: "Ahlden (Aller)"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13114.html">Ahlden (Aller) - Anzahl: 6</a></div>'); L.marker([53.075878000,8.807311000], {icon: orangeIcon,title: "Bremen"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13115.html">Bremen - Anzahl: 2</a></div>'); L.marker([53.549866000,9.997729000], {icon: orangeIcon,title: "Speersort"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17192.html">Speersort - Anzahl: 3</a></div>'); L.marker([53.552173487,9.986060836], {icon: orangeIcon,title: "Hamburg"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13117.html">Hamburg - Anzahl: 9</a></div>'); L.marker([53.569444000,10.337500000], {icon: orangeIcon,title: "Witzhave"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13153.html">Witzhave - Anzahl: 3</a></div>'); L.marker([55.675706000,12.578745000], {icon: orangeIcon,title: "Kopenhagen"}).addTo(idMapAuctions).bindPopup('<div><a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13188.html">Kopenhagen - Anzahl: 1</a></div>');</script></article></p><div class="searchTabs">  <input type="radio" name="inhalt" id="tabAuctionAll">
+            <label for="tabAuctionAll">Alle</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.de/html/auction/list/auctionAll.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Übersicht (415)...</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabAuctionYear">
+            <label for="tabAuctionYear">Jahr</label>
+            <div class="searchTab"> <h2>Wählen sie ein Jahr:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1872.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1872 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1880.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1880 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1881.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1881 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1882.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1882 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1885.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1885 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1891.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1891 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1896 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1897 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1898.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1898 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1899.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1899 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1900.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1900 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1904.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1904 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1905.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1905 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1922.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1922 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1928.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1928 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1933.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1933 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1934.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1934 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1951.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1951 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1957.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1957 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1959.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1959 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1962.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1962 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1963.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1963 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1964.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1964 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1965.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1965 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1966.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1966 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1967.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1967 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1968.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1968 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1969.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1969 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1970.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1970 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1971.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1971 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1972.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1972 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1973.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1973 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1974.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1974 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1975.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1975 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1976.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1976 (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1977.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1977 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1978.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1978 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1979.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1979 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1980.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1980 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1981.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1981 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1982.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1982 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1983.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1983 (9)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1984.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1984 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1985.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1985 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1986.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1986 (8)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1987.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1987 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1988.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1988 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1989.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1989 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1990.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1990 (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1991.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1991 (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1992.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1992 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1993.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1993 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1994.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1994 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1995.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1995 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1996.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1996 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1997.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1997 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1998.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1998 (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_1999.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1999 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2000.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2000 (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2001.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2001 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2002.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2002 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2003.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2003 (9)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2004.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2004 (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2005.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2005 (8)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2006.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2006 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2007.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2007 (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2008.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2008 (8)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2009.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2009 (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2010.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2010 (9)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2011.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2011 (13)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2012.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2012 (7)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2013.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2013 (17)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2014.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2014 (13)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2015.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2015 (20)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2016.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2016 (13)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2017.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2017 (7)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2018.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2018 (17)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2019.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2019 (11)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2020.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2020 (18)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2021.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2021 (13)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2022.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2022 (16)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2023.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2023 (13)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_2024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">2024 (11)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/year_Unbekannt.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Unbekannt (10)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabAuctionInstitution">
+            <label for="tabAuctionInstitution">Veranstalter</label>
+            <div class="searchTab"> <h2>Wählen sie den Veranstalter:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1081.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Abbey Auction Gallery (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1094.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antiquariat A. Klittich - Pfankuch (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4297.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antiquariat Abaton (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4299.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antiquariat Halkyone (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4298.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antiquariat Inlibris (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6574.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Antiquit&auml;tenmesse Stuttgart (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6544.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ars Nobilis (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3106.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">artnet (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3119.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Blank (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3259.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus City Nord (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1051.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Dannenberg (10)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1053.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Dietrich Schneider-Henn (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3130.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Hauswedell &amp; Nolte (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1059.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Kaupp (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4285.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus K&ouml;nigstein (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1043.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Lempertz (19)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1075.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Lux (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1066.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Mag. Johann Seb&ouml;k (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6546.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Mehlis (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4522.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Mich&aelig;l Zeller (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6582.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus OWL (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_5529.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Pl&uuml;ckbaum (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1074.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Quentin (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4469.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Rheine (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4436.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Rudolf Bangel (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1080.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Schwab (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1058.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Zadick (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3114.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus zeitGenossen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4294.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Axel Schmolt Autographen-Auktionen (10)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6578.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bazar in Rio de Janeiro oder Montevideo (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3128.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bolland &amp; Marotz (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1100.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bonhams (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Booklooker (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3135.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bruun Rasmussen Auctioneers (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6547.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Buch- und Kunstantiquariat F. D&ouml;rling (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1091.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Christie&apos;s (8)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1084.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dawo Auktionen (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1073.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dobiaschofsky Auktionen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1034.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dorotheum (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_2106.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;sseldorfer Auktionshaus (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1047.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">eBay (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4300.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eberhard K&ouml;stler Autographen &amp; B&uuml;cher (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1032.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galeria Savaria (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_5.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Bassenge (81)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6540.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Gerd Rosen (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6534.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Jens-Heiner Bauer (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3145.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Joseph Fach (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6537.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie J&uuml;rg Stuker (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3151.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Grant Zahajko Auctions (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1052.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Graphem. Kunst- und Buchantiquariat (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3284.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Great Gatsby&rsquo;s Auction Gallery (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1023.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Grisebach (21)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3142.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">H. W. Fichter Kunsthandel (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1031.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hampel Fine Art Auctions (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1097.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hargesheimer Kunstauktionen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1085.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hartung &amp; Hartung (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1037.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hauff &amp; Auvermann (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4519.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Haus der B&uuml;cher AG, Basel - L&apos;Art Ancien S. A., Z&uuml;rich (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6551.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hellmut Meyer und Ernst, Autographenhandlung und Antiquariat (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1105.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Historia Auktionshaus (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3137.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Illustration House (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4386.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">J. A. Stargardt (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Jacksons&apos;s (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1095.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Jeschke van Vliet (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3132.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Jochen Granier, Buch- &amp; Kunstauktionen (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1021.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karl &amp; Faber (22)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_11.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kastern Auktionshaus (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ketterer Kunst (10)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kiefer Buch- und Kunstauktionen (8)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3150.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Klein James / Seattle Auction Gallery (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3116.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Koller Auktionen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kotte Autographs (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1077.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunkel Fine Art (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3131.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunst &amp; Auktionshaus Ruef (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3147.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunst- &amp; Auktionshaus W. G. Herr (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1028.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstauktionshaus Neumeister (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1033.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstauktionshaus Schloss Ahlden (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1036.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunsthaus Winterberg (17)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1029.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">LEO SPIK Auktionshaus (28)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3134.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nagel Auktionen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4351.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">NIFTEE (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4467.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nosb&uuml;sch &amp; Stucke (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3152.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nye &amp; Company (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1092.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">pastbuy.net (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3144.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Peter Bierl Buch- &amp; Kunstantiquariat (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3143.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">pro art - kunsthandel (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1065.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Reiss &amp; Sohn Buch- und Kunstantiquariat &middot; Auktionen (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1076.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Renascimento (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1027.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Richter &amp; Kafitz Kunst- und Auktionshaus (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1098.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rudolph Lepke&rsquo;s Kunst-Auctions-Haus (20)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3108.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schmidt Kunstakutionen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1078.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schuler Auktionen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3121.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sotheby&apos;s (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3268.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stair Galleries (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1089.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Swann Galleries (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_1022.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Van Ham Kunstauktionen (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_6558.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venator &amp; Hanstein (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3247.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verband deutscher Illustratoren (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4424.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Von Zengen Kunstauktionen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4344.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wettmann Kunstauktionen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_3133.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wiener Kunstauktionen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionInstitution_4417.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Yves Siebers Auktionen (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabAuctionPlace">
+            <label for="tabAuctionPlace">Ort</label>
+            <div class="searchTab"> <h2>Wählen sie einen Ort:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13114.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ahlden (Aller) (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13152.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Amsterdam (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13247.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Atalanta (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17188.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Mehlis (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_15048.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Mich&aelig;l Zeller (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18400.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus OWL (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_16110.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Pl&uuml;ckbaum (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17144.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auktionshaus Stuker Bern (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17185.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Automobil Forum Unter den Linden (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13187.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Vibel (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-W&uuml;rttemberg (38)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_8581.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bamberg (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13148.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Battle (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bayern (62)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5416.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (182)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13139.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bern (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13128.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bielefeld (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14841.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bloomfield (New Jersey) (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13116.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bonn (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18385.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Brasilien (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13154.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Braunschweig (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13115.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bremen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13192.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Cedar Falls (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13314.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">City of London (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12239.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&auml;nemark (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13198.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Davenport (Washington) (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12667.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dawo Auktionen (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12240.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutschland (370)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13089.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dresden (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13092.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;sseldorf (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12688.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&uuml;sseldorfer Auktionshaus (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13312.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">East Sussex (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13132.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Essen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13195.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eurasburg (Oberbayern) (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5771.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt am Main (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13297.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freie Hansestadt Bremen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12601.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Bassenge (81)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17159.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie Gerd Rosen (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Galerie J. H. Bauer (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13341.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Georgia (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14840.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gundelfingen (Breisgau) (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13117.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hamburg (9)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13084.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hannover (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5126.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heidelberg (17)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18210.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hellmut Meyer und Ernst, Autographenhandlung und Antiquariat (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13298.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hessen (10)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13342.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Iowa (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14825.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Bern (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13292.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Z&uuml;rich (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12613.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karl &amp; Faber (22)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Koblenz (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13105.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;ln (21)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13129.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigstein im Taunus (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13188.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kopenhagen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13250.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Krefeld (10)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13282.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Land Salzburg (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13106.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landshut (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_15047.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lindau (Bodensee) (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13141.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lissabon (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13137.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">London (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13110.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mannheim (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13081.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchen (49)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13175.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nster (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13346.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">New Jersey (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13085.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">New York (6)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_9965.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niederlande (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13300.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Niedersachsen (12)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13301.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Nordrhein-Westfalen (45)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12245.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Ouml;sterreich (7)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13109.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Pforzheim (9)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17189.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Plauen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12246.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Portugal (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13323.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Provinz Noord-Holland (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13334.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Regi&atilde;o de Lisboa / Region Lissabon (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13308.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Region Hovedstaden (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_14654.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheine (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13302.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinland-Pfalz (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18390.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rio de Janeiro (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18388.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rio de Janeiro (Bundesstaat) (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13252.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Roßhaupten (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12035.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Saarbr&uuml;cken (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13304.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Saarland (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13166.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Salzburg (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13303.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig-Holstein (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_5360.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweiz (7)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13197.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Seattle (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13120.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Seefeld (Oberbayern) (2)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_17192.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Speersort (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_8887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stuttgart (5)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13124.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sulzburg (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13253.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tutzing (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_6263.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Uuml;berlingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_18235.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venator &amp; Hanstein (1)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12251.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte K&ouml;nigreich von Großbritannien und Nordirland (7)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_12252.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vereinigte Staaten von Amerika (13)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13348.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Washington (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13090.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wien (4)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13153.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Witzhave (3)</a>
+	    <a href="https://antonvonwerner.de/html/auction/list/auctionLocation_13143.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Z&uuml;rich (3)</a></div>     </div>
+ </div>
+    </article>
+
+    <footer>
+    <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
+	- Anton von Werner-Archiv (2024) /
+        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
+    </p>
+    </footer>
+
+</body>
+
+</html>
+

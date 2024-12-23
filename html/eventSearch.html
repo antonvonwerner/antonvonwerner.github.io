@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Suche nach Ereignissen</title>
+    <meta name="description" content="Anton von Werner-Archiv">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="labelwords" content="Anton von Werner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+    <link rel="icon" type="image/x-icon" href="https://antonvonwerner.de/shared/resources/favicon-32x32.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://antonvonwerner.de/shared/resources/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://antonvonwerner.de/shared/resources/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://antonvonwerner.de/shared/resources/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="https://antonvonwerner.de/shared/resources/favicon-128x128.png">	
+	<link rel="icon" type="image/png" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">	
+	<link rel="apple-touch-icon" sizes="180x180" href="https://antonvonwerner.de/shared/resources/favicon-180x180.png">
+	<link rel="apple-touch-icon" sizes="228x228" href="https://antonvonwerner.de/shared/resources/favicon-228x228.png">
+
+    <link href="https://antonvonwerner.de/shared/styles/avw-archiv.css"  type="text/css" rel="stylesheet">
+	<script src="https://antonvonwerner.de/shared/scripts/avw-archiv.js"></script><link rel="stylesheet" href="https://antonvonwerner.de/shared/misc/leaflet/leaflet.css" /><script src="https://antonvonwerner.de/shared/misc/leaflet/leaflet.js"></script>
+</head>
+
+<body onload="init();">
+    <header>
+        <div class="header-title">
+            <h1>
+                <a href="https://antonvonwerner.de/index.html" class="logo-container">
+                    <img class="logo" alt="Logo" src="https://antonvonwerner.de/shared/resources/logo.svg"> Anton von Werner-Archiv
+                </a>
+            </h1>
+        </div>
+        <nav>
+            <a href="https://antonvonwerner.de/html/news.html">Neuigkeiten</a>
+            <a href="https://antonvonwerner.de/html/artworkSearch.html">Bilder</a>
+            <a href="https://antonvonwerner.de/html/messageSearch.html">Briefe/Texte/Reden</a>
+            <a href="https://antonvonwerner.de/html/eventSearch.html">Ereignisse</a>
+            <a href="https://antonvonwerner.de/html/opinionSearch.html">Meinungen</a>
+            <a href="https://antonvonwerner.de/html/personRelSearch.html">Beziehungen</a>
+            <a href="https://antonvonwerner.de/html/awardSearch.html">Ehrungen und Ämter</a>
+            <a href="https://antonvonwerner.de/html/ownerSearch.html">Besitzer</a>
+            <a href="https://antonvonwerner.de/html/exhibitionSearch.html">Ausstellungen</a>
+            <a href="https://antonvonwerner.de/html/auctionSearch.html">Auktionen</a>
+            <a href="https://antonvonwerner.de/html/publicationSearch.html">Publikationen</a>
+        </nav>
+    </header>
+    <img class="mainImg" alt="Header-Bild" src="https://antonvonwerner.de/shared/resources/AvW-Header.jpg">
+<div class="projectInfo"><b>Hintergrund</b>: Ein Hobby-Projekt als Versuch, die vielfältigen Informationen zu einem
+        Künstler hochgradig verknüpft in einer relationalen Datenbank abzulegen (170 Tabellen).<br><cite>"...seinem <a href="https://antonvonwerner.de/">Archiv</a>,
+  das eine Fülle an Abbildungen und Querbezügen bereithält, verdanke ich zahlreiche Informationen. Seine
+        akribische Durchsicht meines Manuskripts hat mich vor etlichen Fehlern, Unstimmigkeiten und Lücken bewahrt."</cite> (Bartmann, Dominik. Anton von Werner - Werkverzeichnis. 2024)
+    </div>
+
+     <article style="border-style: dotted;">
+        <p></p><h2 class="detail-title" style="text-align: center; font-size: large;">Vollständiges Werkverzeichnis</h2>
+<p>Vom 17.11.2024 bis 19.1.2025 zeigt die Galerie Mutter Fourage in Berlin-Wannsee die Ausstellung „Anton von
+            Werner – Sammlung Ketels“. Der zugehörige, von Dominik Bartmann erarbeitete Katalog erscheint im Oktober
+            2024 im Berliner <a href="https://holy-verlag.com/">Holy Verlag</a>. Mit dieser Publikation ist ein Link
+            zum Download des nun vorliegenden Werkverzeichnisses verbunden. Aufgelistet sind dort sämtliche Bilder –
+            Gemälde, Zeichnungen, Skizzenbücher und Illustrationen –, die der Autor im Zeitraum von über vier
+            Jahrzehnten registrieren konnte: 2582 Positionen auf 657 Seiten. Das Werkverzeichnis enthält zudem eine
+            Transkription des Nachlassverzeichnisses inklusive Konkordanz zu den Verzeichnissen der Gemälde und der
+            Zeichnungen, einen Einblick in die Handschrift „Das Werk Anton von Werners – Ikonographie“ von Georg Galland
+            aus dem Jahr 1913 sowie ein Porträtregister.</p>     </article>
+        <article>
+        <h2 class="article-title">Ereignisauswahl nach:</h2><p><article><div id="idMapEvent" class="openStreetMap"></div> <script>const idMapEvent = L.map("idMapEvent").setView([51.3154546,9.4924096], 6); const idMapEvent_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Alle Ereignisse. <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapEvent);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([40.550000000,14.233333000], {icon: orangeIcon,title: "Capri"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_1029.html">Capri - Anzahl: 1</a></div>'); L.marker([40.626111000,14.376111000], {icon: orangeIcon,title: "Sorrent"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5283.html">Sorrent - Anzahl: 1</a></div>'); L.marker([40.833333000,14.250000000], {icon: orangeIcon,title: "Neapel"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13108.html">Neapel - Anzahl: 1</a></div>'); L.marker([41.860278000,13.032222000], {icon: orangeIcon,title: "Olevano Romano"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_1025.html">Olevano Romano - Anzahl: 2</a></div>'); L.marker([41.881667000,13.028611000], {icon: orangeIcon,title: "Civitella (Bellegra)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12085.html">Civitella (Bellegra) - Anzahl: 1</a></div>'); L.marker([41.883333000,12.483333000], {icon: orangeIcon,title: "Rom"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5170.html">Rom - Anzahl: 3</a></div>'); L.marker([41.904563242,12.486566468], {title: "Via Sistina, 123"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14940.html">Via Sistina, 123 - Anzahl: 1</a></div>'); L.marker([41.960000000,12.800000000], {icon: orangeIcon,title: "Tivoli (Latium)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12027.html">Tivoli (Latium) - Anzahl: 1</a></div>'); L.marker([43.000000000,12.000000000], {icon: orangeIcon,title: "Italien"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_1024.html">Italien - Anzahl: 15</a></div>'); L.marker([43.783333000,11.250000000], {icon: orangeIcon,title: "Florenz"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13239.html">Florenz - Anzahl: 1</a></div>'); L.marker([45.437500000,12.335833000], {icon: orangeIcon,title: "Venedig"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5789.html">Venedig - Anzahl: 2</a></div>'); L.marker([45.905556000,8.500000000], {icon: orangeIcon,title: "Baveno"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6037.html">Baveno - Anzahl: 1</a></div>'); L.marker([46.315000000,6.976389000], {title: "Adlerburg (Château d’Aigle)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5773.html">Adlerburg (Château d’Aigle) - Anzahl: 1</a></div>'); L.marker([46.432859000,6.925893000], {icon: orangeIcon,title: "Glion"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5357.html">Glion - Anzahl: 1</a></div>'); L.marker([46.433334000,6.916656000], {icon: orangeIcon,title: "Montreux"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_18249.html">Montreux - Anzahl: 1</a></div>'); L.marker([46.544336915,7.446367041], {icon: orangeIcon,title: "Scheidegg (Diemtigen)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14925.html">Scheidegg (Diemtigen) - Anzahl: 1</a></div>'); L.marker([46.575740000,7.940270000], {icon: orangeIcon,title: "Wengernalp"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14924.html">Wengernalp - Anzahl: 1</a></div>'); L.marker([46.664861000,8.160944000], {icon: orangeIcon,title: "Rosenlauigletscher"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14926.html">Rosenlauigletscher - Anzahl: 1</a></div>'); L.marker([46.683331000,7.866660000], {icon: orangeIcon,title: "Interlaken"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14923.html">Interlaken - Anzahl: 1</a></div>'); L.marker([46.728606000,8.186384000], {icon: orangeIcon,title: "Meiringen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14927.html">Meiringen - Anzahl: 1</a></div>'); L.marker([46.757778000,8.137778000], {icon: orangeIcon,title: "Brünigpass"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14928.html">Brünigpass - Anzahl: 1</a></div>'); L.marker([46.759000000,7.630000000], {icon: orangeIcon,title: "Thun"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14922.html">Thun - Anzahl: 1</a></div>'); L.marker([46.781033000,9.543481000], {icon: orangeIcon,title: "Churwalden"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5768.html">Churwalden - Anzahl: 1</a></div>'); L.marker([46.800000000,8.233333000], {icon: orangeIcon,title: "Schweiz"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5360.html">Schweiz - Anzahl: 25</a></div>'); L.marker([46.833333000,9.283327000], {icon: orangeIcon,title: "Flims"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6262.html">Flims - Anzahl: 1</a></div>'); L.marker([46.940276000,8.273611000], {icon: orangeIcon,title: "Alpnach"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14930.html">Alpnach - Anzahl: 1</a></div>'); L.marker([46.970830000,8.470832000], {icon: orangeIcon,title: "Beckenried"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14932.html">Beckenried - Anzahl: 1</a></div>'); L.marker([46.975825000,8.586117000], {icon: orangeIcon,title: "Seelisberg"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8932.html">Seelisberg - Anzahl: 2</a></div>'); L.marker([47.052070000,8.305850000], {icon: orangeIcon,title: "Luzern"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6255.html">Luzern - Anzahl: 2</a></div>'); L.marker([47.371740000,8.542260000], {icon: orangeIcon,title: "Zürich"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13143.html">Zürich - Anzahl: 1</a></div>'); L.marker([47.423056000,9.377222000], {icon: orangeIcon,title: "Fürstabtei St. Gallen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6270.html">Fürstabtei St. Gallen - Anzahl: 1</a></div>'); L.marker([47.550833000,7.948611000], {title: "Schloss Schönau (Bad Säckingen)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5139.html">Schloss Schönau (Bad Säckingen) - Anzahl: 1</a></div>'); L.marker([47.552540865,7.950023385], {title: "Zum Güldenen Knopf"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14908.html">Zum Güldenen Knopf - Anzahl: 1</a></div>'); L.marker([47.553333000,7.947222000], {icon: orangeIcon,title: "Bad Säckingen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5119.html">Bad Säckingen - Anzahl: 3</a></div>'); L.marker([47.558140000,7.587690000], {icon: orangeIcon,title: "Basel"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13103.html">Basel - Anzahl: 2</a></div>'); L.marker([47.571111000,7.934722000], {icon: orangeIcon,title: "Bergsee (Bad Säckingen)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14936.html">Bergsee (Bad Säckingen) - Anzahl: 1</a></div>'); L.marker([47.587600000,7.998200000], {title: "Burgruine Wieladingen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14935.html">Burgruine Wieladingen - Anzahl: 1</a></div>'); L.marker([47.631389000,13.004167000], {icon: orangeIcon,title: "Berchtesgaden"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6273.html">Berchtesgaden - Anzahl: 1</a></div>'); L.marker([47.659349000,8.859469000], {icon: orangeIcon,title: "Stein am Rhein"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14977.html">Stein am Rhein - Anzahl: 1</a></div>'); L.marker([47.678252277,8.615463968], {icon: orangeIcon,title: "Rheinfall"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14975.html">Rheinfall - Anzahl: 1</a></div>'); L.marker([47.693056000,9.063056000], {icon: orangeIcon,title: "Reichenau (Insel)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6073.html">Reichenau (Insel) - Anzahl: 2</a></div>'); L.marker([47.698740000,9.062080000], {title: "Kloster Reichenau"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6194.html">Kloster Reichenau - Anzahl: 1</a></div>'); L.marker([47.727500000,9.004444000], {icon: orangeIcon,title: "Mettnau"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6265.html">Mettnau - Anzahl: 4</a></div>'); L.marker([47.728012000,8.995748000], {title: "Scheffelschlösschen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6264.html">Scheffelschlösschen - Anzahl: 1</a></div>'); L.marker([47.735538317,8.977033868], {title: "Villa Seehalde"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14956.html">Villa Seehalde - Anzahl: 2</a></div>'); L.marker([47.738889000,8.968611000], {icon: orangeIcon,title: "Radolfzell am Bodensee"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6211.html">Radolfzell am Bodensee - Anzahl: 2</a></div>'); L.marker([47.764722000,8.818889000], {icon: orangeIcon,title: "Hohentwiel"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5812.html">Hohentwiel - Anzahl: 3</a></div>'); L.marker([47.766667000,9.158333000], {icon: orangeIcon,title: "Überlingen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6263.html">Überlingen - Anzahl: 1</a></div>'); L.marker([47.775230000,9.132690000], {icon: orangeIcon,title: "Heidenhöhlen (Goldbach)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5430.html">Heidenhöhlen (Goldbach) - Anzahl: 1</a></div>'); L.marker([47.798889000,8.820556000], {icon: orangeIcon,title: "Hohenkrähen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6203.html">Hohenkrähen - Anzahl: 1</a></div>'); L.marker([47.994828000,7.849881000], {icon: orangeIcon,title: "Freiburg im Breisgau"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13158.html">Freiburg im Breisgau - Anzahl: 1</a></div>'); L.marker([48.000000000,8.000000000], {icon: orangeIcon,title: "Schwarzwald"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5122.html">Schwarzwald - Anzahl: 1</a></div>'); L.marker([48.146724360,11.577305840], {title: "Fürstenstraße (München)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14949.html">Fürstenstraße (München) - Anzahl: 1</a></div>'); L.marker([48.290644000,8.272019000], {icon: orangeIcon,title: "Kinzigtal (Wolfach)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6192.html">Kinzigtal (Wolfach) - Anzahl: 1</a></div>'); L.marker([48.567500000,8.150556000], {icon: orangeIcon,title: "Ottenhöfen im Schwarzwald"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14939.html">Ottenhöfen im Schwarzwald - Anzahl: 1</a></div>'); L.marker([48.634965060,8.107689423], {title: "Schulhaus Obersasbach"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12213.html">Schulhaus Obersasbach - Anzahl: 1</a></div>'); L.marker([48.638333000,8.091667000], {icon: orangeIcon,title: "Erlenbad / Sasbach"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5343.html">Erlenbad / Sasbach - Anzahl: 3</a></div>'); L.marker([48.659016000,8.147961000], {icon: orangeIcon,title: "Neusatzeck"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5913.html">Neusatzeck - Anzahl: 1</a></div>'); L.marker([48.759664297,8.236853768], {title: "Hotel Messmer (Baden-Baden)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6284.html">Hotel Messmer (Baden-Baden) - Anzahl: 1</a></div>'); L.marker([48.775556000,9.182778000], {icon: orangeIcon,title: "Stuttgart"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8887.html">Stuttgart - Anzahl: 1</a></div>'); L.marker([48.804722000,2.134167000], {icon: orangeIcon,title: "Versailles"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5899.html">Versailles - Anzahl: 4</a></div>'); L.marker([48.856452370,2.335560297], {title: "Rue des Beaux-Arts, No 9"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13458.html">Rue des Beaux-Arts, No 9 - Anzahl: 1</a></div>'); L.marker([48.856667000,2.351667000], {icon: orangeIcon,title: "Paris"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5398.html">Paris - Anzahl: 3</a></div>'); L.marker([48.919167000,8.164722000], {icon: orangeIcon,title: "Murg (Nordschwarzwald)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14933.html">Murg (Nordschwarzwald) - Anzahl: 1</a></div>'); L.marker([49.004581000,8.405760000], {icon: orangeIcon,title: "Alter Bahnhof Karlsruhe"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14891.html">Alter Bahnhof Karlsruhe - Anzahl: 1</a></div>'); L.marker([49.012674848,8.396481168], {title: "Stephanienstraße 18 (Karlsruhe)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14890.html">Stephanienstraße 18 (Karlsruhe) - Anzahl: 2</a></div>'); L.marker([49.014000000,8.404300000], {icon: orangeIcon,title: "Karlsruhe"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6140.html">Karlsruhe - Anzahl: 9</a></div>'); L.marker([49.037500000,7.946389000], {icon: orangeIcon,title: "Kreis Weißenburg"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13164.html">Kreis Weißenburg - Anzahl: 1</a></div>'); L.marker([49.076389000,9.156750000], {icon: orangeIcon,title: "Lauffen am Neckar"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14965.html">Lauffen am Neckar - Anzahl: 1</a></div>'); L.marker([49.078056000,6.074167000], {icon: orangeIcon,title: "Ars-sur-Moselle"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14669.html">Ars-sur-Moselle - Anzahl: 1</a></div>'); L.marker([49.084806000,9.195639000], {icon: orangeIcon,title: "Talheim (Landkreis Heilbronn)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12044.html">Talheim (Landkreis Heilbronn) - Anzahl: 2</a></div>'); L.marker([49.089615116,9.191139820], {title: "Oberes Schloss (Talheim)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12043.html">Oberes Schloss (Talheim) - Anzahl: 1</a></div>'); L.marker([49.109800000,6.177500000], {title: "Bahnhof Metz-Ville"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14952.html">Bahnhof Metz-Ville - Anzahl: 1</a></div>'); L.marker([49.112222000,9.737500000], {icon: orangeIcon,title: "Schwäbisch Hall"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14966.html">Schwäbisch Hall - Anzahl: 1</a></div>'); L.marker([49.119722000,6.176944000], {icon: orangeIcon,title: "Metz"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14668.html">Metz - Anzahl: 2</a></div>'); L.marker([49.141667000,9.222222000], {icon: orangeIcon,title: "Heilbronn"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6420.html">Heilbronn - Anzahl: 1</a></div>'); L.marker([49.377500000,10.178889000], {icon: orangeIcon,title: "Rothenburg ob der Tauber"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14967.html">Rothenburg ob der Tauber - Anzahl: 1</a></div>'); L.marker([49.630167000,8.359789000], {title: "Wormser Dom"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14901.html">Wormser Dom - Anzahl: 1</a></div>'); L.marker([49.633056000,8.360833000], {icon: orangeIcon,title: "Worms"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14900.html">Worms - Anzahl: 3</a></div>'); L.marker([49.633508746,8.376745885], {title: "Kriemhilds Rosengarten"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14902.html">Kriemhilds Rosengarten - Anzahl: 1</a></div>'); L.marker([49.653889000,8.568889000], {title: "Kloster Lorsch"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14899.html">Kloster Lorsch - Anzahl: 1</a></div>'); L.marker([49.681111000,8.622778000], {icon: orangeIcon,title: "Bensheim"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14892.html">Bensheim - Anzahl: 1</a></div>'); L.marker([49.702200000,8.619200000], {icon: orangeIcon,title: "Auerbach (Bensheim)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14897.html">Auerbach (Bensheim) - Anzahl: 2</a></div>'); L.marker([49.709167000,8.631944000], {title: "Schloss Auerbach"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14894.html">Schloss Auerbach - Anzahl: 1</a></div>'); L.marker([49.725000000,8.636944000], {icon: orangeIcon,title: "Melibokus"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14893.html">Melibokus - Anzahl: 1</a></div>'); L.marker([49.793333000,8.668333000], {title: "Burg Frankenstein (Odenwald)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14896.html">Burg Frankenstein (Odenwald) - Anzahl: 1</a></div>'); L.marker([49.794410000,9.929370000], {icon: orangeIcon,title: "Würzburg"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13099.html">Würzburg - Anzahl: 1</a></div>'); L.marker([49.891667000,10.891667000], {icon: orangeIcon,title: "Bamberg"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8581.html">Bamberg - Anzahl: 1</a></div>'); L.marker([50.101200000,7.732220000], {title: "Schönburg (Rhein)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_18307.html">Schönburg (Rhein) - Anzahl: 1</a></div>'); L.marker([50.199444000,10.076389000], {icon: orangeIcon,title: "Bad Kissingen"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14968.html">Bad Kissingen - Anzahl: 1</a></div>'); L.marker([50.280489000,7.618111000], {icon: orangeIcon,title: "Rhens"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_18303.html">Rhens - Anzahl: 1</a></div>'); L.marker([50.306289000,7.612464000], {title: "Burg Lahneck"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_18305.html">Burg Lahneck - Anzahl: 1</a></div>'); L.marker([50.364167000,7.605556000], {icon: orangeIcon,title: "Mittelrhein"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_18302.html">Mittelrhein - Anzahl: 1</a></div>'); L.marker([50.916667000,14.150000000], {icon: orangeIcon,title: "Bad Schandau"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14661.html">Bad Schandau - Anzahl: 1</a></div>'); L.marker([51.865556000,10.679722000], {icon: orangeIcon,title: "Ilsenburg (Harz)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6034.html">Ilsenburg (Harz) - Anzahl: 1</a></div>'); L.marker([52.342083000,14.551667000], {icon: orangeIcon,title: "Frankfurt (Oder)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8917.html">Frankfurt (Oder) - Anzahl: 4</a></div>'); L.marker([52.401464621,13.015987082], {title: "Neues Palais"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5937.html">Neues Palais - Anzahl: 1</a></div>'); L.marker([52.421620149,13.162306929], {title: "Mietvilla, Quistorpsche Dreieck (Wannsee)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14903.html">Mietvilla, Quistorpsche Dreieck (Wannsee) - Anzahl: 3</a></div>'); L.marker([52.422801748,13.160263671], {title: "Landhaus Zum Löwen 5 (Wannsee)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14905.html">Landhaus Zum Löwen 5 (Wannsee) - Anzahl: 1</a></div>'); L.marker([52.427600000,13.173122000], {icon: orangeIcon,title: "Großer Wannsee"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6025.html">Großer Wannsee - Anzahl: 2</a></div>'); L.marker([52.428611000,14.318611000], {icon: orangeIcon,title: "Falkenhagen (Mark)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8935.html">Falkenhagen (Mark) - Anzahl: 1</a></div>'); L.marker([52.453635465,13.593543169], {title: "Künstlerhaus in der Bellevuestraße 3"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12231.html">Künstlerhaus in der Bellevuestraße 3 - Anzahl: 1</a></div>'); L.marker([52.502343860,13.365877340], {title: "Villa VI in Potsdam"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5481.html">Villa VI in Potsdam - Anzahl: 3</a></div>'); L.marker([52.502580945,13.394514297], {title: "Lindenstraße 93a Berlin"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14889.html">Lindenstraße 93a Berlin - Anzahl: 1</a></div>'); L.marker([52.505800405,13.366290000], {title: "Verein Berliner Künstler"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6167.html">Verein Berliner Künstler - Anzahl: 1</a></div>'); L.marker([52.506747130,13.348429840], {title: "Lützower Ufer 31"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6454.html">Lützower Ufer 31 - Anzahl: 1</a></div>'); L.marker([52.508889000,13.326667000], {title: "Hochschule der Künste Berlin"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12835.html">Hochschule der Künste Berlin - Anzahl: 1</a></div>'); L.marker([52.509368239,13.401330127], {title: "Gerbersche Industriegebäude"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12192.html">Gerbersche Industriegebäude - Anzahl: 2</a></div>'); L.marker([52.512697018,13.382221442], {title: "Architektenhaus - Wilhelmstraße 92/93"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12183.html">Architektenhaus - Wilhelmstraße 92/93 - Anzahl: 9</a></div>'); L.marker([52.514653455,13.350108497], {title: "Siegesssäule (Berlin)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5833.html">Siegesssäule (Berlin) - Anzahl: 1</a></div>'); L.marker([52.516777506,13.388632597], {title: "Hotel du Nord (Berlin)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14881.html">Hotel du Nord (Berlin) - Anzahl: 1</a></div>'); L.marker([52.517041133,13.400682727], {title: "Berliner Schloss"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6169.html">Berliner Schloss - Anzahl: 2</a></div>'); L.marker([52.517076148,13.392856697], {title: "Altes Palais (Berlin)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6288.html">Altes Palais (Berlin) - Anzahl: 1</a></div>'); L.marker([52.517413332,13.396769642], {title: "Kronprinzenpalais (Berlin)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12050.html">Kronprinzenpalais (Berlin) - Anzahl: 1</a></div>'); L.marker([52.518241944,13.396994984], {title: "Zeughaus (Berlin)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12036.html">Zeughaus (Berlin) - Anzahl: 1</a></div>'); L.marker([52.518421101,13.408655026], {title: "Berliner Rathaus (Rotes Rathaus)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_10985.html">Berliner Rathaus (Rotes Rathaus) - Anzahl: 1</a></div>'); L.marker([52.518550000,13.368700000], {title: "Krolloper"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12206.html">Krolloper - Anzahl: 1</a></div>'); L.marker([52.518550000,13.388640000], {title: "Central-Hotel"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12188.html">Central-Hotel - Anzahl: 1</a></div>'); L.marker([52.518611000,13.376111000], {title: "Reichstagsgebäude"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6256.html">Reichstagsgebäude - Anzahl: 1</a></div>'); L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5416.html">Berlin - Anzahl: 64</a></div>'); L.marker([52.522749390,13.411531891], {title: "Panoramagebäude Alexanderplatz"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_12219.html">Panoramagebäude Alexanderplatz - Anzahl: 1</a></div>'); L.marker([53.529286337,10.340023635], {icon: orangeIcon,title: "Friedrichsruh"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_13156.html">Friedrichsruh - Anzahl: 1</a></div>'); L.marker([53.954380000,14.167110000], {icon: orangeIcon,title: "Heringsdorf"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_5769.html">Heringsdorf - Anzahl: 3</a></div>'); L.marker([54.182500000,7.885278000], {icon: orangeIcon,title: "Helgoland"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6313.html">Helgoland - Anzahl: 3</a></div>'); L.marker([54.323210000,10.140190000], {icon: orangeIcon,title: "Kiel"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8552.html">Kiel - Anzahl: 4</a></div>'); L.marker([54.450360122,10.112673246], {title: "Fleethörnstraße 38 (Kiel)"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_14921.html">Fleethörnstraße 38 (Kiel) - Anzahl: 1</a></div>'); L.marker([54.571667000,13.658333000], {icon: orangeIcon,title: "Stubbenkammer"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_6182.html">Stubbenkammer - Anzahl: 1</a></div>'); L.marker([54.782760000,9.436280000], {icon: orangeIcon,title: "Flensburg"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8741.html">Flensburg - Anzahl: 1</a></div>'); L.marker([54.907700000,8.308800000], {icon: orangeIcon,title: "Westerland"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_8740.html">Westerland - Anzahl: 1</a></div>'); L.marker([54.915833000,8.330833000], {icon: orangeIcon,title: "Sylt"}).addTo(idMapEvent).bindPopup('<div><a href="https://antonvonwerner.de/html/event/list/eventLocation_18283.html">Sylt - Anzahl: 1</a></div>');</script></article></p><div class="searchTabs">  <input type="radio" name="inhalt" id="tabEventAll">
+            <label for="tabEventAll">Alle</label>
+            <div class="searchTab"> <div class="buttonChoices"><a href="https://antonvonwerner.de/html/event/list/eventAll.html" class="button">
+	<img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Uuml;bersicht (199)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabName">
+            <label for="tabName">Gruppe</label>
+            <div class="searchTab"> <div class="buttonChoices"> <a href="https://antonvonwerner.de/html/event/list/event_groups.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Übersicht...</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventYear">
+            <label for="tabEventYear">Jahr</label>
+            <div class="searchTab"> <h2>Wählen sie eine Jahresangabe:</h2>  <div class="buttonChoices"><a href="https://antonvonwerner.de/html/event/list/year_1843.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1843 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1858.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1858 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1859.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1859 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1861.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1861 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1862.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1862 (4)</a><a href="https://antonvonwerner.de/html/event/list/year_1863.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1863 (9)</a><a href="https://antonvonwerner.de/html/event/list/year_1867.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1867 (3)</a><a href="https://antonvonwerner.de/html/event/list/year_1868.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1868 (25)</a><a href="https://antonvonwerner.de/html/event/list/year_1869.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1869 (8)</a><a href="https://antonvonwerner.de/html/event/list/year_1870.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1870 (5)</a><a href="https://antonvonwerner.de/html/event/list/year_1871.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1871 (9)</a><a href="https://antonvonwerner.de/html/event/list/year_1872.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1872 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1873.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1873 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1874.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1874 (7)</a><a href="https://antonvonwerner.de/html/event/list/year_1875.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1875 (10)</a><a href="https://antonvonwerner.de/html/event/list/year_1876.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1876 (3)</a><a href="https://antonvonwerner.de/html/event/list/year_1877.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1877 (12)</a><a href="https://antonvonwerner.de/html/event/list/year_1878.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1878 (4)</a><a href="https://antonvonwerner.de/html/event/list/year_1879.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1879 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1880.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1880 (3)</a><a href="https://antonvonwerner.de/html/event/list/year_1881.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1881 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1882.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1882 (8)</a><a href="https://antonvonwerner.de/html/event/list/year_1883.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1883 (11)</a><a href="https://antonvonwerner.de/html/event/list/year_1884.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1884 (7)</a><a href="https://antonvonwerner.de/html/event/list/year_1885.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1885 (5)</a><a href="https://antonvonwerner.de/html/event/list/year_1886.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1886 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1887 (8)</a><a href="https://antonvonwerner.de/html/event/list/year_1888.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1888 (3)</a><a href="https://antonvonwerner.de/html/event/list/year_1889.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1889 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1890.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1890 (6)</a><a href="https://antonvonwerner.de/html/event/list/year_1891.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1891 (4)</a><a href="https://antonvonwerner.de/html/event/list/year_1892.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1892 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1893.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1893 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1896 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1897 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1898.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1898 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1900.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1900 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1901 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1902.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1902 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1904.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1904 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1906.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1906 (2)</a><a href="https://antonvonwerner.de/html/event/list/year_1908.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1908 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1909.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1909 (4)</a><a href="https://antonvonwerner.de/html/event/list/year_1912.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1912 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1913.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1913 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1914.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1914 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1915.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1915 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1922.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1922 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1925.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1925 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_1947.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">1947 (1)</a><a href="https://antonvonwerner.de/html/event/list/year_Schätzung.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sch&auml;tzung (4)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventPerson">
+            <label for="tabEventPerson">Person</label>
+            <div class="searchTab"> <h2>Wählen sie eine Person aus:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/event/list/person_3234.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Atzenroth, Carl August (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3274.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bally, Theodor (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_5.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Becker, Carl Ludwig Friedrich (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3129.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Biber-Palubicki, Alfred von (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2064.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bismarck, Otto von (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3310.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Blumenthal, Leonhard von (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3120.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bode, Wilhelm von (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3278.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bonz, Adolf Carl (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3213.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dielitz, Conrad (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3214.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrentraut, Julius (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3216.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frenzel, Karl (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3106.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrich I. (Baden) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2069.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrich III.  (Deutsches Reich) (5)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2057.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gude, Hans Fredrik (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3276.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">J&auml;hns, Max (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lessing, Carl Friedrich (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3126.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lutterroth, Ascan (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3275.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Malsen, Caroline Freiin von  (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2036.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meckel, Adolf von Hemsbach (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2103.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meckel, Lina von (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2039.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Menzel, Adolph (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3127.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meyerheim, Franz (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2073.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Moltke, Helmut von (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Munch, Edvard (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3280.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;tzelburg, Adolf (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3167.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Pietsch, Ludwig (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3172.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ruben, Franz Leo (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2043.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Salviati, Antonio (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3279.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schaper, Fritz (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_1013.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scheffel, Joseph Victor (62)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3142.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scholz, Wilhelm (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2042.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schr&oelig;dter, Alwine (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3130.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tendlau, Louis (Ludwig) (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3198.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tschudi, Hugo von (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3174.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venus, Franz Albert (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2056.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Victoria von Großbritannien und Irland (Kaiserin Friedrich) (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3281.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vischer, August (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3239.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Adeline (Lilli)  (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_1.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Anton von (199)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2040.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Malvina von (38)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_2062.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wilhelm I. (Deutsches Reich) (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/person_3117.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wolff, Julius (Bildhauer) (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventParticipantType">
+            <label for="tabEventParticipantType">Art</label>
+            <div class="searchTab"> <h2>Wählen sie eine Art aus :</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/event/list/participant_DIE.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dienstlich (61)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/participant_PRI.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Privat (280)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/participant_PUD.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Privat und Dienstlich (22)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/participant_UNB.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Unbekannt (4)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventPriority">
+            <label for="tabEventPriority">Gewichtung</label>
+            <div class="searchTab"> <h2>Wählen sie eine Gewichtung aus :</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/event/list/prio_BED.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bedeutend (18)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/prio_NOR.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Normal (31)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/prio_UNB.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Unbedeutend (150)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabEventPlace">
+            <label for="tabEventPlace">Ort</label>
+            <div class="searchTab"> <h2>Wählen sie einen Ort:</h2>  <div class="buttonChoices">
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5773.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Adlerburg (Ch&acirc;teau d&rsquo;Aigle) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14799.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Aigle VD (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14930.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alpnach (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14891.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alter Bahnhof Karlsruhe (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6288.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Altes Palais (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12183.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Architektenhaus - Wilhelmstraße 92/93 (9)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14669.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ars-sur-Moselle (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14897.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auerbach (Bensheim) (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14968.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Kissingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5119.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad S&auml;ckingen (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14661.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Schandau (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13151.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-Baden (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13295.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-W&uuml;rttemberg (45)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14952.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bahnhof Metz-Ville (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8581.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bamberg (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13103.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Basel (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6037.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baveno (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13296.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bayern (6)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14932.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Beckenried (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14892.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bensheim (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6273.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berchtesgaden (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14936.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bergsee (Bad S&auml;ckingen) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5416.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (58)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_10985.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Rathaus (Rotes Rathaus) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6169.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Schloss (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14904.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin-Wannsee (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Brandenburg (5)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14928.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Br&uuml;nigpass (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14896.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burg Frankenstein (Odenwald) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burg Lahneck (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14935.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burgruine Wieladingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_1029.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Capri (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12188.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Central-Hotel (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5768.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Churwalden (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12085.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Civitella (Bellegra) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5460.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Colonie Alsen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14895.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Darmstadt-Eberstadt (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12240.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutschland (139)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5343.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Erlenbad / Sasbach (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8935.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Falkenhagen (Mark) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14921.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fleeth&ouml;rnstraße 38 (Kiel) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8741.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flensburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6262.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flims (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13239.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Florenz (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8917.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt (Oder) (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5339.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankreich (10)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13158.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freiburg im Breisgau (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13156.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrichsruh (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6270.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">F&uuml;rstabtei St. Gallen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14949.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">F&uuml;rstenstraße (M&uuml;nchen) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12192.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gerbersche Industriegeb&auml;ude (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5357.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Glion (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13310.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Grand Est (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6025.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Großer Wannsee (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5430.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heidenh&ouml;hlen (Goldbach) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6420.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heilbronn (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6313.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Helgoland (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5769.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heringsdorf (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13298.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hessen (6)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12835.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hochschule der K&uuml;nste Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6203.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hohenkr&auml;hen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5812.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hohentwiel (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14881.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hotel du Nord (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6284.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hotel Messmer (Baden-Baden) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13311.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Icirc;le-de-France (7)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6034.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ilsenburg (Harz) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14923.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Interlaken (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_1024.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Italien (14)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13321.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kampanien (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13285.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Basel-Stadt (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14825.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Bern (7)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13288.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Graub&uuml;nden (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13289.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Luzern (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14931.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Nidwalden (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14929.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Obwalden (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14973.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Schaffhausen (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14821.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton St. Gallen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13290.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Uri (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13291.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Waadt (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13292.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kanton Z&uuml;rich (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6140.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karlsruhe (9)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8552.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kiel (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6192.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kinzigtal (Wolfach) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14899.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kloster Lorsch (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6194.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kloster Reichenau (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13164.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kreis Weißenburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14902.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kriemhilds Rosengarten (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12206.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Krolloper (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12050.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kronprinzenpalais (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12231.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&uuml;nstlerhaus in der Bellevuestraße 3 (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18304.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lahnstein (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14905.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landhaus Zum L&ouml;wen 5 (Wannsee) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13320.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Latium (7)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14965.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lauffen am Neckar (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14889.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lindenstraße 93a Berlin (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14898.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lorsch (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6454.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">L&uuml;tzower Ufer 31 (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6255.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Luzern (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13299.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mecklenburg-Vorpommern (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14927.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meiringen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14893.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Melibokus (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6265.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mettnau (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14668.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Metz (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14903.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mietvilla, Quistorpsche Dreieck (Wannsee) (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18302.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mittelrhein (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18249.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Montreux (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14933.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Murg (Nordschwarzwald) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13108.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neapel (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5937.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neues Palais (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5913.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neusatzeck (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12043.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oberes Schloss (Talheim) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18306.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oberwesel (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_1025.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Olevano Romano (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14939.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ottenh&ouml;fen im Schwarzwald (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12219.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Panoramageb&auml;ude Alexanderplatz (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5398.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Paris (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13316.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Piemont (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6211.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Radolfzell am Bodensee (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6073.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Reichenau (Insel) (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6256.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Reichstagsgeb&auml;ude (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14975.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinfall (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13302.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinland-Pfalz (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18303.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rhens (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14934.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rickenbach (Hotzenwald) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5170.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rom (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14926.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rosenlauigletscher (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14967.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rothenburg ob der Tauber (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13458.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rue des Beaux-Arts, No 9 (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13305.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13306.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sachsen-Anhalt (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6264.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scheffelschl&ouml;sschen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14925.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scheidegg (Diemtigen) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13303.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schleswig-Holstein (10)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14894.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Auerbach (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5139.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Sch&ouml;nau (Bad S&auml;ckingen) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18307.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sch&ouml;nburg (Rhein) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12213.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schulhaus Obersasbach (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14966.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schw&auml;bisch Hall (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5122.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schwarzwald (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5360.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweiz (25)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8932.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Seelisberg (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5833.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Siegesss&auml;ule (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5283.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sorrent (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14977.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stein am Rhein (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14890.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stephanienstraße 18 (Karlsruhe) (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6182.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stubbenkammer (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8887.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stuttgart (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_18283.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sylt (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12044.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Talheim (Landkreis Heilbronn) (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14922.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Thun (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12027.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tivoli (Latium) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13319.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Toskana (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6263.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Uuml;berlingen (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5789.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venedig (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13318.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venetien (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_6167.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verein Berliner K&uuml;nstler (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5899.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Versailles (4)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14940.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Via Sistina, 123 (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14956.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa Seehalde (2)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_5481.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa VI in Potsdam (3)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14924.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wengernalp (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_8740.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Westerland (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14900.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Worms (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14901.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wormser Dom (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13099.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">W&uuml;rzburg (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_12036.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Zeughaus (Berlin) (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_14908.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Zum G&uuml;ldenen Knopf (1)</a>
+	    <a href="https://antonvonwerner.de/html/event/list/eventLocation_13143.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Z&uuml;rich (1)</a></div>     </div>
+  <input type="radio" name="inhalt" id="tabTag">
+            <label for="tabTag">Schlagwort</label>
+            <div class="searchTab"> <h2>Wählen sie ein Schlagwort:</h2>  <br><div class="buttonChoices"> <a href="https://antonvonwerner.de/html/event/list/eventTag_all.html" class="button">
+	    <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Suche...</a></div><br><div>
+    <div class="info-block openClose">
+	   <input type="checkbox" id="28" name="28">
+	   <label for="28" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Architektur (7)</label>
+	   <label for="28" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Architektur (7)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8514.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bahnhof (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5976.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Denkmal (Gedenken) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6455.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wohnung (5)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="27" name="27">
+	   <label for="27" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Bauwerke / Geb&auml;ude / Anlage (47)</label>
+	   <label for="27" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Bauwerke / Geb&auml;ude / Anlage (47)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5773.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Adlerburg (Ch&acirc;teau d&rsquo;Aigle) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6288.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Altes Palais (Berlin) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12183.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Architektenhaus - Wilhelmstraße 92/93 (9)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14952.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bahnhof Metz-Ville (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6169.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berliner Schloss (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14896.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burg Frankenstein (Odenwald) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_18305.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burg Lahneck (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14935.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Burgruine Wieladingen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12188.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Central-Hotel (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12192.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gerbersche Industriegeb&auml;ude (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14881.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hotel du Nord (Berlin) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6284.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hotel Messmer (Baden-Baden) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14899.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kloster Lorsch (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6194.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kloster Reichenau (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12206.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Krolloper (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12050.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kronprinzenpalais (Berlin) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14905.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Landhaus Zum L&ouml;wen 5 (Wannsee) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6454.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">L&uuml;tzower Ufer 31 (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14903.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mietvilla, Quistorpsche Dreieck (Wannsee) (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5937.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neues Palais (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12043.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Oberes Schloss (Talheim) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13458.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rue des Beaux-Arts, No 9 (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6264.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scheffelschl&ouml;sschen (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14894.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Auerbach (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8936.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Falkenhagen (Mark) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5139.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schloss Sch&ouml;nau (Bad S&auml;ckingen) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_18307.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sch&ouml;nburg (Rhein) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12213.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schulhaus Obersasbach (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5833.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Siegesss&auml;ule (Berlin) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12026.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa d&apos;Este (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14956.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa Seehalde (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5481.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Villa VI in Potsdam (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="15" name="15">
+	   <label for="15" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Berufe / Stand / Hobbys (5)</label>
+	   <label for="15" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Berufe / Stand / Hobbys (5)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8488.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ausbildung (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8487.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Maler und Lackierer (Stubenmaler) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5271.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Studenten (2)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="22" name="22">
+	   <label for="22" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Beziehungen (59)</label>
+	   <label for="22" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Beziehungen (59)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5100.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Familie (20)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5098.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freundschaft (39)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="1" name="1">
+	   <label for="1" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Emotionen (1)</label>
+	   <label for="1" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Emotionen (1)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5071.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Trauer / Traurigkeit (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="4" name="4">
+	   <label for="4" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Epochen (1)</label>
+	   <label for="4" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Epochen (1)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5784.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Renaissance (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="25" name="25">
+	   <label for="25" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Ereignisse (8)</label>
+	   <label for="25" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Ereignisse (8)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5336.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutsch-Franz&ouml;sischer Krieg (1870/71) (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8900.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heyden, August von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13399.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstdebatte im deutschen Reichstag (15-16.2.1904) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13391.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lex Heinze (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13457.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weltausstellung Paris 1867 (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13395.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weltausstellung St. Louis 1904 (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="10" name="10">
+	   <label for="10" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gegenst&auml;nde (4)</label>
+	   <label for="10" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Gegenst&auml;nde (4)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5806.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kamin / Ofen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5114.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Totenbett / Sterbebett / Sterbesessel (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="16" name="16">
+	   <label for="16" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Geographie (6)</label>
+	   <label for="16" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Geographie (6)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_10.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berg (6)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="14" name="14">
+	   <label for="14" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gesellschaft (137)</label>
+	   <label for="14" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Gesellschaft (137)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5902.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Abendgesellschaft (Soir&eacute;e) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8564.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Absage (Ereignis) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6197.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ausflug (24)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5299.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Begr&auml;bnis / Bestattung / Beerdigung (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6267.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Besuch (13)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8563.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Einladung (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6228.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Erholungsurlaub (7)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5173.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Feste und Feiern (17)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1021.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Festessen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5834.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Finanzen (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5124.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gastfreundschaft (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5727.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hochzeitstag (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_9964.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kabinettsorder (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6105.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kontroverse / Streit / Disput (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8543.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Preußische Akademie der K&uuml;nste (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5158.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rede / Vortrag / Monolog (7)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6293.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Reichstag (Deutsches Kaiserreich) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5056.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Trinkspruch/Toast/Prosit (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8845.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Unterricht (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5767.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Urlaub (40)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13539.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Versammlung (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13519.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vorfahren (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5057.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Zug / Auszug (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="19" name="19">
+	   <label for="19" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Handlung (25)</label>
+	   <label for="19" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Handlung (25)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5766.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dekorieren (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5831.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Umzug (Wohnsitzwechsel) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5422.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verhandeln/Feilschen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5785.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vorlesen / Rezitation (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5273.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wandern (21)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="32" name="32">
+	   <label for="32" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Institution (27)</label>
+	   <label for="32" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Institution (27)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12684.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Allgemeine Deutsche Kunstgenossenschaft (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8903.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alte Nationalgalerie (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13392.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Deutscher K&uuml;nstlerbund (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12612.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">K&ouml;nigliche akademische Hochschule f&uuml;r die Bildenden K&uuml;nste (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6167.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Verein Berliner K&uuml;nstler (20)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12783.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weltausstellung (Organisation) (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="30" name="30">
+	   <label for="30" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Kleidung (3)</label>
+	   <label for="30" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Kleidung (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5781.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kost&uuml;m / Verkleidung (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="29" name="29">
+	   <label for="29" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">K&ouml;rper / Anatomie (4)</label>
+	   <label for="29" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">K&ouml;rper / Anatomie (4)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5210.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Krankheit (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14976.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scharlach (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="17" name="17">
+	   <label for="17" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Kunst (65)</label>
+	   <label for="17" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Kunst (65)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8562.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ausstellung (8)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8583.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kulturtourismus (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1020.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunstakademie (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1023.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kunststudium (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6259.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lebendes Bild (Tableau vivant) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8711.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mich&aelig;l-Beer-Stiftung (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6236.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Modell (Kunst) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5469.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Moderne Kunst (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13424.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Retrospektive (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6298.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sitzungen (Kunst) (5)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5970.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Studien- und Forschungsreise (38)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="18" name="18">
+	   <label for="18" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Lebensstationen (25)</label>
+	   <label for="18" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Lebensstationen (25)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5912.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">AvW Urlaubs-/Familienalbum (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1022.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Geburt (6)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5957.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Geburtstag (5)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_3053.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hochzeit (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1033.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tod (9)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="5" name="5">
+	   <label for="5" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Lebewesen (5)</label>
+	   <label for="5" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Lebewesen (5)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_3051.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baby (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12042.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Junge (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5115.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Leiche (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="9" name="9">
+	   <label for="9" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Literatur (4)</label>
+	   <label for="9" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Literatur (4)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5881.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ekkehard (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5188.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frau Aventiure (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="11" name="11">
+	   <label for="11" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Orte (222)</label>
+	   <label for="11" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Orte (222)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5275.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alpen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14930.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alpnach (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14891.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alter Bahnhof Karlsruhe (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14669.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ars-sur-Moselle (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14897.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Auerbach (Bensheim) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14968.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Kissingen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5119.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad S&auml;ckingen (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14661.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bad Schandau (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13151.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden-Baden (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8581.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bamberg (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13103.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Basel (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6037.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baveno (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14932.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Beckenried (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14892.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bensheim (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6273.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berchtesgaden (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14936.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bergsee (Bad S&auml;ckingen) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5416.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin (42)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14904.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Berlin-Wannsee (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6074.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bodensee (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14928.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Br&uuml;nigpass (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1029.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Capri (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5768.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Churwalden (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12085.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Civitella (Bellegra) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5460.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Colonie Alsen (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5343.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Erlenbad / Sasbach (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13132.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Essen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8935.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Falkenhagen (Mark) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8741.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flensburg (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6262.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Flims (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13239.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Florenz (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8917.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt (Oder) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5771.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankfurt am Main (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5339.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frankreich (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14938.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Freiburg im &Uuml;echtland (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13156.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrichsruh (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6310.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Fr&oelig;schwiller / Froschweiler (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6270.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">F&uuml;rstabtei St. Gallen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5357.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Glion (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6025.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Großer Wannsee (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Harz (Landschaft) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6420.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heilbronn (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6313.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Helgoland (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5769.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Heringsdorf (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6203.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hohenkr&auml;hen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5812.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Hohentwiel (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6034.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ilsenburg (Harz) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14923.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Interlaken (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1024.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Italien (9)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6140.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Karlsruhe (8)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8552.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kiel (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6192.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kinzigtal (Wolfach) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13164.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kreis Weißenburg (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14965.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lauffen am Neckar (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6255.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Luzern (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14927.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meiringen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14893.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Melibokus (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6265.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mettnau (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14668.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Metz (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_18302.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Mittelrhein (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_18249.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Montreux (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13081.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;nchen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14933.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Murg (Nordschwarzwald) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13108.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neapel (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5913.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Neusatzeck (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14751.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Odenwald (8)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1025.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Olevano Romano (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14939.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ottenh&ouml;fen im Schwarzwald (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5398.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Paris (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13150.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Potsdam (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6211.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Radolfzell am Bodensee (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6073.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Reichenau (Insel) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14975.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rheinfall (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_18303.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rhens (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5170.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rom (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14926.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rosenlauigletscher (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14967.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Rothenburg ob der Tauber (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6183.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">R&uuml;gen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12086.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sabiner Berge (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14974.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schaffhausen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14925.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scheidegg (Diemtigen) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14964.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schwaben (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14966.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schw&auml;bisch Hall (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5122.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schwarzwald (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5360.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schweiz (13)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8932.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Seelisberg (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5283.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sorrent (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14977.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stein am Rhein (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13094.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stockholm (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6182.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stubbenkammer (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8887.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Stuttgart (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_18283.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Sylt (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12044.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Talheim (Landkreis Heilbronn) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14922.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Thun (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12027.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tivoli (Latium) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6263.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">&Uuml;berlingen (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5789.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venedig (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5899.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Versailles (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5284.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vesuv (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14924.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wengernalp (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8740.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Westerland (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6309.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wissembourg / Weißenburg (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14900.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Worms (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13099.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">W&uuml;rzburg (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13143.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Z&uuml;rich (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="7" name="7">
+	   <label for="7" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Personen (448)</label>
+	   <label for="7" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Personen (448)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13639.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Atzenroth, Carl August (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5507.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Baden, Friedrich I. von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14937.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bally, Theodor (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12051.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Becker, Karl (Maler) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12054.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Begas, Oscar (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13032.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Biber-Palubicki, Alfred von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5379.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bismarck, Otto von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5428.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Blumenthal, Leonhard von (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13028.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bode, Wilhelm von (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12093.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Bonz, Adolf Carl (oder Ludwig Adolf) (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13511.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Coudres, Ludwig Des (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13532.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dielitz, Conrad (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12052.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&oelig;pler, Carl Emil (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5982.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">D&oelig;pler, Emil d.J. (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12030.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dr. Jansen (Historiker) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12031.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Dr. Papst (Historiker) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13533.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ehrentraut, Julius (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5427.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Eulenburg, August zu  (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12053.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ewald, Ernst (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13417.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frapan, Ilse (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13535.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Frenzel, Karl (Schriftsteller) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5393.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Friedrich III. (Deutsches Reich) (7)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6232.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Gude, Hans Fredrik (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5579.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Harrach, Ferdinand von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14951.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">J&auml;hns, Max (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6368.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kayser, Maria Magdalena (Mutter von AvW) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13394.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kessler, Harry Graf (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13513.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kl&oelig;ber, August von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5984.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Knaus, Ludwig (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12056.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Knille, Otto (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6233.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lessing, Carl Friedrich (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12083.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Lutteroth, Ascan (Maler) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14950.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Malsen, Caroline Freiin von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8920.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meckel, Adolf von Hemsbach, (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8919.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meckel, Lina von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5668.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Menzel, Adolph von (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13031.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meyerheim, Franz (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6181.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Meyerheim, Paul Friedrich (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_1027.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Moltke, Helmut von (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12064.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Munch, Edvard (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8561.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">M&uuml;tzelburg, Adolf (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5832.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Pietsch, Ludwig (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13070.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Ruben, Franz Leo (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5835.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Salviati, Antonio (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5826.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schaper, Fritz (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_2033.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scheffel, Joseph Victor (66)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13512.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schirmer, Johann Wilhelm (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6150.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Scholz, Wilhelm (Karikaturist) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5818.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schr&oelig;dter, Adolph (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6277.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Schr&oelig;dter, Alwine (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13033.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tendlau, Louis (Ludwig) (2)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_6463.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tizian (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13416.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Tschudi, Hugo von (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12153.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Venus, Franz Albert (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5478.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Victoria von Großbritannien und Irland (Kaiserin Friedrich) (4)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14979.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Vischer, August (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_12029.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wedding (K&uuml;nstler) (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5484.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Adeline (Lilli) Margarete Karoline Friedericke von (02.05.1874 - 29.9.1947) (10)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5736.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Anton Alexander von (199)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5482.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Fritz von (1878 - 1906) (9)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5487.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Hans Karl Anton von (06.07.1881 - 1922) (7)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5483.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Hildegard Josepha Alwine von (28.04.1873 - 1925) (9)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5341.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Malvina von (Schr&oelig;dter 07.02.1847 - 16.12.1901) (38)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5485.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Molly von (1877 - 1883) (3)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5486.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Werner, Paul von (06.07.1881 - 1902) (8)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5418.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wilhelm I. (Deutsches Reich) (5)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_14981.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wolff, Julius (Bildhauer) (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="24" name="24">
+	   <label for="24" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Pflanzen (1)</label>
+	   <label for="24" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Pflanzen (1)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5058.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Alkohol (1)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="3" name="3">
+	   <label for="3" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Religion-Mythen (3)</label>
+	   <label for="3" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Religion-Mythen (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_5208.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Weihnachten (3)</a></div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="idEventTag12" name="idEventTag12">
+	   <label for="idEventTag12" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Schriften (3)</label>
+	   <label for="idEventTag12" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Schriften (3)</label>
+	   <div class="buttonChoices">
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_13536.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Kritik (1)</a>
+	   <a href="https://antonvonwerner.de/html/event/list/event_tag_8620.html" class="button">
+	   <img src="https://antonvonwerner.de/shared/resources/forward.svg" alt="Gehe zu">Wohnadresse (2)</a></div>
+    </div>     
+</div>     </div>
+ </div>
+    </article>
+
+    <footer>
+    <p> <a href="https://antonvonwerner.de/html/privacy.html" style="border-style: dotted;">Impressum/Datenschutz</a>
+	- Anton von Werner-Archiv (2024) /
+        <a class="contact" href="mailto:antonvonwerneraehtdannfolgtgmailunddannPunktunddanncom"><img src="https://antonvonwerner.de/shared/resources/mail.svg" alt="Mail"></a>
+    </p>
+    </footer>
+
+</body>
+
+</html>
+

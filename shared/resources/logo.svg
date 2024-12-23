@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <!-- Blauer Rahmen -->
+  <rect x="5" y="5" width="90" height="90" fill="#115799"/>
+  <!-- Weißer Hintergrund innerhalb des Rahmens -->
+  <rect x="10" y="10" width="80" height="80" fill="white"/>
+  <!-- Buchstabe A -->
+  <text x="25" y="48" font-family="Italic" font-size="45" fill="#59a3e9">A</text>
+  <!-- Buchstabe v -->
+  <text x="55" y="48" font-family="Italic" font-size="45" fill="#59a3e9">v</text>
+  <!-- Buchstabe W -->
+  <text x="50" y="80" font-family="Italic" font-size="45" fill="#59a3e9" text-anchor="middle">W</text>
+</svg>

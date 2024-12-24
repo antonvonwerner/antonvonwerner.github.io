@@ -132,7 +132,7 @@
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
 	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
 		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
-	   <div><article><div id="idMapArtwork_3900" class="openStreetMap"></div> <script>const idMapArtwork_3900 = L.map("idMapArtwork_3900").setView([49.002621000,8.401129000], 6); const idMapArtwork_3900_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_3900);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.002621000,8.401129000], {icon: orangeIcon,title: "Festplatz (Karlsruhe) "}).addTo(idMapArtwork_3900).bindPopup('<div>Festplatz (Karlsruhe) : Bildinhalt</div>'); L.marker([49.014000000,8.404300000], {icon: orangeIcon,title: "Karlsruhe"}).addTo(idMapArtwork_3900).bindPopup('<div>Karlsruhe: Bildinhalt</div>'); L.marker([50.045000000,10.234167000], {icon: orangeIcon,title: "Schweinfurt"}).addTo(idMapArtwork_3900).bindPopup('<div>Schweinfurt: Besitzer</div>'); L.marker([50.044105524,10.236329122], {title: "Museum Georg Schäfer"}).addTo(idMapArtwork_3900).bindPopup('<div>Museum Georg Schäfer: Besitzer</div>');</script></article></div>
+	   <div><article><div id="idMapArtwork_3900" class="openStreetMap"></div> <script>const idMapArtwork_3900 = L.map("idMapArtwork_3900").setView([49.002621000,8.401129000], 6); const idMapArtwork_3900_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_3900);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([49.002621000,8.401129000], {icon: orangeIcon,title: "Festplatz (Karlsruhe) "}).addTo(idMapArtwork_3900).bindPopup('<div>Festplatz (Karlsruhe) : Bildinhalt</div>'); L.marker([49.014000000,8.404300000], {icon: orangeIcon,title: "Karlsruhe"}).addTo(idMapArtwork_3900).bindPopup('<div>Karlsruhe: Bildinhalt</div>'); L.marker([50.045000000,10.234167000], {icon: orangeIcon,title: "Schweinfurt"}).addTo(idMapArtwork_3900).bindPopup('<div>Schweinfurt: Besitzer</div>'); L.marker([50.044105524,10.236329122], {title: "Museum Georg Schäfer"}).addTo(idMapArtwork_3900).bindPopup('<div>Museum Georg Schäfer: Ausstellungen, Besitzer</div>');</script></article></div>
     </div>     
 
     <div class="info-block openClose">
@@ -166,6 +166,18 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkExhibitionShort" name="idArtworkExhibitionShort" checked="checked" >
+	   <label for="idArtworkExhibitionShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Ausstellungen</label>
+	   <label for="idArtworkExhibitionShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Ausstellungen</label>
+	   <div class="label-value-pair">
+	   <div class="label">Ausstellungen</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/exhibition/detail/8FEAD3A9-8249-4771-8853-02E4EE74BAE4.html">Winterwelten – Cooles aus der Sammlung Georg Schäfer (So, 08.12.2024 - So, 16.02.2025), Museum Georg Sch&auml;fer</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkPublication" name="idArtworkPublication" checked="checked" >
 	   <label for="idArtworkPublication" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Literatur</label>
@@ -194,7 +206,7 @@
         <div class="value">02.10.2020</div>
     </div><div class="label-value-pair">
 	   <div class="label">Letzte &Auml;nderung</div>
-        <div class="value">20.09.2024</div>
+        <div class="value">24.12.2024</div>
     </div>
     </div>     
 

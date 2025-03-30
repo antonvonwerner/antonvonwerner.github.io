@@ -108,6 +108,15 @@
     </div>     
 
     <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkMap" name="idArtworkMap" checked="checked" >
+	   <label for="idArtworkMap" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Karte</label>
+	   <label for="idArtworkMap" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Karte</label>
+	   <div><article><div id="idMapArtwork_3657" class="openStreetMap"></div> <script>const idMapArtwork_3657 = L.map("idMapArtwork_3657").setView([52.520295645,13.404179753], 6); const idMapArtwork_3657_tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon.png" class="mapTitleImg">:Genaue Angabe für Gebäude <img src="https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-orange.png" class="mapTitleImg">: Referenzpunkt für geographische Gebiete'}).addTo(idMapArtwork_3657);var orangeIcon = new L.Icon({iconUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-icon-2x-orange.png",shadowUrl: "https://antonvonwerner.de/shared/misc/leaflet/images/marker-shadow.png",iconSize: [25, 41],iconAnchor: [12, 41],popupAnchor: [1, -34],shadowSize: [41, 41]});L.marker([52.520295645,13.404179753], {icon: orangeIcon,title: "Berlin"}).addTo(idMapArtwork_3657).bindPopup('<div>Berlin: Besitzer</div>');</script></article></div>
+    </div>     
+
+    <div class="info-block openClose">
 	   <input type="checkbox" id="idArtworkCategories" name="idArtworkCategories" checked="checked" >
 	   <label for="idArtworkCategories" class="block-title open" onClick="changedInfoBlock(this,'open');">
 		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Gruppierungen</label>
@@ -121,7 +130,19 @@
         <div class="value"><ul><li><a href="https://antonvonwerner.de/html/artwork/list/genre_POR.html">Portr&auml;t</a></li></ul></div>
     </div><div class="label-value-pair">
 	   <div class="label">Schlagwort</div>
-        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5972.html">Festhalten / Greifen</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_6371.html">Fl&uuml;gelhelm</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5891.html">Frontalansicht </a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_6247.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/A99C6221-07B3-4FC4-B2C0-608E5CE6B1F3_thumb.jpg" alt="Bild zum Schlagwort">Garde</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5864.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/CFC299BA-634E-4382-924D-45AD98B6B08A_thumb.jpg" alt="Bild zum Schlagwort">Gardes du Corps</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5863.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/D15D4573-BFD0-464D-9741-1B740113817B_thumb.jpg" alt="Bild zum Schlagwort">Helm</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5885.html">Kniest&uuml;ck</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_8764.html">Kopf nach vorne</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_6355.html">K&uuml;rassier</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_1009.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/BD744906-096C-4237-8133-C0DFE1E6B2CC_thumb.png" alt="Bild zum Schlagwort">Mann/M&auml;nner</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5396.html">Orden und Ehrenzeichen</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5359.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/3E2E9B2A-6549-4498-9D07-DD59C9EA365B_thumb.jpg" alt="Bild zum Schlagwort">Uniform</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5607.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/7E858119-8584-42BD-9158-B7A0CFD8CC26_thumb.jpg" alt="Bild zum Schlagwort">Wilhelm II. (Deutsches Reich)</a></li></ul></div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5972.html">Festhalten / Greifen</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_6371.html">Fl&uuml;gelhelm</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5891.html">Frontalansicht </a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_6247.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/A99C6221-07B3-4FC4-B2C0-608E5CE6B1F3_thumb.jpg" alt="Bild zum Schlagwort">Garde</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5864.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/CFC299BA-634E-4382-924D-45AD98B6B08A_thumb.jpg" alt="Bild zum Schlagwort">Gardes du Corps</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5863.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/D15D4573-BFD0-464D-9741-1B740113817B_thumb.jpg" alt="Bild zum Schlagwort">Helm</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5885.html">Kniest&uuml;ck</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_8764.html">Kopf nach vorne</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_6355.html">K&uuml;rassier</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_1009.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/BD744906-096C-4237-8133-C0DFE1E6B2CC_thumb.jpg" alt="Bild zum Schlagwort">Mann/M&auml;nner</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5396.html">Orden und Ehrenzeichen</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5359.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/3E2E9B2A-6549-4498-9D07-DD59C9EA365B_thumb.jpg" alt="Bild zum Schlagwort">Uniform</a></li><li><a href="https://antonvonwerner.de/html/artwork/list/tag_5607.html"><img class="li-img-xx-small" src="https://antonvonwerner.de/shared/resources/misc/7E858119-8584-42BD-9158-B7A0CFD8CC26_thumb.jpg" alt="Bild zum Schlagwort">Wilhelm II. (Deutsches Reich)</a></li></ul></div>
+    </div>
+    </div>     
+
+    <div class="info-block openClose">
+	   <input type="checkbox" id="idArtworkOwnerShort" name="idArtworkOwnerShort" checked="checked" >
+	   <label for="idArtworkOwnerShort" class="block-title open" onClick="changedInfoBlock(this,'open');">
+		  <img src="https://antonvonwerner.de/shared/resources/closed.svg" alt="Closed">Besitzer</label>
+	   <label for="idArtworkOwnerShort" class="block-title close" onClick="changedInfoBlock(this,'close');">
+		  <img src="https://antonvonwerner.de/shared/resources/opened.svg" alt="Opened">Besitzer</label>
+	   <div class="label-value-pair">
+	   <div class="label">Besitzer</div>
+        <div class="value"><ul><li><a href="https://antonvonwerner.de/html/owner/detail/366FAB9E-389D-413B-AACB-794B9988F5E6.html">B&ouml;rse Berlin, Berlin. Bestimmt für die Berliner Börse</a></li><li><a href="https://antonvonwerner.de/html/owner/detail/BDA3DE9E-0F0F-4990-8CB0-B760E8EAFF78.html">Verbleib unbekannt</a></li></ul></div>
     </div>
     </div>     
 
@@ -166,7 +187,7 @@
         <div class="value">06.06.2020</div>
     </div><div class="label-value-pair">
 	   <div class="label">Letzte &Auml;nderung</div>
-        <div class="value">22.12.2024</div>
+        <div class="value">30.03.2025</div>
     </div>
     </div>     
 
